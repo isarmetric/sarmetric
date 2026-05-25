@@ -8,14 +8,14 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from './routes/__root.tsx'
-import { Route as TechnologyRouteImport } from './routes/technology.tsx'
-import { Route as SolutionsRouteImport } from './routes/solutions.tsx'
-import { Route as ContactRouteImport } from './routes/contact.tsx'
-import { Route as AboutRouteImport } from './routes/about.tsx'
+import { Route as rootRouteImport } from './routes/__root'
+import { Route as TechnologyRouteImport } from './routes/technology'
+import { Route as SolutionsRouteImport } from './routes/solutions'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as SolutionsIndexRouteImport } from './routes/solutions.index.tsx'
-import { Route as SolutionsSlugRouteImport } from './routes/solutions.$slug.tsx'
+import { Route as SolutionsIndexRouteImport } from './routes/solutions.index'
+import { Route as SolutionsSlugRouteImport } from './routes/solutions.$slug'
 
 const TechnologyRoute = TechnologyRouteImport.update({
   id: '/technology',
