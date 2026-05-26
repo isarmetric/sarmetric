@@ -33,8 +33,6 @@ const industries = ["Geohazards", "Mining", "Infrastructure", "Oil & Gas", "Stru
 
 function ContactPage() {
   const [sent, setSent] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
-  const [error, setError] = useState<string | null>(null);
 
   return (
     <SiteLayout>
@@ -51,33 +49,9 @@ function ContactPage() {
         <div className="grid md:grid-cols-12 gap-12">
           <form
             className="md:col-span-7 space-y-8"
-            onSubmit={async (e) => {
+            onSubmit={(e) => {
               e.preventDefault();
-              setSubmitting(true);
-              setError(null);
-
-              const formData = new FormData(e.target);
-              formData.append("access_key", "1f177b95-4020-49a1-a523-08c52bbbba5d");
-
-              try {
-                const response = await fetch("https://api.web3forms.com/submit", {
-                  method: "POST",
-                  body: formData
-                });
-
-                const data = await response.json();
-                if (data.success) {
-                  setSent(true);
-                } else {
-                  setError(data.error || "Form submission failed");
-                  console.error("Form submission failed:", data);
-                }
-              } catch (error) {
-                setError("Network error. Please try again.");
-                console.error("Error submitting form:", error);
-              } finally {
-                setSubmitting(false);
-              }
+              setSent(true);
             }}
           >
             <Field label="Name" name="name" />
@@ -118,13 +92,10 @@ function ContactPage() {
               <button
                 type="submit"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background text-sm hover:opacity-90 transition disabled:opacity-50"
-                disabled={sent || submitting}
+                disabled={sent}
               >
-                {sent ? "Thanks — we'll be in touch." : submitting ? "Sending..." : "Send message"}
+                {sent ? "Thanks — we'll be in touch." : "Send message"}
               </button>
-              {error && (
-                <p className="mt-2 text-sm text-destructive">{error}</p>
-              )}
             </div>
           </form>
 
@@ -145,6 +116,10 @@ function ContactPage() {
               <div>
                 General enquiries
                 <div className="text-foreground mt-1">kontakt@sarmetrics.pl</div>
+              </div>
+              <div>
+                Tobiasz Bator
+                <div className="text-foreground mt-1">tobiasz.bator@sarmetrics.pl</div>
               </div>
             </div>
           </div>
