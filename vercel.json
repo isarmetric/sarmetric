@@ -3,16 +3,16 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/static-build",
+      "use": "@vercel/node",
       "config": {
-        "distDir": "dist/client"
+        "includeFiles": ["dist/server/**", "dist/client/**"]   
       }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/$1"
+      "dest": "/app/dist/server/server.js"
     }
   ]
 }
