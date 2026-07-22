@@ -1,8 +1,10 @@
 import geohazards from "@/assets/offering-geohazards.jpg";
-import mining from "@/assets/offering-mining.jpg";
-import infrastructure from "@/assets/offering-infrastructure.jpg";
+// import mining from "@/assets/offering-mining.jpg";
+import mining from "@/assets/mining_v2.png";
+// import infrastructure from "@/assets/offering-infrastructure.jpg";
 import oilgas from "@/assets/offering-oilgas.jpg";
 import structural from "@/assets/offering-structural.jpg";
+import infrastructure from "@/assets/infrastructure_v2.png";
 
 export type Offering = {
   slug: string;
@@ -20,9 +22,9 @@ export const offerings: Offering[] = [
     to: "/solutions/infrastructure",
     number: "01",
     title: "Infrastructure",
-    tagline: "Optimizing design, construction and operation with millimetric data",
+    tagline: "Movement intelligence for safer infrastructure - from design to maintenance",
     description:
-      "Dams, bridges, tunnels, railways and pipelines monitored at millimeter precision through every phase of their lifecycle.",
+      "Highways, bridges, dams, railways and pipelines monitored at millimeter precision through every phase of their lifecycle.",
     image: infrastructure,
   },
   {

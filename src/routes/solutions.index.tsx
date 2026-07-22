@@ -9,13 +9,13 @@ import hero from "@/assets/hero-solutions.jpg";
 export const Route = createFileRoute("/solutions/")({
   head: () => ({
     meta: [
-      { title: "Solutions — SarMetrics" },
+      { title: "Solutions — SAR Metrics" },
       {
         name: "description",
         content:
           "InSAR-powered monitoring for geohazards, mining, infrastructure, oil & gas and structural movement.",
       },
-      { property: "og:title", content: "Solutions — SarMetrics" },
+      { property: "og:title", content: "Solutions — SAR Metrics" },
       {
         property: "og:description",
         content:
@@ -33,8 +33,8 @@ function SolutionsPage() {
     <SiteLayout>
       <PageHero
         eyebrow="Solutions"
-        title="One platform. Every asset that doesn't stay still."
-        subtitle="Industry-tuned monitoring services built on the same satellite radar foundation."
+        title="One system. Every critical asset."
+        subtitle="Industry-tuned monitoring services built on the satellite radar foundation."
         image={hero}
         imageAlt="Earth from low orbit"
         height="short"

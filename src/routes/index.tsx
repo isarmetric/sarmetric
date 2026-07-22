@@ -4,17 +4,18 @@ import { SiteLayout } from "@/components/site/Layout";
 import { CTASection } from "@/components/site/CTASection";
 import { offerings } from "@/lib/offerings";
 import heroHome from "@/assets/hero-home.jpg";
+import esaBicPolandLogo from "@/assets/esa-bic-poland-white.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "SarMetrics — Millimetric ground intelligence from space" },
+      { title: "SAR Metrics — Millimetric ground intelligence from space" },
       {
         name: "description",
         content:
           "InSAR analytics for geohazards, mining, infrastructure and energy. Wide-area, millimeter-precision ground monitoring.",
       },
-      { property: "og:title", content: "SarMetrics — Earth observation & InSAR" },
+      { property: "og:title", content: "SAR Metrics — Earth observation & InSAR" },
       {
         property: "og:description",
         content:
@@ -31,7 +32,7 @@ const capabilities = [
   {
     n: "01",
     title: "Millimetric precision",
-    body: "Line-of-sight measurement of ground and structural displacement, precise to 1 mm.",
+    body: "Line-of-sight measurement of ground and structural displacement, precise to milimeters.",
   },
   {
     n: "02",
@@ -68,23 +69,26 @@ function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/5 to-background" />
         <div className="container-x relative pb-20 md:pb-32 pt-32 w-full">
           <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-6 fade-up">
-            Earth observation · InSAR analytics
+            
           </div>
           <h1 className="text-display text-hero max-w-5xl fade-up">
-            Ground intelligence that supports the decisions that move the world.
+            Measure movement. Manage risk.
           </h1>
           <p className="mt-8 max-w-xl text-base md:text-lg text-foreground/75 fade-up">
-            SarMetrics operates a satellite-radar analytics platform that measures
+            SAR Metrics operates a satellite-radar system that measures
             ground and structural movement down to the millimeter — anywhere,
             day or night, in any weather.
           </p>
           <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4 fade-up">
-            <Link
-              to="/solutions"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background text-sm hover:opacity-90 transition"
+            <a
+              href="https://demo.sarmetrics.pl/upper_silesia"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-foreground px-6 py-3 text-sm text-background transition hover:opacity-90"
             >
-              Explore solutions <ArrowRight size={16} />
-            </Link>
+              Explore demo
+              <ArrowUpRight size={16} />
+            </a>
             <Link
               to="/technology"
               className="inline-flex items-center gap-2 text-sm text-foreground/80 hover:text-foreground transition"
@@ -95,14 +99,36 @@ function HomePage() {
         </div>
       </section>
 
+      <section className="border-y border-border bg-background">
+        <div className="container-x py-8 md:py-10">
+          <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
+            <div>
+              <div className="mb-2 text-xs uppercase tracking-[0.3em] text-muted-foreground">
+                Supported by
+              </div>
+
+              <p className="max-w-md text-sm text-foreground/65">
+                SAR Metrics is supported by the European Space Agency Business Incubation Centre
+                Poland.
+              </p>
+            </div>
+
+            <img
+              src={esaBicPolandLogo}
+              alt="ESA Business Incubation Centre Poland"
+              className="h-auto w-full max-w-[520px] object-contain"
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="container-x py-24 md:py-36">
         <div className="grid md:grid-cols-12 gap-8 mb-16 md:mb-24">
           <div className="md:col-span-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">
             Solutions
           </div>
           <h2 className="md:col-span-9 text-display text-section max-w-4xl">
-            From individual structures to entire regions — monitor what moves,
-            before it matters.
+            From individual structures to entire regions - monitor movement before it becomes a risk.
           </h2>
         </div>
         <div className="grid md:grid-cols-2 gap-px bg-border">

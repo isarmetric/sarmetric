@@ -7,16 +7,16 @@ import hero from "@/assets/hero-technology.jpg";
 export const Route = createFileRoute("/technology")({
   head: () => ({
     meta: [
-      { title: "Technology — SarMetrics" },
+      { title: "Technology — SAR Metrics" },
       {
         name: "description",
         content:
           "How InSAR works: persistent scatterers, satellite SAR archives and millimetric displacement analytics.",
       },
-      { property: "og:title", content: "Technology — SarMetrics" },
+      { property: "og:title", content: "Technology — SAR Metrics" },
       {
         property: "og:description",
-        content: "Inside the InSAR processing chain that powers SarMetrics analytics.",
+        content: "Inside the InSAR processing chain that powers SAR Metrics analytics.",
       },
       { property: "og:url", content: "/technology" },
       { property: "og:image", content: hero },

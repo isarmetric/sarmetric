@@ -7,13 +7,13 @@ import hero from "@/assets/hero-about.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — SarMetrics" },
+      { title: "About — SAR Metrics" },
       {
         name: "description",
         content:
-          "SarMetrics turns satellite radar into millimetric ground intelligence for industry, infrastructure and civil protection.",
+          "SAR Metrics turns satellite radar into millimetric ground intelligence for industry, infrastructure and civil protection.",
       },
-      { property: "og:title", content: "About — SarMetrics" },
+      { property: "og:title", content: "About — SAR Metrics" },
       {
         property: "og:description",
         content: "Who we are and why we measure what moves.",
@@ -37,8 +37,9 @@ const timeline = [
   { year: "1992", title: "ERS-1 archive begins", body: "ESA's ERS missions start the continuous SAR archive that still anchors historical InSAR today." },
   { year: "2002", title: "Persistent Scatterer InSAR", body: "PSInSAR techniques unlock millimeter-precision time series over stable reflectors." },
   { year: "2014", title: "Sentinel-1", body: "Free, open, global SAR every 6–12 days turns InSAR from a research tool into an operational service." },
-  { year: "2020s", title: "Commercial SAR constellations", body: "High-resolution, high-revisit SAR from commercial operators makes daily monitoring of individual assets viable." },
-  { year: "2026", title: "SarMetrics founded", body: "We bring four decades of SAR science into a focused analytics platform for industry and infrastructure." },
+  { year: "2020s", title: "Commercial small-sat SAR constellations", body: "High-resolution, high-revisit SAR from commercial operators makes daily monitoring of individual assets viable." },
+  { year: "2026", title: "SAR Metrics founded", body: "We bring four decades of SAR science into an asset monitoring system for industry and infrastructure." },
+  { year: "2026", title: "ESA BIC Poland Grant", body: "SAR Metrics received an ESA BIC Poland grant to support the development and commercialisation of its technology." },
 ];
 
 function AboutPage() {

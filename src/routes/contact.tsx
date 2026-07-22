@@ -7,16 +7,16 @@ import hero from "@/assets/hero-contact.jpg";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — SarMetrics" },
+      { title: "Contact — SAR Metrics" },
       {
         name: "description",
         content:
           "Tell us about the asset or region you need to monitor. We'll show what InSAR can reveal.",
       },
-      { property: "og:title", content: "Contact — SarMetrics" },
+      { property: "og:title", content: "Contact — SAR Metrics" },
       {
         property: "og:description",
-        content: "Get in touch with the SarMetrics team.",
+        content: "Get in touch with the SAR Metrics team.",
       },
       { property: "og:url", content: "/contact" },
     ],

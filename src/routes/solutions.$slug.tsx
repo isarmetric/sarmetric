@@ -20,7 +20,7 @@ const detail: Record<
 > = {
   geohazards: {
     intro:
-      "From mountainous terrain to coastal plains, geohazards rarely announce themselves. SarMetrics turns decades of SAR imagery into a continuously updated atlas of the moving ground — so risk owners can act before motion becomes failure.",
+      "From mountainous terrain to coastal plains, geohazards rarely announce themselves. SAR Metrics turns decades of SAR imagery into a continuously updated atlas of the moving ground — so risk owners can act before motion becomes failure.",
     challenge:
       "Landslides, subsidence and tectonic motion threaten populations and infrastructure across vast, hard-to-survey terrain.",
     approach:
@@ -51,7 +51,7 @@ const detail: Record<
   },
   mining: {
     intro:
-      "Open pits, tailings storage facilities and underground operations all move — the question is how fast, and what it means. SarMetrics integrates satellite, ground-based radar and in-situ data into one geotechnical picture.",
+      "Open pits, tailings storage facilities and underground operations all move — the question is how fast, and what it means. SAR Metrics integrates satellite, ground-based radar and in-situ data into one geotechnical picture.",
     challenge:
       "Pit walls, tailings dams and waste piles fail without warning, with catastrophic environmental and human cost.",
     approach:
@@ -82,7 +82,7 @@ const detail: Record<
   },
   infrastructure: {
     intro:
-      "Critical infrastructure moves through every phase of its life — settling under load, responding to nearby works, ageing in place. SarMetrics provides the continuous record that connects design assumptions to real-world behaviour.",
+      "Critical infrastructure moves through every phase of its life — settling under load, responding to nearby works, ageing in place. SAR Metrics provides the continuous record that connects design assumptions to real-world behaviour.",
     challenge:
       "Dams, bridges, tunnels and rail networks degrade silently; visual inspection alone misses millimetric precursors.",
     approach:
@@ -113,7 +113,7 @@ const detail: Record<
   },
   "oil-gas": {
     intro:
-      "Reservoir performance, well integrity and storage security all leave a fingerprint on the surface. SarMetrics decodes that signal across producing fields, abandoned wells and CO₂ storage sites worldwide.",
+      "Reservoir performance, well integrity and storage security all leave a fingerprint on the surface. SAR Metrics decodes that signal across producing fields, abandoned wells and CO₂ storage sites worldwide.",
     challenge:
       "Reservoir extraction and injection induce surface displacement that signals well integrity, compaction and storage performance.",
     approach:
@@ -144,7 +144,7 @@ const detail: Record<
   },
   structural: {
     intro:
-      "Every reflective façade in a city is a potential measurement point. SarMetrics turns urban areas into living deformation maps — building by building, going back to the early 1990s.",
+      "Every reflective façade in a city is a potential measurement point. SAR Metrics turns urban areas into living deformation maps — building by building, going back to the early 1990s.",
     challenge:
       "Urban buildings settle, tilt and crack in response to neighboring works, water tables and decades-old foundations.",
     approach:
@@ -186,7 +186,7 @@ export const Route = createFileRoute("/solutions/$slug")({
   },
   head: ({ loaderData }) => {
     const o = loaderData?.offering;
-    const title = o ? `${o.title} — SarMetrics` : "Solution — SarMetrics";
+    const title = o ? `${o.title} — SAR Metrics` : "Solution — SAR Metrics";
     const desc = o?.tagline ?? "InSAR monitoring solution";
     return {
       meta: [

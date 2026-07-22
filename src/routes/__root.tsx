@@ -72,13 +72,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SarMetrics — Earth observation & InSAR analytics" },
+      { title: "SAR Metrics — Earth observation & InSAR analytics" },
       {
         name: "description",
         content:
           "Millimetric ground intelligence from space. InSAR analytics for geohazards, mining, infrastructure and energy.",
       },
-      { property: "og:site_name", content: "SarMetrics" },
+      { property: "og:site_name", content: "SAR Metrics" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
