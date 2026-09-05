@@ -28,7 +28,10 @@ const detail: Record<
     outcome:
       "Civil protection authorities and insurers get a prioritized, continuously updated picture of where the ground is moving — and how fast.",
     features: [
-      { title: "Regional screening", body: "Country- and basin-scale baseline maps of ground motion." },
+      {
+        title: "Regional screening",
+        body: "Country- and basin-scale baseline maps of ground motion.",
+      },
       { title: "Hot-spot refinement", body: "High-resolution focus where movement is detected." },
       { title: "Alerting thresholds", body: "Tunable velocity and acceleration alerts per site." },
     ],
@@ -44,9 +47,18 @@ const detail: Record<
       "Quarterly review reports with expert interpretation",
     ],
     useCases: [
-      { title: "Civil protection", body: "Prioritize ground inspection and evacuation planning across a region." },
-      { title: "Transport authorities", body: "Screen road and rail corridors for slope instability before it disrupts service." },
-      { title: "Insurers & reinsurers", body: "Quantify exposure to subsidence and landslide risk across portfolios." },
+      {
+        title: "Civil protection",
+        body: "Prioritize ground inspection and evacuation planning across a region.",
+      },
+      {
+        title: "Transport authorities",
+        body: "Screen road and rail corridors for slope instability before it disrupts service.",
+      },
+      {
+        title: "Insurers & reinsurers",
+        body: "Quantify exposure to subsidence and landslide risk across portfolios.",
+      },
     ],
   },
   mining: {
@@ -59,9 +71,18 @@ const detail: Record<
     outcome:
       "Mine geotechnical teams receive early-warning indicators, daily, against site-specific stability thresholds.",
     features: [
-      { title: "Pit & wall stability", body: "Bench-level displacement series for active and legacy pits." },
-      { title: "Tailings dam integrity", body: "Cell-by-cell motion tracking with alert thresholds." },
-      { title: "Closure monitoring", body: "Long-term post-closure subsidence and rebound tracking." },
+      {
+        title: "Pit & wall stability",
+        body: "Bench-level displacement series for active and legacy pits.",
+      },
+      {
+        title: "Tailings dam integrity",
+        body: "Cell-by-cell motion tracking with alert thresholds.",
+      },
+      {
+        title: "Closure monitoring",
+        body: "Long-term post-closure subsidence and rebound tracking.",
+      },
     ],
     metrics: [
       { value: "Weekly", label: "Update cadence on critical assets" },
@@ -75,9 +96,67 @@ const detail: Record<
       "Closure and post-closure long-term trend baselines",
     ],
     useCases: [
-      { title: "Geotechnical engineering", body: "Validate slope stability models with continuous, asset-wide ground truth." },
-      { title: "Tailings management", body: "Demonstrate dam integrity to regulators and communities under GISTM." },
-      { title: "Closure & legacy sites", body: "Track residual subsidence decades after operations cease." },
+      {
+        title: "Geotechnical engineering",
+        body: "Validate slope stability models with continuous, asset-wide ground truth.",
+      },
+      {
+        title: "Tailings management",
+        body: "Demonstrate dam integrity to regulators and communities under GISTM.",
+      },
+      {
+        title: "Closure & legacy sites",
+        body: "Track residual subsidence decades after operations cease.",
+      },
+    ],
+  },
+  insurance: {
+    intro:
+      "Insurers need independent evidence that scales from a single claim to an entire book of business. SAR Metrics uses satellite radar to quantify ground and structural movement across portfolios, catastrophe zones and disputed assets.",
+    challenge:
+      "Underwriters and claims teams often make high-value decisions with limited, inconsistent or delayed site evidence.",
+    approach:
+      "Wide-area InSAR screening identifies exposure hotspots across portfolios, then site-focused analysis reconstructs displacement history before, during and after an event.",
+    outcome:
+      "Insurance teams gain defensible motion evidence for underwriting, accumulation management, claims validation and expert reporting.",
+    features: [
+      {
+        title: "Portfolio screening",
+        body: "Rank insured assets and regions by observed subsidence, landslide and settlement activity.",
+      },
+      {
+        title: "Claims reconstruction",
+        body: "Rebuild the displacement history around a reported damage event using SAR archives.",
+      },
+      {
+        title: "Independent reporting",
+        body: "Deliver expert-ready evidence packs for adjusters, brokers and legal teams.",
+      },
+    ],
+    metrics: [
+      { value: "1992→", label: "Archive depth for event reconstruction" },
+      { value: "Portfolio-scale", label: "Coverage across books of business" },
+      { value: "1 mm/yr", label: "Long-term motion sensitivity" },
+    ],
+    deliverables: [
+      "Portfolio exposure maps with prioritized hotspots",
+      "Property- and corridor-level displacement time series",
+      "Pre- and post-event movement reconstructions for claims",
+      "Expert reports supporting underwriting and loss assessment",
+    ],
+    useCases: [
+      {
+        title: "Underwriting",
+        body: "Screen new risks for subsidence, slope instability and long-term settlement signals.",
+      },
+      {
+        title: "Claims & loss adjusting",
+        body: "Test whether observed movement aligns with the timing and nature of reported damage.",
+      },
+      {
+        title: "Portfolio management",
+        body: "Identify concentrations of motion-related exposure across regions, sectors and asset classes.",
+      },
     ],
   },
   infrastructure: {
@@ -90,9 +169,18 @@ const detail: Record<
     outcome:
       "Owners and operators de-risk capex and extend asset life through evidence-based maintenance planning.",
     features: [
-      { title: "Pre-construction baseline", body: "Years of historical motion before ground is broken." },
-      { title: "Construction surveillance", body: "Tracks displacement induced by works in real time." },
-      { title: "Operational monitoring", body: "Permanent surveillance across the asset lifecycle." },
+      {
+        title: "Pre-construction baseline",
+        body: "Years of historical motion before ground is broken.",
+      },
+      {
+        title: "Construction surveillance",
+        body: "Tracks displacement induced by works in real time.",
+      },
+      {
+        title: "Operational monitoring",
+        body: "Permanent surveillance across the asset lifecycle.",
+      },
     ],
     metrics: [
       { value: "30+ yrs", label: "Retrospective baseline available" },
@@ -106,8 +194,14 @@ const detail: Record<
       "Independent evidence for permits, audits and litigation",
     ],
     useCases: [
-      { title: "Dams & reservoirs", body: "Detect crest and abutment movement across the full structure." },
-      { title: "Bridges & viaducts", body: "Per-pier motion records correlated with traffic and seasons." },
+      {
+        title: "Dams & reservoirs",
+        body: "Detect crest and abutment movement across the full structure.",
+      },
+      {
+        title: "Bridges & viaducts",
+        body: "Per-pier motion records correlated with traffic and seasons.",
+      },
       { title: "Tunnels & metros", body: "Surface response to underground works and TBM advance." },
     ],
   },
@@ -121,7 +215,10 @@ const detail: Record<
     outcome:
       "Asset teams correlate motion with downhole data to optimize production and demonstrate CO₂ storage integrity.",
     features: [
-      { title: "Reservoir surveillance", body: "Track compaction and rebound over producing fields." },
+      {
+        title: "Reservoir surveillance",
+        body: "Track compaction and rebound over producing fields.",
+      },
       { title: "CO₂ storage integrity", body: "Surface response to injection at storage sites." },
       { title: "Permit compliance", body: "Independent evidence for regulators and stakeholders." },
     ],
@@ -137,8 +234,14 @@ const detail: Record<
       "Regulator-ready CCS monitoring, reporting and verification packs",
     ],
     useCases: [
-      { title: "Producing fields", body: "Link surface compaction to production rates and reservoir pressure." },
-      { title: "CCS & storage", body: "Independently verify containment of injected CO₂ at storage sites." },
+      {
+        title: "Producing fields",
+        body: "Link surface compaction to production rates and reservoir pressure.",
+      },
+      {
+        title: "CCS & storage",
+        body: "Independently verify containment of injected CO₂ at storage sites.",
+      },
       { title: "Abandoned wells", body: "Screen legacy well populations for surface anomalies." },
     ],
   },
@@ -153,7 +256,10 @@ const detail: Record<
       "City authorities, asset managers and forensic engineers get building-level displacement histories on demand.",
     features: [
       { title: "Building-by-building", body: "Per-structure displacement at the façade level." },
-      { title: "Archive reconstruction", body: "Historical motion from 1992 onward where data exists." },
+      {
+        title: "Archive reconstruction",
+        body: "Historical motion from 1992 onward where data exists.",
+      },
       { title: "Forensic evidence", body: "Court-grade documentation of subsidence events." },
     ],
     metrics: [
@@ -168,9 +274,18 @@ const detail: Record<
       "Expert reports for litigation, insurance and asset disputes",
     ],
     useCases: [
-      { title: "City authorities", body: "Monitor heritage districts and high-risk neighborhoods continuously." },
-      { title: "Real-estate owners", body: "Diagnose tilt and settlement issues before they become structural." },
-      { title: "Forensic engineering", body: "Reconstruct the motion history of a building around a damage event." },
+      {
+        title: "City authorities",
+        body: "Monitor heritage districts and high-risk neighborhoods continuously.",
+      },
+      {
+        title: "Real-estate owners",
+        body: "Diagnose tilt and settlement issues before they become structural.",
+      },
+      {
+        title: "Forensic engineering",
+        body: "Reconstruct the motion history of a building around a damage event.",
+      },
     ],
   },
 };
@@ -178,7 +293,9 @@ const detail: Record<
 type SolutionContent = (typeof detail)[keyof typeof detail];
 
 export const Route = createFileRoute("/solutions/$slug")({
-  loader: ({ params }): { offering: ReturnType<typeof offeringBySlug>; content: SolutionContent } => {
+  loader: ({
+    params,
+  }): { offering: ReturnType<typeof offeringBySlug>; content: SolutionContent } => {
     const o = offeringBySlug(params.slug);
     const c = detail[params.slug as keyof typeof detail];
     if (!o || !c) throw notFound();
@@ -205,7 +322,10 @@ export const Route = createFileRoute("/solutions/$slug")({
     <SiteLayout>
       <div className="container-x pt-40 pb-32">
         <h1 className="text-display text-section">Solution not found</h1>
-        <Link to="/solutions" className="mt-6 inline-flex items-center gap-2 text-foreground/80 hover:text-foreground">
+        <Link
+          to="/solutions"
+          className="mt-6 inline-flex items-center gap-2 text-foreground/80 hover:text-foreground"
+        >
           <ArrowLeft size={16} /> Back to solutions
         </Link>
       </div>
@@ -214,7 +334,10 @@ export const Route = createFileRoute("/solutions/$slug")({
 });
 
 function SolutionDetail() {
-  const data = Route.useLoaderData() as { offering: NonNullable<ReturnType<typeof offeringBySlug>>; content: SolutionContent };
+  const data = Route.useLoaderData() as {
+    offering: NonNullable<ReturnType<typeof offeringBySlug>>;
+    content: SolutionContent;
+  };
   const { offering, content } = data;
   const others = offerings.filter((o) => o.slug !== offering.slug).slice(0, 3);
 
@@ -264,9 +387,7 @@ function SolutionDetail() {
 
       <section className="border-t border-border">
         <div className="container-x py-24 md:py-32">
-          <h2 className="text-display text-section max-w-3xl mb-16">
-            What the service includes.
-          </h2>
+          <h2 className="text-display text-section max-w-3xl mb-16">What the service includes.</h2>
           <div className="grid md:grid-cols-3 gap-px bg-border">
             {content.features.map((f) => (
               <div key={f.title} className="bg-background p-8 md:p-10">
@@ -304,9 +425,7 @@ function SolutionDetail() {
           <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-6">
             Use cases
           </div>
-          <h2 className="text-display text-section max-w-3xl mb-16">
-            Who uses this, and why.
-          </h2>
+          <h2 className="text-display text-section max-w-3xl mb-16">Who uses this, and why.</h2>
           <div className="grid md:grid-cols-3 gap-px bg-border">
             {content.useCases.map((u) => (
               <div key={u.title} className="bg-background p-8 md:p-10">
@@ -329,9 +448,7 @@ function SolutionDetail() {
               to={o.to}
               className="group bg-background p-8 md:p-10 flex flex-col justify-between min-h-[220px]"
             >
-              <div className="text-xs tracking-[0.3em] text-muted-foreground">
-                {o.number}
-              </div>
+              <div className="text-xs tracking-[0.3em] text-muted-foreground">{o.number}</div>
               <div>
                 <h3 className="text-display text-2xl md:text-3xl mb-2">{o.title}</h3>
                 <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-foreground/70 group-hover:text-foreground transition">
@@ -351,12 +468,8 @@ function SolutionDetail() {
 function Block({ label, body }: { label: string; body: string }) {
   return (
     <div className="border-t border-border pt-6">
-      <div className="text-xs tracking-[0.3em] text-muted-foreground mb-4">
-        {label}
-      </div>
-      <p className="text-xl md:text-2xl text-foreground/90 leading-snug">
-        {body}
-      </p>
+      <div className="text-xs tracking-[0.3em] text-muted-foreground mb-4">{label}</div>
+      <p className="text-xl md:text-2xl text-foreground/90 leading-snug">{body}</p>
     </div>
   );
 }

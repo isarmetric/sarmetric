@@ -25,11 +25,17 @@ export const Route = createFileRoute("/contact")({
   component: ContactPage,
 });
 
-const offices = [
-  { city: "Warsaw", line1: "Chmielna II", line2: "00-020 Warsaw, Poland" },
-];
+const offices = [{ city: "Warsaw", line1: "Chmielna II", line2: "00-020 Warsaw, Poland" }];
 
-const industries = ["Geohazards", "Mining", "Infrastructure", "Oil & Gas", "Structural", "Other"];
+const industries = [
+  "Infrastructure",
+  "Mining",
+  "Insurance",
+  "Oil & Gas",
+  "Geohazards",
+  "Structural",
+  "Other",
+];
 
 function ContactPage() {
   const [sent, setSent] = useState(false);
@@ -62,7 +68,7 @@ function ContactPage() {
               try {
                 const response = await fetch("https://api.web3forms.com/submit", {
                   method: "POST",
-                  body: formData
+                  body: formData,
                 });
 
                 const data = await response.json();
@@ -122,9 +128,7 @@ function ContactPage() {
               >
                 {sent ? "Thanks — we'll be in touch." : submitting ? "Sending..." : "Send message"}
               </button>
-              {error && (
-                <p className="mt-2 text-sm text-destructive">{error}</p>
-              )}
+              {error && <p className="mt-2 text-sm text-destructive">{error}</p>}
             </div>
           </form>
 
@@ -154,15 +158,7 @@ function ContactPage() {
   );
 }
 
-function Field({
-  label,
-  name,
-  type = "text",
-}: {
-  label: string;
-  name: string;
-  type?: string;
-}) {
+function Field({ label, name, type = "text" }: { label: string; name: string; type?: string }) {
   return (
     <div>
       <label

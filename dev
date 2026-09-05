@@ -1,0 +1,33 @@
+> vite dev
+
+
+  VITE v7.3.3  ready in 624 ms
+
+  ➜  Local:   http://localhost:8080/
+  ➜  Network: http://192.168.0.31:8080/
+  ➜  press h + enter to show help
+[vite] connected.
+8:55:38 PM [vite] (client) hmr update /src/styles.css?direct, /src/routes/solutions.$slug.tsx, /src/routes/index.tsx?tsr-split=component, /src/routes/solutions.$slug.tsx?tsr-split=component
+8:55:38 PM [vite] (ssr) page reload src/lib/offerings.ts
+[vite] program reload
+8:55:44 PM [vite] (client) hmr update /src/styles.css?direct, /src/routes/solutions.$slug.tsx, /src/routes/solutions.$slug.tsx?tsr-split=notFoundComponent, /src/routes/solutions.$slug.tsx?tsr-split=component
+8:55:44 PM [vite] (ssr) page reload src/routes/solutions.$slug.tsx
+8:55:46 PM [vite] (client) hmr update /src/styles.css?direct, /src/components/site/Footer.tsx
+8:55:46 PM [vite] (ssr) page reload src/components/site/Footer.tsx
+8:55:48 PM [vite] (client) hmr update /src/styles.css?direct, /src/routes/contact.tsx
+8:PM [vite] (ssr) page reload src/routes/contact.tsx
+8:56:00 PM [vite] (client) hmr update /src/styles.css?direct, /src/components/site/Footer.tsx
+8:56:00 PM [vite] (ssr) page reload src/components/site/Footer.tsx
+8:56:00 PM [vite] (client) hmr update /src/styles.css?direct, /src/routes/solutions.$slug.tsx, /src/routes/index.tsx?tsr-split=component, /src/routes/solutions.$slug.tsx?tsr-split=component
+8:56:00 PM [vite] (ssr) page reload src/lib/offerings.ts
+8:56:00 PM [vite] (client) hmr update /src/styles.css?direct, /src/routes/contact.tsx
+8:56:00 PM [vite] (ssr) page reload src/routes/contact.tsx
+8:56:03 PM [vite] (client) hmr update /src/styles.css?direct, /src/routes/solutions.$slug.tsx, /src/routes/solutions.$slug.tsx?tsr-split=notFoundComponent, /src/routes/solutions.$slug.tsx?tsr-split=component
+8:56:03 PM [vite] (ssr) page reload src/routes/solutions.$slug.tsx
+[vite] program reload
+^C
+
+clear
+
+
+

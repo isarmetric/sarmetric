@@ -5,6 +5,7 @@ import mining from "@/assets/mining_v2.png";
 import oilgas from "@/assets/offering-oilgas.jpg";
 import structural from "@/assets/offering-structural.jpg";
 import infrastructure from "@/assets/infrastructure_v2.png";
+import insurance from "@/assets/dark_city_mauricio-chavez.jpg";
 
 export type Offering = {
   slug: string;
@@ -38,9 +39,19 @@ export const offerings: Offering[] = [
     image: mining,
   },
   {
+    slug: "insurance",
+    to: "/solutions/insurance",
+    number: "03",
+    title: "Insurance",
+    tagline: "Independent ground-motion evidence for underwriting, claims and portfolio risk",
+    description:
+      "Portfolio-scale and site-specific InSAR analysis for subsidence, landslides and structural movement — supporting underwriting, exposure screening and claims assessment.",
+    image: insurance,
+  },
+  {
     slug: "oil-gas",
     to: "/solutions/oil-gas",
-    number: "03",
+    number: "04",
     title: "Oil & Gas",
     tagline: "Subtle surface displacement for production and reservoir management",
     description:
@@ -50,7 +61,7 @@ export const offerings: Offering[] = [
   {
     slug: "geohazards",
     to: "/solutions/geohazards",
-    number: "04",
+    number: "05",
     title: "Geohazards",
     tagline: "Identifying at-risk locations and monitoring geohazards over wide areas",
     description:
@@ -60,7 +71,7 @@ export const offerings: Offering[] = [
   {
     slug: "structural",
     to: "/solutions/structural",
-    number: "05",
+    number: "06",
     title: "Structural movement",
     tagline: "Measuring ground and structural movement from space",
     description:
@@ -69,5 +80,4 @@ export const offerings: Offering[] = [
   },
 ];
 
-export const offeringBySlug = (slug: string) =>
-  offerings.find((o) => o.slug === slug);
+export const offeringBySlug = (slug: string) => offerings.find((o) => o.slug === slug);

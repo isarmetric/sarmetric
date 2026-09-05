@@ -8,20 +8,10 @@ export function Footer() {
     <footer className="mt-32 border-t border-border">
       <div className="container-x grid grid-cols-2 gap-10 py-16 md:grid-cols-4">
         <div className="col-span-2 md:col-span-1">
-          <Link
-            to="/"
-            className="inline-flex items-center gap-3"
-            aria-label="SAR Metrics home"
-          >
-            <img
-              src={logo}
-              alt=""
-              className="h-7 w-auto invert"
-            />
+          <Link to="/" className="inline-flex items-center gap-3" aria-label="SAR Metrics home">
+            <img src={logo} alt="" className="h-7 w-auto invert" />
 
-            <div className="text-display tracking-[0.3em] text-foreground">
-              SAR METRICS
-            </div>
+            <div className="text-display tracking-[0.3em] text-foreground">SAR METRICS</div>
           </Link>
 
           <p className="mt-4 max-w-xs text-sm text-muted-foreground">
@@ -45,20 +35,28 @@ export function Footer() {
           title="Solutions"
           items={[
             {
-              to: "/solutions/geohazards",
-              label: "Geohazards",
+              to: "/solutions/infrastructure",
+              label: "Infrastructure",
             },
             {
               to: "/solutions/mining",
               label: "Mining",
             },
             {
-              to: "/solutions/infrastructure",
-              label: "Infrastructure",
+              to: "/solutions/insurance",
+              label: "Insurance",
             },
             {
               to: "/solutions/oil-gas",
               label: "Oil & Gas",
+            },
+            {
+              to: "/solutions/geohazards",
+              label: "Geohazards",
+            },
+            {
+              to: "/solutions/structural",
+              label: "Structural movement",
             },
           ]}
         />
@@ -82,9 +80,7 @@ export function Footer() {
         />
 
         <div>
-          <div className="mb-4 text-xs uppercase tracking-widest text-muted-foreground">
-            Office
-          </div>
+          <div className="mb-4 text-xs uppercase tracking-widest text-muted-foreground">Office</div>
 
           <ul className="space-y-2 text-sm text-foreground/80">
             <li>Warsaw</li>
@@ -95,9 +91,7 @@ export function Footer() {
 
       <div className="border-t border-border">
         <div className="container-x flex flex-col items-start justify-between gap-3 py-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
-          <span>
-            © {new Date().getFullYear()} SAR Metrics. All rights reserved.
-          </span>
+          <span>© {new Date().getFullYear()} SAR Metrics. All rights reserved.</span>
 
           <span>Millimetric ground intelligence, from space.</span>
         </div>
@@ -118,9 +112,7 @@ function FooterCol({
 }) {
   return (
     <div>
-      <div className="mb-4 text-xs uppercase tracking-widest text-muted-foreground">
-        {title}
-      </div>
+      <div className="mb-4 text-xs uppercase tracking-widest text-muted-foreground">{title}</div>
 
       <ul className="space-y-2 text-sm">
         {items.map((item) => (
