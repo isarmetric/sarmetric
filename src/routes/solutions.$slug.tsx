@@ -4,6 +4,7 @@ import { SiteLayout } from "@/components/site/Layout";
 import { PageHero } from "@/components/site/PageHero";
 import { CTASection } from "@/components/site/CTASection";
 import { offerings, offeringBySlug } from "@/lib/offerings";
+import { pageHead, serviceJsonLd } from "@/lib/seo";
 
 const detail: Record<
   string,
@@ -303,19 +304,32 @@ export const Route = createFileRoute("/solutions/$slug")({
   },
   head: ({ loaderData }) => {
     const o = loaderData?.offering;
-    const title = o ? `${o.title} — SAR Metrics` : "Solution — SAR Metrics";
-    const desc = o?.tagline ?? "InSAR monitoring solution";
-    return {
-      meta: [
-        { title },
-        { name: "description", content: desc },
-        { property: "og:title", content: title },
-        { property: "og:description", content: desc },
-        { property: "og:url", content: o ? o.to : "/solutions" },
-        ...(o ? [{ property: "og:image", content: o.image }] : []),
-      ],
-      links: o ? [{ rel: "canonical", href: o.to }] : [],
-    };
+    const title = o
+      ? `${o.title} InSAR Monitoring — SAR Metrics`
+      : "Solution — SAR Metrics";
+    const desc = o
+      ? `${o.tagline}. InSAR analytics and space monitoring for ${o.title.toLowerCase()}.`
+      : "InSAR monitoring solution";
+    return pageHead({
+      title,
+      description: desc,
+      path: o?.to ?? "/solutions",
+      image: o?.image,
+      breadcrumbs: o
+        ? [
+            { name: "Home", path: "/" },
+            { name: "InSAR solutions", path: "/solutions" },
+            { name: o.title, path: o.to },
+          ]
+        : undefined,
+      jsonLd: o
+        ? serviceJsonLd({
+            name: `${o.title} InSAR monitoring`,
+            description: desc,
+            path: o.to,
+          })
+        : [],
+    });
   },
   component: SolutionDetail,
   notFoundComponent: () => (

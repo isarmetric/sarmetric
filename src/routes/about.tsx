@@ -2,27 +2,22 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
 import { PageHero } from "@/components/site/PageHero";
 import { CTASection } from "@/components/site/CTASection";
+import { pageHead } from "@/lib/seo";
 import hero from "@/assets/hero-about.jpg";
 
 export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About — SAR Metrics" },
-      {
-        name: "description",
-        content:
-          "SAR Metrics turns satellite radar into millimetric ground intelligence for industry, infrastructure and civil protection.",
-      },
-      { property: "og:title", content: "About — SAR Metrics" },
-      {
-        property: "og:description",
-        content: "Who we are and why we measure what moves.",
-      },
-      { property: "og:url", content: "/about" },
-      { property: "og:image", content: hero },
-    ],
-    links: [{ rel: "canonical", href: "/about" }],
-  }),
+  head: () =>
+    pageHead({
+      title: "About — SAR Metrics",
+      description:
+        "SAR Metrics turns satellite radar into millimetric ground intelligence and InSAR analytics for industry, infrastructure and civil protection.",
+      path: "/about",
+      image: hero,
+      breadcrumbs: [
+        { name: "Home", path: "/" },
+        { name: "About", path: "/about" },
+      ],
+    }),
   component: AboutPage,
 });
 
@@ -48,7 +43,7 @@ function AboutPage() {
       <PageHero
         eyebrow="About"
         title="We measure what moves, so others can act before it matters."
-        subtitle="A team of radar engineers, geoscientists and software builders making Earth observation operational."
+        subtitle="A team of radar engineers, geoscientists and software builders making Earth observation and InSAR analytics operational."
         image={hero}
         imageAlt="Mission control consoles"
         height="short"

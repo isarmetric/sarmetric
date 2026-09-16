@@ -6,7 +6,7 @@ import esaBicPolandLogo from "@/assets/esa-bic-poland-white.png";
 export function Footer() {
   return (
     <footer className="mt-32 border-t border-border">
-      <div className="container-x grid grid-cols-2 gap-10 py-16 md:grid-cols-4">
+      <div className="container-x grid grid-cols-2 gap-10 py-16 md:grid-cols-5">
         <div className="col-span-2 md:col-span-1">
           <Link to="/" className="inline-flex items-center gap-3" aria-label="SAR Metrics home">
             <img src={logo} alt="" className="h-7 w-auto invert" />
@@ -34,48 +34,33 @@ export function Footer() {
         <FooterCol
           title="Solutions"
           items={[
-            {
-              to: "/solutions/infrastructure",
-              label: "Infrastructure",
-            },
-            {
-              to: "/solutions/mining",
-              label: "Mining",
-            },
-            {
-              to: "/solutions/insurance",
-              label: "Insurance",
-            },
-            {
-              to: "/solutions/oil-gas",
-              label: "Oil & Gas",
-            },
-            {
-              to: "/solutions/geohazards",
-              label: "Geohazards",
-            },
-            {
-              to: "/solutions/structural",
-              label: "Structural movement",
-            },
+            { to: "/solutions/infrastructure", label: "Infrastructure" },
+            { to: "/solutions/mining", label: "Mining" },
+            { to: "/solutions/insurance", label: "Insurance" },
+            { to: "/solutions/oil-gas", label: "Oil & Gas" },
+            { to: "/solutions/geohazards", label: "Geohazards" },
+            { to: "/solutions/structural", label: "Structural movement" },
           ]}
         />
 
         <FooterCol
-          title="Company"
+          title="Capabilities"
           items={[
-            {
-              to: "/technology",
-              label: "Technology",
-            },
-            {
-              to: "/about",
-              label: "About",
-            },
-            {
-              to: "/contact",
-              label: "Contact",
-            },
+            { to: "/insar-analytics", label: "InSAR analytics" },
+            { to: "/insar-solutions", label: "InSAR solutions" },
+            { to: "/space-monitoring", label: "Space monitoring" },
+            { to: "/technology", label: "Technology" },
+          ]}
+        />
+
+        <FooterCol
+          title="Resources"
+          items={[
+            { to: "/resources", label: "Overview" },
+            { to: "/resources/glossary", label: "Glossary" },
+            { to: "/resources/faq", label: "FAQ" },
+            { to: "/about", label: "About" },
+            { to: "/contact", label: "Contact" },
           ]}
         />
 

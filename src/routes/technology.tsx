@@ -1,28 +1,23 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
 import { PageHero } from "@/components/site/PageHero";
 import { CTASection } from "@/components/site/CTASection";
+import { pageHead } from "@/lib/seo";
 import hero from "@/assets/hero-technology.jpg";
 
 export const Route = createFileRoute("/technology")({
-  head: () => ({
-    meta: [
-      { title: "Technology — SAR Metrics" },
-      {
-        name: "description",
-        content:
-          "How InSAR works: persistent scatterers, satellite SAR archives and millimetric displacement analytics.",
-      },
-      { property: "og:title", content: "Technology — SAR Metrics" },
-      {
-        property: "og:description",
-        content: "Inside the InSAR processing chain that powers SAR Metrics analytics.",
-      },
-      { property: "og:url", content: "/technology" },
-      { property: "og:image", content: hero },
-    ],
-    links: [{ rel: "canonical", href: "/technology" }],
-  }),
+  head: () =>
+    pageHead({
+      title: "InSAR Analytics Technology — SAR Metrics",
+      description:
+        "How InSAR analytics works: persistent scatterers, satellite SAR archives and millimetric displacement for space monitoring.",
+      path: "/technology",
+      image: hero,
+      breadcrumbs: [
+        { name: "Home", path: "/" },
+        { name: "Technology", path: "/technology" },
+      ],
+    }),
   component: TechnologyPage,
 });
 
@@ -30,7 +25,7 @@ const steps = [
   {
     n: "01",
     title: "Acquisition",
-    body: "Active radar instruments aboard SAR satellites image the Earth's surface day and night, through cloud and smoke.",
+    body: "Active radar instruments aboard SAR satellites image the Earth's surface day and night, through cloud and smoke — the foundation of space monitoring.",
   },
   {
     n: "02",
@@ -45,7 +40,7 @@ const steps = [
   {
     n: "04",
     title: "Analytics & alerting",
-    body: "Time series are decomposed into trends, seasonal cycles and anomalies, then surfaced through dashboards, APIs and tuned alerts.",
+    body: "Time series are decomposed into trends, seasonal cycles and anomalies, then surfaced through dashboards, APIs and tuned alerts — InSAR analytics operators can act on.",
   },
 ];
 
@@ -61,10 +56,10 @@ function TechnologyPage() {
     <SiteLayout>
       <PageHero
         eyebrow="Technology"
-        title="Satellite radar, turned into ground intelligence."
-        subtitle="A processing chain that compresses petabytes of SAR data into millimetric displacement insight."
+        title="InSAR analytics from satellite radar."
+        subtitle="A processing chain that compresses petabytes of SAR data into millimetric displacement insight for operational space monitoring."
         image={hero}
-        imageAlt="SAR satellite over Earth"
+        imageAlt="SAR satellite over Earth enabling InSAR analytics"
       />
 
       <section className="container-x py-24 md:py-36">
@@ -87,6 +82,21 @@ function TechnologyPage() {
             </li>
           ))}
         </ol>
+        <p className="mt-12 max-w-3xl text-foreground/70">
+          Dig deeper in our{" "}
+          <Link to="/resources/glossary" className="underline underline-offset-4 hover:text-foreground">
+            InSAR glossary
+          </Link>
+          , explore{" "}
+          <Link to="/insar-analytics" className="underline underline-offset-4 hover:text-foreground">
+            InSAR analytics
+          </Link>
+          , or see industry{" "}
+          <Link to="/insar-solutions" className="underline underline-offset-4 hover:text-foreground">
+            InSAR solutions
+          </Link>
+          .
+        </p>
       </section>
 
       <section className="border-t border-border">
@@ -102,6 +112,17 @@ function TechnologyPage() {
               </div>
             ))}
           </div>
+          <p className="mt-12 text-foreground/70">
+            Compare wide-area and focused approaches on our{" "}
+            <Link to="/space-monitoring" className="underline underline-offset-4 hover:text-foreground">
+              space monitoring
+            </Link>{" "}
+            page, or browse{" "}
+            <Link to="/solutions" className="underline underline-offset-4 hover:text-foreground">
+              industry solutions
+            </Link>
+            .
+          </p>
         </div>
       </section>
 

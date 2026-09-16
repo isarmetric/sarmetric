@@ -2,26 +2,22 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout } from "@/components/site/Layout";
 import { PageHero } from "@/components/site/PageHero";
+import { pageHead } from "@/lib/seo";
 import hero from "@/assets/hero-contact.jpg";
 
 export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact — SAR Metrics" },
-      {
-        name: "description",
-        content:
-          "Tell us about the asset or region you need to monitor. We'll show what InSAR can reveal.",
-      },
-      { property: "og:title", content: "Contact — SAR Metrics" },
-      {
-        property: "og:description",
-        content: "Get in touch with the SAR Metrics team.",
-      },
-      { property: "og:url", content: "/contact" },
-    ],
-    links: [{ rel: "canonical", href: "/contact" }],
-  }),
+  head: () =>
+    pageHead({
+      title: "Contact — SAR Metrics",
+      description:
+        "Tell us about the asset or region you need to monitor. We'll show what InSAR analytics and space monitoring can reveal.",
+      path: "/contact",
+      image: hero,
+      breadcrumbs: [
+        { name: "Home", path: "/" },
+        { name: "Contact", path: "/contact" },
+      ],
+    }),
   component: ContactPage,
 });
 

@@ -10,21 +10,62 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TechnologyRouteImport } from './routes/technology'
+import { Route as SpaceMonitoringRouteImport } from './routes/space-monitoring'
 import { Route as SolutionsRouteImport } from './routes/solutions'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
+import { Route as ResourcesRouteImport } from './routes/resources'
+import { Route as InsarSolutionsRouteImport } from './routes/insar-solutions'
+import { Route as InsarAnalyticsRouteImport } from './routes/insar-analytics'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SolutionsIndexRouteImport } from './routes/solutions.index'
+import { Route as ResourcesIndexRouteImport } from './routes/resources.index'
 import { Route as SolutionsSlugRouteImport } from './routes/solutions.$slug'
+import { Route as ResourcesGlossaryRouteImport } from './routes/resources.glossary'
+import { Route as ResourcesFaqRouteImport } from './routes/resources.faq'
+import { Route as ResourcesGlossaryIndexRouteImport } from './routes/resources.glossary.index'
+import { Route as ResourcesGlossaryTermRouteImport } from './routes/resources.glossary.$term'
 
 const TechnologyRoute = TechnologyRouteImport.update({
   id: '/technology',
   path: '/technology',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SpaceMonitoringRoute = SpaceMonitoringRouteImport.update({
+  id: '/space-monitoring',
+  path: '/space-monitoring',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SolutionsRoute = SolutionsRouteImport.update({
   id: '/solutions',
   path: '/solutions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
+  id: '/robots.txt',
+  path: '/robots.txt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResourcesRoute = ResourcesRouteImport.update({
+  id: '/resources',
+  path: '/resources',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InsarSolutionsRoute = InsarSolutionsRouteImport.update({
+  id: '/insar-solutions',
+  path: '/insar-solutions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InsarAnalyticsRoute = InsarAnalyticsRouteImport.update({
+  id: '/insar-analytics',
+  path: '/insar-analytics',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -47,38 +88,94 @@ const SolutionsIndexRoute = SolutionsIndexRouteImport.update({
   path: '/',
   getParentRoute: () => SolutionsRoute,
 } as any)
+const ResourcesIndexRoute = ResourcesIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ResourcesRoute,
+} as any)
 const SolutionsSlugRoute = SolutionsSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
   getParentRoute: () => SolutionsRoute,
+} as any)
+const ResourcesGlossaryRoute = ResourcesGlossaryRouteImport.update({
+  id: '/glossary',
+  path: '/glossary',
+  getParentRoute: () => ResourcesRoute,
+} as any)
+const ResourcesFaqRoute = ResourcesFaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => ResourcesRoute,
+} as any)
+const ResourcesGlossaryIndexRoute = ResourcesGlossaryIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ResourcesGlossaryRoute,
+} as any)
+const ResourcesGlossaryTermRoute = ResourcesGlossaryTermRouteImport.update({
+  id: '/$term',
+  path: '/$term',
+  getParentRoute: () => ResourcesGlossaryRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/insar-analytics': typeof InsarAnalyticsRoute
+  '/insar-solutions': typeof InsarSolutionsRoute
+  '/resources': typeof ResourcesRouteWithChildren
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/solutions': typeof SolutionsRouteWithChildren
+  '/space-monitoring': typeof SpaceMonitoringRoute
   '/technology': typeof TechnologyRoute
+  '/resources/faq': typeof ResourcesFaqRoute
+  '/resources/glossary': typeof ResourcesGlossaryRouteWithChildren
   '/solutions/$slug': typeof SolutionsSlugRoute
+  '/resources/': typeof ResourcesIndexRoute
   '/solutions/': typeof SolutionsIndexRoute
+  '/resources/glossary/$term': typeof ResourcesGlossaryTermRoute
+  '/resources/glossary/': typeof ResourcesGlossaryIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/insar-analytics': typeof InsarAnalyticsRoute
+  '/insar-solutions': typeof InsarSolutionsRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/space-monitoring': typeof SpaceMonitoringRoute
   '/technology': typeof TechnologyRoute
+  '/resources/faq': typeof ResourcesFaqRoute
   '/solutions/$slug': typeof SolutionsSlugRoute
+  '/resources': typeof ResourcesIndexRoute
   '/solutions': typeof SolutionsIndexRoute
+  '/resources/glossary/$term': typeof ResourcesGlossaryTermRoute
+  '/resources/glossary': typeof ResourcesGlossaryIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/insar-analytics': typeof InsarAnalyticsRoute
+  '/insar-solutions': typeof InsarSolutionsRoute
+  '/resources': typeof ResourcesRouteWithChildren
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/solutions': typeof SolutionsRouteWithChildren
+  '/space-monitoring': typeof SpaceMonitoringRoute
   '/technology': typeof TechnologyRoute
+  '/resources/faq': typeof ResourcesFaqRoute
+  '/resources/glossary': typeof ResourcesGlossaryRouteWithChildren
   '/solutions/$slug': typeof SolutionsSlugRoute
+  '/resources/': typeof ResourcesIndexRoute
   '/solutions/': typeof SolutionsIndexRoute
+  '/resources/glossary/$term': typeof ResourcesGlossaryTermRoute
+  '/resources/glossary/': typeof ResourcesGlossaryIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -86,34 +183,71 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
+    | '/insar-analytics'
+    | '/insar-solutions'
+    | '/resources'
+    | '/robots.txt'
+    | '/sitemap.xml'
     | '/solutions'
+    | '/space-monitoring'
     | '/technology'
+    | '/resources/faq'
+    | '/resources/glossary'
     | '/solutions/$slug'
+    | '/resources/'
     | '/solutions/'
+    | '/resources/glossary/$term'
+    | '/resources/glossary/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
     | '/contact'
+    | '/insar-analytics'
+    | '/insar-solutions'
+    | '/robots.txt'
+    | '/sitemap.xml'
+    | '/space-monitoring'
     | '/technology'
+    | '/resources/faq'
     | '/solutions/$slug'
+    | '/resources'
     | '/solutions'
+    | '/resources/glossary/$term'
+    | '/resources/glossary'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/contact'
+    | '/insar-analytics'
+    | '/insar-solutions'
+    | '/resources'
+    | '/robots.txt'
+    | '/sitemap.xml'
     | '/solutions'
+    | '/space-monitoring'
     | '/technology'
+    | '/resources/faq'
+    | '/resources/glossary'
     | '/solutions/$slug'
+    | '/resources/'
     | '/solutions/'
+    | '/resources/glossary/$term'
+    | '/resources/glossary/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
+  InsarAnalyticsRoute: typeof InsarAnalyticsRoute
+  InsarSolutionsRoute: typeof InsarSolutionsRoute
+  ResourcesRoute: typeof ResourcesRouteWithChildren
+  RobotsDottxtRoute: typeof RobotsDottxtRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SolutionsRoute: typeof SolutionsRouteWithChildren
+  SpaceMonitoringRoute: typeof SpaceMonitoringRoute
   TechnologyRoute: typeof TechnologyRoute
 }
 
@@ -126,11 +260,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TechnologyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/space-monitoring': {
+      id: '/space-monitoring'
+      path: '/space-monitoring'
+      fullPath: '/space-monitoring'
+      preLoaderRoute: typeof SpaceMonitoringRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/solutions': {
       id: '/solutions'
       path: '/solutions'
       fullPath: '/solutions'
       preLoaderRoute: typeof SolutionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/robots.txt': {
+      id: '/robots.txt'
+      path: '/robots.txt'
+      fullPath: '/robots.txt'
+      preLoaderRoute: typeof RobotsDottxtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources': {
+      id: '/resources'
+      path: '/resources'
+      fullPath: '/resources'
+      preLoaderRoute: typeof ResourcesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insar-solutions': {
+      id: '/insar-solutions'
+      path: '/insar-solutions'
+      fullPath: '/insar-solutions'
+      preLoaderRoute: typeof InsarSolutionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/insar-analytics': {
+      id: '/insar-analytics'
+      path: '/insar-analytics'
+      fullPath: '/insar-analytics'
+      preLoaderRoute: typeof InsarAnalyticsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -161,6 +337,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SolutionsIndexRouteImport
       parentRoute: typeof SolutionsRoute
     }
+    '/resources/': {
+      id: '/resources/'
+      path: '/'
+      fullPath: '/resources/'
+      preLoaderRoute: typeof ResourcesIndexRouteImport
+      parentRoute: typeof ResourcesRoute
+    }
     '/solutions/$slug': {
       id: '/solutions/$slug'
       path: '/$slug'
@@ -168,8 +351,65 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SolutionsSlugRouteImport
       parentRoute: typeof SolutionsRoute
     }
+    '/resources/glossary': {
+      id: '/resources/glossary'
+      path: '/glossary'
+      fullPath: '/resources/glossary'
+      preLoaderRoute: typeof ResourcesGlossaryRouteImport
+      parentRoute: typeof ResourcesRoute
+    }
+    '/resources/faq': {
+      id: '/resources/faq'
+      path: '/faq'
+      fullPath: '/resources/faq'
+      preLoaderRoute: typeof ResourcesFaqRouteImport
+      parentRoute: typeof ResourcesRoute
+    }
+    '/resources/glossary/': {
+      id: '/resources/glossary/'
+      path: '/'
+      fullPath: '/resources/glossary/'
+      preLoaderRoute: typeof ResourcesGlossaryIndexRouteImport
+      parentRoute: typeof ResourcesGlossaryRoute
+    }
+    '/resources/glossary/$term': {
+      id: '/resources/glossary/$term'
+      path: '/$term'
+      fullPath: '/resources/glossary/$term'
+      preLoaderRoute: typeof ResourcesGlossaryTermRouteImport
+      parentRoute: typeof ResourcesGlossaryRoute
+    }
   }
 }
+
+interface ResourcesGlossaryRouteChildren {
+  ResourcesGlossaryTermRoute: typeof ResourcesGlossaryTermRoute
+  ResourcesGlossaryIndexRoute: typeof ResourcesGlossaryIndexRoute
+}
+
+const ResourcesGlossaryRouteChildren: ResourcesGlossaryRouteChildren = {
+  ResourcesGlossaryTermRoute: ResourcesGlossaryTermRoute,
+  ResourcesGlossaryIndexRoute: ResourcesGlossaryIndexRoute,
+}
+
+const ResourcesGlossaryRouteWithChildren =
+  ResourcesGlossaryRoute._addFileChildren(ResourcesGlossaryRouteChildren)
+
+interface ResourcesRouteChildren {
+  ResourcesFaqRoute: typeof ResourcesFaqRoute
+  ResourcesGlossaryRoute: typeof ResourcesGlossaryRouteWithChildren
+  ResourcesIndexRoute: typeof ResourcesIndexRoute
+}
+
+const ResourcesRouteChildren: ResourcesRouteChildren = {
+  ResourcesFaqRoute: ResourcesFaqRoute,
+  ResourcesGlossaryRoute: ResourcesGlossaryRouteWithChildren,
+  ResourcesIndexRoute: ResourcesIndexRoute,
+}
+
+const ResourcesRouteWithChildren = ResourcesRoute._addFileChildren(
+  ResourcesRouteChildren,
+)
 
 interface SolutionsRouteChildren {
   SolutionsSlugRoute: typeof SolutionsSlugRoute
@@ -189,7 +429,13 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
+  InsarAnalyticsRoute: InsarAnalyticsRoute,
+  InsarSolutionsRoute: InsarSolutionsRoute,
+  ResourcesRoute: ResourcesRouteWithChildren,
+  RobotsDottxtRoute: RobotsDottxtRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   SolutionsRoute: SolutionsRouteWithChildren,
+  SpaceMonitoringRoute: SpaceMonitoringRoute,
   TechnologyRoute: TechnologyRoute,
 }
 export const routeTree = rootRouteImport

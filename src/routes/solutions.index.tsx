@@ -4,27 +4,28 @@ import { SiteLayout } from "@/components/site/Layout";
 import { PageHero } from "@/components/site/PageHero";
 import { CTASection } from "@/components/site/CTASection";
 import { offerings } from "@/lib/offerings";
+import { pageHead, serviceJsonLd } from "@/lib/seo";
 import hero from "@/assets/hero-solutions.jpg";
 
 export const Route = createFileRoute("/solutions/")({
-  head: () => ({
-    meta: [
-      { title: "Solutions — SAR Metrics" },
-      {
-        name: "description",
-        content:
-          "InSAR-powered monitoring for geohazards, mining, infrastructure, oil & gas and structural movement.",
-      },
-      { property: "og:title", content: "Solutions — SAR Metrics" },
-      {
-        property: "og:description",
-        content:
-          "InSAR-powered monitoring across geohazards, mining, infrastructure and energy.",
-      },
-      { property: "og:url", content: "/solutions" },
-    ],
-    links: [{ rel: "canonical", href: "/solutions" }],
-  }),
+  head: () =>
+    pageHead({
+      title: "InSAR Solutions — SAR Metrics",
+      description:
+        "InSAR solutions for geohazards, mining, infrastructure, insurance, oil & gas and structural movement — millimetric monitoring from space.",
+      path: "/solutions",
+      image: hero,
+      breadcrumbs: [
+        { name: "Home", path: "/" },
+        { name: "InSAR solutions", path: "/solutions" },
+      ],
+      jsonLd: serviceJsonLd({
+        name: "InSAR solutions",
+        description:
+          "Industry-tuned InSAR monitoring services for critical assets and regions.",
+        path: "/solutions",
+      }),
+    }),
   component: SolutionsPage,
 });
 
@@ -32,14 +33,26 @@ function SolutionsPage() {
   return (
     <SiteLayout>
       <PageHero
-        eyebrow="Solutions"
-        title="One system. Every critical asset."
-        subtitle="Industry-tuned monitoring services built on the satellite radar foundation."
+        eyebrow="InSAR solutions"
+        title="InSAR solutions for every critical asset."
+        subtitle="Industry-tuned monitoring services built on satellite radar — from individual structures to entire regions."
         image={hero}
-        imageAlt="Earth from low orbit"
+        imageAlt="Earth from low orbit for InSAR solutions"
         height="short"
       />
       <section className="container-x py-20 md:py-28">
+        <p className="mb-12 max-w-3xl text-foreground/70">
+          Each vertical below is an InSAR solution designed for how that industry
+          manages risk. For a broader overview, see{" "}
+          <Link to="/insar-solutions" className="underline underline-offset-4 hover:text-foreground">
+            InSAR solutions
+          </Link>{" "}
+          and{" "}
+          <Link to="/insar-analytics" className="underline underline-offset-4 hover:text-foreground">
+            InSAR analytics
+          </Link>
+          .
+        </p>
         <ul className="divide-y divide-border border-y border-border">
           {offerings.map((o) => (
             <li key={o.slug}>

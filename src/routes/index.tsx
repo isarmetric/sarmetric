@@ -3,28 +3,20 @@ import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { SiteLayout } from "@/components/site/Layout";
 import { CTASection } from "@/components/site/CTASection";
 import { offerings } from "@/lib/offerings";
+import { pageHead } from "@/lib/seo";
 import heroHome from "@/assets/hero-home.jpg";
 import esaBicPolandLogo from "@/assets/esa-bic-poland-white.png";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "SAR Metrics — Millimetric ground intelligence from space" },
-      {
-        name: "description",
-        content:
-          "InSAR analytics for geohazards, mining, infrastructure and energy. Wide-area, millimeter-precision ground monitoring.",
-      },
-      { property: "og:title", content: "SAR Metrics — Earth observation & InSAR" },
-      {
-        property: "og:description",
-        content:
-          "Wide-area, millimeter-precision ground monitoring from satellite SAR.",
-      },
-      { property: "og:url", content: "/" },
-    ],
-    links: [{ rel: "canonical", href: "/" }],
-  }),
+  head: () =>
+    pageHead({
+      title: "InSAR Analytics & Space Monitoring — SAR Metrics",
+      description:
+        "InSAR analytics for geohazards, mining, infrastructure and energy. Wide-area, millimeter-precision ground monitoring from space.",
+      path: "/",
+      image: heroHome,
+      breadcrumbs: [{ name: "Home", path: "/" }],
+    }),
   component: HomePage,
 });
 
@@ -32,7 +24,7 @@ const capabilities = [
   {
     n: "01",
     title: "Millimetric precision",
-    body: "Line-of-sight measurement of ground and structural displacement, precise to milimeters.",
+    body: "Line-of-sight measurement of ground and structural displacement, precise to millimeters.",
   },
   {
     n: "02",
@@ -58,7 +50,7 @@ function HomePage() {
         <div className="absolute inset-0 starfield" aria-hidden="true" />
         <img
           src={heroHome}
-          alt="Satellite over Earth's horizon"
+          alt="Satellite over Earth's horizon for space monitoring"
           className="absolute inset-0 w-full h-full object-cover earth-drift"
           loading="eager"
         />
@@ -69,15 +61,15 @@ function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/5 to-background" />
         <div className="container-x relative pb-20 md:pb-32 pt-32 w-full">
           <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-6 fade-up">
-            
+            InSAR analytics
           </div>
           <h1 className="text-display text-hero max-w-5xl fade-up">
             Measure movement. Manage risk.
           </h1>
           <p className="mt-8 max-w-xl text-base md:text-lg text-foreground/75 fade-up">
-            SAR Metrics operates a satellite-radar system that measures
-            ground and structural movement down to the millimeter — anywhere,
-            day or night, in any weather.
+            SAR Metrics delivers InSAR analytics and space monitoring that measure
+            ground and structural movement down to the millimeter — anywhere, day or
+            night, in any weather.
           </p>
           <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4 fade-up">
             <a
@@ -89,6 +81,12 @@ function HomePage() {
               Explore demo
               <ArrowUpRight size={16} />
             </a>
+            <Link
+              to="/insar-solutions"
+              className="inline-flex items-center gap-2 text-sm text-foreground/80 hover:text-foreground transition"
+            >
+              InSAR solutions <ArrowUpRight size={16} />
+            </Link>
             <Link
               to="/technology"
               className="inline-flex items-center gap-2 text-sm text-foreground/80 hover:text-foreground transition"
@@ -125,7 +123,7 @@ function HomePage() {
       <section className="container-x py-24 md:py-36">
         <div className="grid md:grid-cols-12 gap-8 mb-16 md:mb-24">
           <div className="md:col-span-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">
-            Solutions
+            InSAR solutions
           </div>
           <h2 className="md:col-span-9 text-display text-section max-w-4xl">
             From individual structures to entire regions - monitor movement before it becomes a risk.
@@ -140,7 +138,7 @@ function HomePage() {
             >
               <img
                 src={o.image}
-                alt={o.title}
+                alt={`${o.title} InSAR monitoring`}
                 className="absolute inset-0 w-full h-full object-cover opacity-95 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
                 loading="lazy"
               />
