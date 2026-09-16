@@ -4,46 +4,52 @@ import { PageHero } from "@/components/site/PageHero";
 import { CTASection } from "@/components/site/CTASection";
 import { pageHead } from "@/lib/seo";
 import hero from "@/assets/hero-about.jpg";
+import { messagesForLocale } from "@/i18n/fromMatches";
+import { useT } from "@/i18n/context";
 
 export const Route = createFileRoute("/about")({
-  head: () =>
-    pageHead({
-      title: "About — SAR Metrics",
-      description:
-        "SAR Metrics turns satellite radar into millimetric ground intelligence and InSAR analytics for industry, infrastructure and civil protection.",
+  loader: ({ context }) => ({ locale: context.locale }),
+  head: ({ loaderData }) => {
+    const t = messagesForLocale(loaderData?.locale);
+    return pageHead({
+      title: t.meta.about.title,
+      description: t.meta.about.description,
       path: "/about",
       image: hero,
       breadcrumbs: [
-        { name: "Home", path: "/" },
-        { name: "About", path: "/about" },
+        { name: t.common.home, path: "/" },
+        { name: t.nav.about, path: "/about" },
       ],
-    }),
+    });
+  },
   component: AboutPage,
 });
 
-const values = [
-  { n: "01", title: "Measurement first", body: "We trust signals, not narratives. Every claim is backed by data we processed ourselves." },
-  { n: "02", title: "Operator-grade", body: "Built to be relied on by geotechnical engineers, civil protection and asset operators." },
-  { n: "03", title: "Open by default", body: "Standard formats, documented APIs, reproducible processing. No black boxes." },
-];
-
-const timeline = [
-  { year: "1978", title: "Seasat", body: "NASA launches the first civilian SAR satellite, proving radar imaging of Earth from orbit." },
-  { year: "1992", title: "ERS-1 archive begins", body: "ESA's ERS missions start the continuous SAR archive that still anchors historical InSAR today." },
-  { year: "2002", title: "Persistent Scatterer InSAR", body: "PSInSAR techniques unlock millimeter-precision time series over stable reflectors." },
-  { year: "2014", title: "Sentinel-1", body: "Free, open, global SAR every 6–12 days turns InSAR from a research tool into an operational service." },
-  { year: "2020s", title: "Commercial small-sat SAR constellations", body: "High-resolution, high-revisit SAR from commercial operators makes daily monitoring of individual assets viable." },
-  { year: "2026", title: "SAR Metrics founded", body: "We bring four decades of SAR science into an asset monitoring system for industry and infrastructure." },
-  { year: "2026", title: "ESA BIC Poland Grant", body: "SAR Metrics received an ESA BIC Poland grant to support the development and commercialisation of its technology." },
-];
-
 function AboutPage() {
+  const t = useT();
+
+  const values = [
+    { n: "01", title: t.about.values.measurementFirst.title, body: t.about.values.measurementFirst.body },
+    { n: "02", title: t.about.values.operatorGrade.title, body: t.about.values.operatorGrade.body },
+    { n: "03", title: t.about.values.openByDefault.title, body: t.about.values.openByDefault.body },
+  ];
+
+  const timeline = [
+    { year: t.about.timeline.seasat.year, title: t.about.timeline.seasat.title, body: t.about.timeline.seasat.body },
+    { year: t.about.timeline.ers.year, title: t.about.timeline.ers.title, body: t.about.timeline.ers.body },
+    { year: t.about.timeline.psinsar.year, title: t.about.timeline.psinsar.title, body: t.about.timeline.psinsar.body },
+    { year: t.about.timeline.sentinel.year, title: t.about.timeline.sentinel.title, body: t.about.timeline.sentinel.body },
+    { year: t.about.timeline.commercial.year, title: t.about.timeline.commercial.title, body: t.about.timeline.commercial.body },
+    { year: t.about.timeline.founded.year, title: t.about.timeline.founded.title, body: t.about.timeline.founded.body },
+    { year: t.about.timeline.esaBic.year, title: t.about.timeline.esaBic.title, body: t.about.timeline.esaBic.body },
+  ];
+
   return (
     <SiteLayout>
       <PageHero
-        eyebrow="About"
-        title="We measure what moves, so others can act before it matters."
-        subtitle="A team of radar engineers, geoscientists and software builders making Earth observation and InSAR analytics operational."
+        eyebrow={t.about.hero.eyebrow}
+        title={t.about.hero.title}
+        subtitle={t.about.hero.subtitle}
         image={hero}
         imageAlt="Mission control consoles"
         height="short"
@@ -52,7 +58,7 @@ function AboutPage() {
       <section className="container-x py-24 md:py-32">
         <div className="grid md:grid-cols-12 gap-12">
           <div className="md:col-span-4 text-xs uppercase tracking-[0.3em] text-muted-foreground">
-            Values
+            {t.about.valuesEyebrow}
           </div>
           <ul className="md:col-span-8 space-y-12">
             {values.map((v) => (
@@ -71,7 +77,7 @@ function AboutPage() {
       <section className="border-t border-border">
         <div className="container-x py-24 md:py-32">
           <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-10">
-            Timeline
+            {t.about.timelineEyebrow}
           </div>
           <ul className="divide-y divide-border border-y border-border">
             {timeline.map((t) => (
@@ -85,7 +91,7 @@ function AboutPage() {
         </div>
       </section>
 
-      <CTASection title="Work with us." ctaLabel="Get in touch" />
+      <CTASection title={t.about.ctaTitle} ctaLabel={t.about.ctaLabel} />
     </SiteLayout>
   );
 }

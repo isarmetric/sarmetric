@@ -3,55 +3,70 @@ import { ArrowRight } from "lucide-react";
 import { SiteLayout } from "@/components/site/Layout";
 import { PageHero } from "@/components/site/PageHero";
 import { CTASection } from "@/components/site/CTASection";
-import { offerings } from "@/lib/offerings";
 import { pageHead, serviceJsonLd } from "@/lib/seo";
 import hero from "@/assets/hero-solutions.jpg";
+import { messagesForLocale } from "@/i18n/fromMatches";
+import { useT, useI18n } from "@/i18n/context";
+import { localizedOfferings } from "@/i18n/localized";
 
 export const Route = createFileRoute("/solutions/")({
-  head: () =>
-    pageHead({
-      title: "InSAR Solutions — SAR Metrics",
-      description:
-        "InSAR solutions for geohazards, mining, infrastructure, insurance, oil & gas and structural movement — millimetric monitoring from space.",
+  loader: ({ context }) => ({ locale: context.locale }),
+  head: ({ loaderData }) => {
+    const t = messagesForLocale(loaderData?.locale);
+    return pageHead({
+      title: t.meta.solutions.title,
+      description: t.meta.solutions.description,
       path: "/solutions",
       image: hero,
       breadcrumbs: [
-        { name: "Home", path: "/" },
-        { name: "InSAR solutions", path: "/solutions" },
+        { name: t.common.home, path: "/" },
+        { name: t.nav.solutions, path: "/solutions" },
       ],
       jsonLd: serviceJsonLd({
-        name: "InSAR solutions",
-        description:
-          "Industry-tuned InSAR monitoring services for critical assets and regions.",
+        name: t.nav.solutions,
+        description: t.meta.solutions.description,
         path: "/solutions",
       }),
-    }),
+    });
+  },
   component: SolutionsPage,
 });
 
 function SolutionsPage() {
+  const t = useT();
+  const { locale } = useI18n();
+  const offerings = localizedOfferings(locale);
+
   return (
     <SiteLayout>
       <PageHero
-        eyebrow="InSAR solutions"
-        title="InSAR solutions for every critical asset."
-        subtitle="Industry-tuned monitoring services built on satellite radar — from individual structures to entire regions."
+        eyebrow={t.solutions.hero.eyebrow}
+        title={t.solutions.hero.title}
+        subtitle={t.solutions.hero.subtitle}
         image={hero}
         imageAlt="Earth from low orbit for InSAR solutions"
         height="short"
       />
       <section className="container-x py-20 md:py-28">
         <p className="mb-12 max-w-3xl text-foreground/70">
-          Each vertical below is an InSAR solution designed for how that industry
-          manages risk. For a broader overview, see{" "}
-          <Link to="/insar-solutions" className="underline underline-offset-4 hover:text-foreground">
-            InSAR solutions
-          </Link>{" "}
-          and{" "}
-          <Link to="/insar-analytics" className="underline underline-offset-4 hover:text-foreground">
-            InSAR analytics
-          </Link>
-          .
+          {t.solutions.intro.split(/\{|\}/).reduce<React.ReactNode[]>((acc, part, i) => {
+            if (part === 'insarSolutions') {
+              acc.push(
+                <Link key={i} to="/insar-solutions" className="underline underline-offset-4 hover:text-foreground">
+                  {t.solutions.introLinks.insarSolutions}
+                </Link>
+              );
+            } else if (part === 'insarAnalytics') {
+              acc.push(
+                <Link key={i} to="/insar-analytics" className="underline underline-offset-4 hover:text-foreground">
+                  {t.solutions.introLinks.insarAnalytics}
+                </Link>
+              );
+            } else if (part) {
+              acc.push(part);
+            }
+            return acc;
+          }, [])}
         </p>
         <ul className="divide-y divide-border border-y border-border">
           {offerings.map((o) => (
@@ -69,7 +84,7 @@ function SolutionsPage() {
                 <p className="md:col-span-5 text-foreground/70">{o.tagline}</p>
                 <div className="md:col-span-2 md:text-right">
                   <span className="inline-flex items-center gap-2 text-sm text-foreground/80 group-hover:text-foreground transition">
-                    Open <ArrowRight size={16} />
+                    {t.solutions.open} <ArrowRight size={16} />
                   </span>
                 </div>
               </Link>

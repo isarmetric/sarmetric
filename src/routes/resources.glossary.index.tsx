@@ -2,34 +2,42 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
 import { PageHero } from "@/components/site/PageHero";
 import { CTASection } from "@/components/site/CTASection";
-import { glossaryTerms } from "@/content/glossary";
 import { pageHead } from "@/lib/seo";
 import hero from "@/assets/hero-technology.jpg";
+import { messagesForLocale } from "@/i18n/fromMatches";
+import { useT, useI18n } from "@/i18n/context";
+import { localizedGlossary } from "@/i18n/localized";
 
 export const Route = createFileRoute("/resources/glossary/")({
-  head: () =>
-    pageHead({
-      title: "InSAR & Space Monitoring Glossary | SAR Metrics",
-      description:
-        "Glossary of InSAR, PS-InSAR, SAR, interferometry, ground deformation, space monitoring and related Earth-observation terms.",
+  loader: ({ context }) => ({ locale: context.locale }),
+  head: ({ loaderData }) => {
+    const t = messagesForLocale(loaderData?.locale);
+    return pageHead({
+      title: t.meta.glossary.title,
+      description: t.meta.glossary.description,
       path: "/resources/glossary",
       image: hero,
       breadcrumbs: [
-        { name: "Home", path: "/" },
-        { name: "Resources", path: "/resources" },
-        { name: "Glossary", path: "/resources/glossary" },
+        { name: t.common.home, path: "/" },
+        { name: t.nav.resources, path: "/resources" },
+        { name: t.resources.hubs.glossary.title, path: "/resources/glossary" },
       ],
-    }),
+    });
+  },
   component: GlossaryIndexPage,
 });
 
 function GlossaryIndexPage() {
+  const t = useT();
+  const { locale } = useI18n();
+  const glossaryTerms = localizedGlossary(locale);
+
   return (
     <SiteLayout>
       <PageHero
-        eyebrow="Glossary"
-        title="InSAR and space monitoring terms."
-        subtitle="Short definitions you can share with stakeholders — each term expands into a full explainer."
+        eyebrow={t.glossary.index.hero.eyebrow}
+        title={t.glossary.index.hero.title}
+        subtitle={t.glossary.index.hero.subtitle}
         image={hero}
         imageAlt="SAR context for the InSAR glossary"
         height="short"
@@ -53,11 +61,18 @@ function GlossaryIndexPage() {
           ))}
         </ul>
         <p className="mt-10 text-sm text-foreground/60">
-          Looking for answers instead of definitions? See the{" "}
-          <Link to="/resources/faq" className="underline underline-offset-4 hover:text-foreground">
-            FAQ
-          </Link>
-          .
+          {t.glossary.index.footer.split(/\{|\}/).reduce<React.ReactNode[]>((acc, part, i) => {
+            if (part === 'faq') {
+              acc.push(
+                <Link key={i} to="/resources/faq" className="underline underline-offset-4 hover:text-foreground">
+                  {t.glossary.index.footerLink}
+                </Link>
+              );
+            } else if (part) {
+              acc.push(part);
+            }
+            return acc;
+          }, [])}
         </p>
       </section>
 

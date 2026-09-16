@@ -4,60 +4,66 @@ import { PageHero } from "@/components/site/PageHero";
 import { CTASection } from "@/components/site/CTASection";
 import { pageHead } from "@/lib/seo";
 import hero from "@/assets/hero-technology.jpg";
+import { messagesForLocale } from "@/i18n/fromMatches";
+import { useT } from "@/i18n/context";
 
 export const Route = createFileRoute("/technology")({
-  head: () =>
-    pageHead({
-      title: "InSAR Analytics Technology — SAR Metrics",
-      description:
-        "How InSAR analytics works: persistent scatterers, satellite SAR archives and millimetric displacement for space monitoring.",
+  loader: ({ context }) => ({ locale: context.locale }),
+  head: ({ loaderData }) => {
+    const t = messagesForLocale(loaderData?.locale);
+    return pageHead({
+      title: t.meta.technology.title,
+      description: t.meta.technology.description,
       path: "/technology",
       image: hero,
       breadcrumbs: [
-        { name: "Home", path: "/" },
-        { name: "Technology", path: "/technology" },
+        { name: t.common.home, path: "/" },
+        { name: t.nav.technology, path: "/technology" },
       ],
-    }),
+    });
+  },
   component: TechnologyPage,
 });
 
-const steps = [
-  {
-    n: "01",
-    title: "Acquisition",
-    body: "Active radar instruments aboard SAR satellites image the Earth's surface day and night, through cloud and smoke — the foundation of space monitoring.",
-  },
-  {
-    n: "02",
-    title: "Interferometry",
-    body: "Pairs of SAR images acquired over the same area are differenced in the complex domain to extract phase change — directly proportional to displacement.",
-  },
-  {
-    n: "03",
-    title: "Persistent scatterers",
-    body: "Stable reflectors — rooftops, infrastructure, exposed rock — are identified across long time series and tracked individually with millimeter precision.",
-  },
-  {
-    n: "04",
-    title: "Analytics & alerting",
-    body: "Time series are decomposed into trends, seasonal cycles and anomalies, then surfaced through dashboards, APIs and tuned alerts — InSAR analytics operators can act on.",
-  },
-];
-
-const products = [
-  { title: "Wide-area baseline", body: "Regional displacement maps refreshed on a cadence you choose." },
-  { title: "Focused monitoring", body: "High-resolution acquisitions over critical assets with dense temporal sampling." },
-  { title: "Historical reconstruction", body: "Archive-only studies recovering displacement back to the early 1990s." },
-  { title: "API & data delivery", body: "GeoJSON, raster and tabular outputs plus a real-time alerting API." },
-];
-
 function TechnologyPage() {
+  const t = useT();
+
+  const steps = [
+    {
+      n: "01",
+      title: t.technology.howItWorks.steps.acquisition.title,
+      body: t.technology.howItWorks.steps.acquisition.body,
+    },
+    {
+      n: "02",
+      title: t.technology.howItWorks.steps.interferometry.title,
+      body: t.technology.howItWorks.steps.interferometry.body,
+    },
+    {
+      n: "03",
+      title: t.technology.howItWorks.steps.persistentScatterers.title,
+      body: t.technology.howItWorks.steps.persistentScatterers.body,
+    },
+    {
+      n: "04",
+      title: t.technology.howItWorks.steps.analytics.title,
+      body: t.technology.howItWorks.steps.analytics.body,
+    },
+  ];
+
+  const products = [
+    { title: t.technology.dataProducts.items.wideArea.title, body: t.technology.dataProducts.items.wideArea.body },
+    { title: t.technology.dataProducts.items.focused.title, body: t.technology.dataProducts.items.focused.body },
+    { title: t.technology.dataProducts.items.historical.title, body: t.technology.dataProducts.items.historical.body },
+    { title: t.technology.dataProducts.items.api.title, body: t.technology.dataProducts.items.api.body },
+  ];
+
   return (
     <SiteLayout>
       <PageHero
-        eyebrow="Technology"
-        title="InSAR analytics from satellite radar."
-        subtitle="A processing chain that compresses petabytes of SAR data into millimetric displacement insight for operational space monitoring."
+        eyebrow={t.technology.hero.eyebrow}
+        title={t.technology.hero.title}
+        subtitle={t.technology.hero.subtitle}
         image={hero}
         imageAlt="SAR satellite over Earth enabling InSAR analytics"
       />
@@ -65,10 +71,10 @@ function TechnologyPage() {
       <section className="container-x py-24 md:py-36">
         <div className="grid md:grid-cols-12 gap-12 mb-16">
           <div className="md:col-span-4 text-xs uppercase tracking-[0.3em] text-muted-foreground">
-            How it works
+            {t.technology.howItWorks.eyebrow}
           </div>
           <h2 className="md:col-span-8 text-display text-section max-w-3xl">
-            Four stages, from raw radar to a decision-ready signal.
+            {t.technology.howItWorks.title}
           </h2>
         </div>
         <ol className="grid md:grid-cols-2 gap-px bg-border">
@@ -83,26 +89,41 @@ function TechnologyPage() {
           ))}
         </ol>
         <p className="mt-12 max-w-3xl text-foreground/70">
-          Dig deeper in our{" "}
-          <Link to="/resources/glossary" className="underline underline-offset-4 hover:text-foreground">
-            InSAR glossary
-          </Link>
-          , explore{" "}
-          <Link to="/insar-analytics" className="underline underline-offset-4 hover:text-foreground">
-            InSAR analytics
-          </Link>
-          , or see industry{" "}
-          <Link to="/insar-solutions" className="underline underline-offset-4 hover:text-foreground">
-            InSAR solutions
-          </Link>
-          .
+          {t.technology.howItWorks.footer.replace('{glossary}', '')
+            .replace('{analytics}', '')
+            .replace('{solutions}', '')
+            .split(/\{|\}/)
+            .reduce<React.ReactNode[]>((acc, part, i) => {
+              if (part === 'glossary') {
+                acc.push(
+                  <Link key={i} to="/resources/glossary" className="underline underline-offset-4 hover:text-foreground">
+                    {t.technology.howItWorks.footerLinks.glossary}
+                  </Link>
+                );
+              } else if (part === 'analytics') {
+                acc.push(
+                  <Link key={i} to="/insar-analytics" className="underline underline-offset-4 hover:text-foreground">
+                    {t.technology.howItWorks.footerLinks.analytics}
+                  </Link>
+                );
+              } else if (part === 'solutions') {
+                acc.push(
+                  <Link key={i} to="/insar-solutions" className="underline underline-offset-4 hover:text-foreground">
+                    {t.technology.howItWorks.footerLinks.solutions}
+                  </Link>
+                );
+              } else if (part) {
+                acc.push(part);
+              }
+              return acc;
+            }, [])}
         </p>
       </section>
 
       <section className="border-t border-border">
         <div className="container-x py-24 md:py-32">
           <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-10">
-            Data products
+            {t.technology.dataProducts.eyebrow}
           </div>
           <div className="grid md:grid-cols-2 gap-x-12 gap-y-10">
             {products.map((p) => (
@@ -113,22 +134,31 @@ function TechnologyPage() {
             ))}
           </div>
           <p className="mt-12 text-foreground/70">
-            Compare wide-area and focused approaches on our{" "}
-            <Link to="/space-monitoring" className="underline underline-offset-4 hover:text-foreground">
-              space monitoring
-            </Link>{" "}
-            page, or browse{" "}
-            <Link to="/solutions" className="underline underline-offset-4 hover:text-foreground">
-              industry solutions
-            </Link>
-            .
+            {t.technology.dataProducts.footer.split(/\{|\}/).reduce<React.ReactNode[]>((acc, part, i) => {
+              if (part === 'spaceMonitoring') {
+                acc.push(
+                  <Link key={i} to="/space-monitoring" className="underline underline-offset-4 hover:text-foreground">
+                    {t.technology.dataProducts.footerLinks.spaceMonitoring}
+                  </Link>
+                );
+              } else if (part === 'solutions') {
+                acc.push(
+                  <Link key={i} to="/solutions" className="underline underline-offset-4 hover:text-foreground">
+                    {t.technology.dataProducts.footerLinks.solutions}
+                  </Link>
+                );
+              } else if (part) {
+                acc.push(part);
+              }
+              return acc;
+            }, [])}
           </p>
         </div>
       </section>
 
       <CTASection
-        title="Want to see the data on your asset?"
-        ctaLabel="Request a sample"
+        title={t.technology.ctaTitle}
+        ctaLabel={t.technology.ctaLabel}
       />
     </SiteLayout>
   );

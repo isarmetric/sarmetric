@@ -2,39 +2,39 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/Layout";
 import { PageHero } from "@/components/site/PageHero";
 import { CTASection } from "@/components/site/CTASection";
-import {
-  glossaryBySlug,
-  glossaryTerms,
-  type GlossaryTerm,
-} from "@/content/glossary";
 import { definedTermJsonLd, pageHead } from "@/lib/seo";
 import hero from "@/assets/hero-technology.jpg";
+import { messagesForLocale } from "@/i18n/fromMatches";
+import { useT, useI18n } from "@/i18n/context";
+import { localizedGlossaryBySlug, localizedGlossary } from "@/i18n/localized";
+import type { GlossaryTerm } from "@/content/glossary";
 
 export const Route = createFileRoute("/resources/glossary/$term")({
-  loader: ({ params }): { entry: GlossaryTerm } => {
-    const entry = glossaryBySlug(params.term);
+  loader: ({ context, params }): { entry: GlossaryTerm; locale: typeof context.locale } => {
+    const entry = localizedGlossaryBySlug(context.locale, params.term);
     if (!entry) throw notFound();
-    return { entry };
+    return { entry, locale: context.locale };
   },
   head: ({ loaderData }) => {
+    const t = messagesForLocale(loaderData?.locale);
     const entry = loaderData?.entry;
     if (!entry) {
       return pageHead({
-        title: "Glossary — SAR Metrics",
-        description: "InSAR and space monitoring glossary.",
+        title: t.meta.glossary.title,
+        description: t.meta.glossary.description,
         path: "/resources/glossary",
       });
     }
     const path = `/resources/glossary/${entry.slug}`;
     return pageHead({
-      title: `${entry.term}: Definition & InSAR Context | SAR Metrics`,
+      title: t.meta.glossaryTerm.titleTemplate(entry.term),
       description: entry.shortDefinition,
       path,
       image: hero,
       breadcrumbs: [
-        { name: "Home", path: "/" },
-        { name: "Resources", path: "/resources" },
-        { name: "Glossary", path: "/resources/glossary" },
+        { name: t.common.home, path: "/" },
+        { name: t.nav.resources, path: "/resources" },
+        { name: t.resources.hubs.glossary.title, path: "/resources/glossary" },
         { name: entry.term, path },
       ],
       jsonLd: definedTermJsonLd({
@@ -45,23 +45,29 @@ export const Route = createFileRoute("/resources/glossary/$term")({
     });
   },
   component: GlossaryTermPage,
-  notFoundComponent: () => (
-    <SiteLayout>
-      <div className="container-x pt-40 pb-32">
-        <h1 className="text-display text-section">Term not found</h1>
-        <Link
-          to="/resources/glossary"
-          className="mt-6 inline-block text-foreground/80 hover:text-foreground underline underline-offset-4"
-        >
-          Back to glossary
-        </Link>
-      </div>
-    </SiteLayout>
-  ),
+  notFoundComponent: () => {
+    const t = useT();
+    return (
+      <SiteLayout>
+        <div className="container-x pt-40 pb-32">
+          <h1 className="text-display text-section">Term not found</h1>
+          <Link
+            to="/resources/glossary"
+            className="mt-6 inline-block text-foreground/80 hover:text-foreground underline underline-offset-4"
+          >
+            {t.common.backToSolutions}
+          </Link>
+        </div>
+      </SiteLayout>
+    );
+  },
 });
 
 function GlossaryTermPage() {
+  const t = useT();
+  const { locale } = useI18n();
   const { entry } = Route.useLoaderData();
+  const glossaryTerms = localizedGlossary(locale);
   const related = entry.relatedSlugs
     .map((slug) => glossaryTerms.find((t) => t.slug === slug))
     .filter(Boolean) as GlossaryTerm[];
@@ -69,7 +75,7 @@ function GlossaryTermPage() {
   return (
     <SiteLayout>
       <PageHero
-        eyebrow="Glossary"
+        eyebrow={t.glossary.index.hero.eyebrow}
         title={entry.term}
         subtitle={entry.shortDefinition}
         image={hero}
@@ -111,11 +117,11 @@ function GlossaryTermPage() {
           </Link>
           {" · "}
           <Link to="/insar-analytics" className="underline underline-offset-4 hover:text-foreground">
-            InSAR analytics
+            {t.footer.capabilities.insarAnalytics}
           </Link>
           {" · "}
           <Link to="/technology" className="underline underline-offset-4 hover:text-foreground">
-            Technology
+            {t.nav.technology}
           </Link>
         </p>
       </section>

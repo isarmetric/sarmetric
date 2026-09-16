@@ -5,63 +5,69 @@ import { PageHero } from "@/components/site/PageHero";
 import { CTASection } from "@/components/site/CTASection";
 import { pageHead } from "@/lib/seo";
 import hero from "@/assets/hero-about.jpg";
+import { messagesForLocale } from "@/i18n/fromMatches";
+import { useT } from "@/i18n/context";
 
 export const Route = createFileRoute("/resources/")({
-  head: () =>
-    pageHead({
-      title: "Resources — InSAR Glossary, FAQ & Guides | SAR Metrics",
-      description:
-        "Learn InSAR analytics, space monitoring and satellite radar: glossary, FAQ and guides from SAR Metrics.",
+  loader: ({ context }) => ({ locale: context.locale }),
+  head: ({ loaderData }) => {
+    const t = messagesForLocale(loaderData?.locale);
+    return pageHead({
+      title: t.meta.resources.title,
+      description: t.meta.resources.description,
       path: "/resources",
       image: hero,
       breadcrumbs: [
-        { name: "Home", path: "/" },
-        { name: "Resources", path: "/resources" },
+        { name: t.common.home, path: "/" },
+        { name: t.nav.resources, path: "/resources" },
       ],
-    }),
+    });
+  },
   component: ResourcesPage,
 });
 
-const hubs = [
-  {
-    to: "/resources/glossary",
-    title: "Glossary",
-    body: "Definitions for InSAR, PS-InSAR, SAR, interferometry, space monitoring and related terms.",
-  },
-  {
-    to: "/resources/faq",
-    title: "FAQ",
-    body: "Practical answers on accuracy, weather independence, industries, delivery and getting started.",
-  },
-  {
-    to: "/insar-analytics",
-    title: "InSAR analytics",
-    body: "How displacement intelligence is produced and used across critical assets.",
-  },
-  {
-    to: "/insar-solutions",
-    title: "InSAR solutions",
-    body: "Industry-tuned monitoring programs built on satellite radar.",
-  },
-  {
-    to: "/space-monitoring",
-    title: "Space monitoring",
-    body: "Wide-area and focused monitoring from orbit for movement risk.",
-  },
-  {
-    to: "/technology",
-    title: "Technology",
-    body: "The four-stage chain from SAR acquisition to analytics and alerting.",
-  },
-];
-
 function ResourcesPage() {
+  const t = useT();
+
+  const hubs = [
+    {
+      to: "/resources/glossary",
+      title: t.resources.hubs.glossary.title,
+      body: t.resources.hubs.glossary.body,
+    },
+    {
+      to: "/resources/faq",
+      title: t.resources.hubs.faq.title,
+      body: t.resources.hubs.faq.body,
+    },
+    {
+      to: "/insar-analytics",
+      title: t.resources.hubs.insarAnalytics.title,
+      body: t.resources.hubs.insarAnalytics.body,
+    },
+    {
+      to: "/insar-solutions",
+      title: t.resources.hubs.insarSolutions.title,
+      body: t.resources.hubs.insarSolutions.body,
+    },
+    {
+      to: "/space-monitoring",
+      title: t.resources.hubs.spaceMonitoring.title,
+      body: t.resources.hubs.spaceMonitoring.body,
+    },
+    {
+      to: "/technology",
+      title: t.resources.hubs.technology.title,
+      body: t.resources.hubs.technology.body,
+    },
+  ];
+
   return (
     <SiteLayout>
       <PageHero
-        eyebrow="Resources"
-        title="Understand InSAR before you buy it."
-        subtitle="Plain-language references for InSAR analytics, space monitoring and the terms your engineers already use."
+        eyebrow={t.resources.hero.eyebrow}
+        title={t.resources.hero.title}
+        subtitle={t.resources.hero.subtitle}
         image={hero}
         imageAlt="Mission context for SAR Metrics resources"
         height="short"
@@ -86,7 +92,7 @@ function ResourcesPage() {
         </ul>
       </section>
 
-      <CTASection title="Still have questions?" ctaLabel="Contact us" />
+      <CTASection title={t.resources.ctaTitle} ctaLabel={t.resources.ctaLabel} />
     </SiteLayout>
   );
 }

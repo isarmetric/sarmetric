@@ -4,18 +4,21 @@ import { Menu, X } from "lucide-react";
 
 import logo from "@/assets/sarmetrics-logo.webp";
 import esaBicPolandLogo from "@/assets/esa-bic-poland-white.png";
-
-const nav = [
-  { to: "/solutions", label: "Solutions" },
-  { to: "/technology", label: "Technology" },
-  { to: "/resources", label: "Resources" },
-  { to: "/about", label: "About" },
-  { to: "/contact", label: "Contact" },
-] as const;
+import { useI18n } from "@/i18n/context";
+import type { Locale } from "@/i18n/locale";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const { t, locale, setLocale } = useI18n();
+
+  const nav = [
+    { to: "/solutions", label: t.nav.solutions },
+    { to: "/technology", label: t.nav.technology },
+    { to: "/resources", label: t.nav.resources },
+    { to: "/about", label: t.nav.about },
+    { to: "/contact", label: t.nav.contact },
+  ] as const;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -36,6 +39,11 @@ export function Header() {
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
   }, [open]);
+
+  const switchLocale = (next: Locale) => {
+    if (next === locale) return;
+    setLocale(next);
+  };
 
   return (
     <header
@@ -69,20 +77,24 @@ export function Header() {
           />
         </Link>
 
-        <nav className="hidden shrink-0 items-center gap-5 lg:flex xl:gap-8">
-          {nav.map((item) => (
-            <Link
-              key={item.to}
-              to={item.to}
-              className="whitespace-nowrap text-sm text-foreground/80 transition-colors hover:text-foreground"
-              activeProps={{
-                className: "text-foreground",
-              }}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+        <div className="hidden shrink-0 items-center gap-5 lg:flex xl:gap-8">
+          <nav className="flex items-center gap-5 xl:gap-8">
+            {nav.map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                className="whitespace-nowrap text-sm text-foreground/80 transition-colors hover:text-foreground"
+                activeProps={{
+                  className: "text-foreground",
+                }}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+
+          <LanguageToggle locale={locale} onChange={switchLocale} label={t.common.language} />
+        </div>
 
         <button
           type="button"
@@ -108,9 +120,60 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
+            <LanguageToggle
+              locale={locale}
+              onChange={switchLocale}
+              label={t.common.language}
+              className="pt-2"
+            />
           </nav>
         </div>
       )}
     </header>
+  );
+}
+
+function LanguageToggle({
+  locale,
+  onChange,
+  label,
+  className = "",
+}: {
+  locale: Locale;
+  onChange: (locale: Locale) => void;
+  label: string;
+  className?: string;
+}) {
+  return (
+    <div className={`flex items-center gap-2 text-xs tracking-[0.2em] uppercase ${className}`}>
+      <span className="sr-only">{label}</span>
+      <button
+        type="button"
+        onClick={() => onChange("en")}
+        className={
+          locale === "en"
+            ? "text-foreground"
+            : "text-foreground/45 transition-colors hover:text-foreground/80"
+        }
+        aria-pressed={locale === "en"}
+      >
+        EN
+      </button>
+      <span className="text-foreground/30" aria-hidden="true">
+        /
+      </span>
+      <button
+        type="button"
+        onClick={() => onChange("pl")}
+        className={
+          locale === "pl"
+            ? "text-foreground"
+            : "text-foreground/45 transition-colors hover:text-foreground/80"
+        }
+        aria-pressed={locale === "pl"}
+      >
+        PL
+      </button>
+    </div>
   );
 }

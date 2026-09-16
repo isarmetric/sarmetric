@@ -2,48 +2,56 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { SiteLayout } from "@/components/site/Layout";
 import { CTASection } from "@/components/site/CTASection";
-import { offerings } from "@/lib/offerings";
 import { pageHead } from "@/lib/seo";
 import heroHome from "@/assets/hero-home.jpg";
 import esaBicPolandLogo from "@/assets/esa-bic-poland-white.png";
+import { messagesForLocale } from "@/i18n/fromMatches";
+import { useT, useI18n } from "@/i18n/context";
+import { localizedOfferings } from "@/i18n/localized";
 
 export const Route = createFileRoute("/")({
-  head: () =>
-    pageHead({
-      title: "InSAR Analytics & Space Monitoring — SAR Metrics",
-      description:
-        "InSAR analytics for geohazards, mining, infrastructure and energy. Wide-area, millimeter-precision ground monitoring from space.",
+  loader: ({ context }) => ({ locale: context.locale }),
+  head: ({ loaderData }) => {
+    const t = messagesForLocale(loaderData?.locale);
+    return pageHead({
+      title: t.meta.home.title,
+      description: t.meta.home.description,
       path: "/",
       image: heroHome,
-      breadcrumbs: [{ name: "Home", path: "/" }],
-    }),
+      breadcrumbs: [{ name: t.common.home, path: "/" }],
+    });
+  },
   component: HomePage,
 });
 
-const capabilities = [
-  {
-    n: "01",
-    title: "Millimetric precision",
-    body: "Line-of-sight measurement of ground and structural displacement, precise to millimeters.",
-  },
-  {
-    n: "02",
-    title: "Wide-area coverage",
-    body: "Monitor entire basins, transport corridors and urban regions in a single processing run.",
-  },
-  {
-    n: "03",
-    title: "24/7 SAR acquisition",
-    body: "Active radar imagery through cloud, smoke and night — independent of weather.",
-  },
-  {
-    n: "04",
-    title: "Historical archive",
-    body: "Reconstruct displacement back to the early 1990s using stacked SAR archives.",
-  },
-];
-
 function HomePage() {
+  const t = useT();
+  const { locale } = useI18n();
+  const offerings = localizedOfferings(locale);
+
+  const capabilities = [
+    {
+      n: "01",
+      title: t.home.capabilities.items.millimetricPrecision.title,
+      body: t.home.capabilities.items.millimetricPrecision.body,
+    },
+    {
+      n: "02",
+      title: t.home.capabilities.items.wideAreaCoverage.title,
+      body: t.home.capabilities.items.wideAreaCoverage.body,
+    },
+    {
+      n: "03",
+      title: t.home.capabilities.items.allWeatherSar.title,
+      body: t.home.capabilities.items.allWeatherSar.body,
+    },
+    {
+      n: "04",
+      title: t.home.capabilities.items.historicalArchive.title,
+      body: t.home.capabilities.items.historicalArchive.body,
+    },
+  ];
+
   return (
     <SiteLayout>
       <section className="relative min-h-screen flex items-end overflow-hidden bg-black">
@@ -61,37 +69,35 @@ function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/5 to-background" />
         <div className="container-x relative pb-20 md:pb-32 pt-32 w-full">
           <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-6 fade-up">
-            InSAR analytics
+            {t.home.hero.eyebrow}
           </div>
           <h1 className="text-display text-hero max-w-5xl fade-up">
-            Measure movement. Manage risk.
+            {t.home.hero.title}
           </h1>
           <p className="mt-8 max-w-xl text-base md:text-lg text-foreground/75 fade-up">
-            SAR Metrics delivers InSAR analytics and space monitoring that measure
-            ground and structural movement down to the millimeter — anywhere, day or
-            night, in any weather.
+            {t.home.hero.subtitle}
           </p>
           <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4 fade-up">
             <a
-              href="https://demo.sarmetrics.pl/upper_silesia"
+              href="https://demo.sarmetrics.pl"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-foreground px-6 py-3 text-sm text-background transition hover:opacity-90"
             >
-              Explore demo
+              {t.home.hero.exploreDemo}
               <ArrowUpRight size={16} />
             </a>
             <Link
               to="/insar-solutions"
               className="inline-flex items-center gap-2 text-sm text-foreground/80 hover:text-foreground transition"
             >
-              InSAR solutions <ArrowUpRight size={16} />
+              {t.home.hero.insarSolutions} <ArrowUpRight size={16} />
             </Link>
             <Link
               to="/technology"
               className="inline-flex items-center gap-2 text-sm text-foreground/80 hover:text-foreground transition"
             >
-              How InSAR works <ArrowUpRight size={16} />
+              {t.home.hero.howInsarWorks} <ArrowUpRight size={16} />
             </Link>
           </div>
         </div>
@@ -102,12 +108,11 @@ function HomePage() {
           <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
             <div>
               <div className="mb-2 text-xs uppercase tracking-[0.3em] text-muted-foreground">
-                Supported by
+                {t.home.supportedBy.eyebrow}
               </div>
 
               <p className="max-w-md text-sm text-foreground/65">
-                SAR Metrics is supported by the European Space Agency Business Incubation Centre
-                Poland.
+                {t.home.supportedBy.text}
               </p>
             </div>
 
@@ -123,10 +128,10 @@ function HomePage() {
       <section className="container-x py-24 md:py-36">
         <div className="grid md:grid-cols-12 gap-8 mb-16 md:mb-24">
           <div className="md:col-span-3 text-xs uppercase tracking-[0.3em] text-muted-foreground">
-            InSAR solutions
+            {t.home.solutions.eyebrow}
           </div>
           <h2 className="md:col-span-9 text-display text-section max-w-4xl">
-            From individual structures to entire regions - monitor movement before it becomes a risk.
+            {t.home.solutions.title}
           </h2>
         </div>
         <div className="grid md:grid-cols-2 gap-px bg-border">
@@ -155,7 +160,7 @@ function HomePage() {
                     {o.tagline}
                   </p>
                   <div className="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-foreground/90 group-hover:text-foreground">
-                    Read more <ArrowRight size={14} />
+                    {t.home.solutions.readMore} <ArrowRight size={14} />
                   </div>
                 </div>
               </div>
@@ -168,10 +173,10 @@ function HomePage() {
         <div className="container-x py-24 md:py-36 grid md:grid-cols-12 gap-12">
           <div className="md:col-span-4">
             <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-6">
-              Capabilities
+              {t.home.capabilities.eyebrow}
             </div>
             <h2 className="text-display text-section">
-              Built for scale, tuned for precision.
+              {t.home.capabilities.title}
             </h2>
           </div>
           <ul className="md:col-span-8 grid sm:grid-cols-2 gap-x-10 gap-y-12">
