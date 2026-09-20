@@ -10,6 +10,7 @@ export const Route = createFileRoute("/robots.txt")({
           "Allow: /",
           "",
           `Sitemap: ${SITE_URL}/sitemap.xml`,
+          `# AI / LLM context: ${SITE_URL}/llms.txt`,
           "",
         ].join("\n");
 

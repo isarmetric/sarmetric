@@ -160,7 +160,7 @@ export const pl: Messages = {
         },
         historicalArchive: {
           title: "Archiwum historyczne",
-          body: "Odtwórz przemieszczenia wstecz do wczesnych lat 90. XX wieku używając zarchiwizowanych danych SAR.",
+          body: "Odtwórz przemieszczenia wstecz do wczesnych lat 90-tych używając zarchiwizowanych danych SAR.",
         },
       },
     },
@@ -362,7 +362,7 @@ export const pl: Messages = {
   offerings: {
     infrastructure: {
       title: "Infrastruktura",
-      tagline: "Inteligencja ruchowa dla bezpieczniejszej infrastruktury — od projektowania po utrzymanie",
+      tagline: "Inteligencja dla bezpieczniejszej infrastruktury — od projektowania po utrzymanie",
       description:
         "Autostrady, mosty, zapory, koleje i rurociągi monitorowane z precyzją milimetrową przez każdą fazę ich cyklu życia — rozwiązania InSAR dostrojone dla operatorów infrastruktury.",
     },
@@ -388,7 +388,7 @@ export const pl: Messages = {
       title: "Zagrożenia geotechniczne",
       tagline: "Identyfikacja lokalizacji zagrożonych i monitoring zagrożeń geotechnicznych na dużych obszarach",
       description:
-        "Screening InSAR na dużych obszarach ujawnia osuwiska, osiadanie i ruchy tektoniczne w całych regionach — na długo przed ich dotarciem do radarów ochrony cywilnej.",
+        "Screening Analiza InSAR na dużych obszarach ujawnia osuwiska, osiadanie i ruchy tektoniczne w całych regionach — na długo przed ich dotarciem do radarów ochrony cywilnej.",
     },
     structural: {
       title: "Ruchy konstrukcji",
@@ -542,13 +542,13 @@ export const pl: Messages = {
     },
     infrastructure: {
       intro:
-        "Infrastruktura krytyczna rusza się przez każdą fazę swojego życia — osadza się pod obciążeniem, reaguje na pobliskie prace, starzeje się na miejscu. SAR Metrics dostarcza ciągłego zapisu łączącego założenia projektowe z rzeczywistym zachowaniem.",
+        "Infrastruktura krytyczna rusza się przez każdą fazę swojego życia — osadza się pod obciążeniem, reaguje na pobliskie prace oraz starzeje się. SAR Metrics dostarcza ciągłego zapisu łączącego założenia projektowe z rzeczywistym zachowaniem.",
       challenge:
-        "Zapory, mosty, tunele i sieci kolejowe degradują się po cichu; sama inspekcja wzrokowa przegapia milimetryczne prekursory.",
+        "Zapory, mosty, tunele i sieci kolejowe degradują się po cichu. Inspekcja gołym okiem przegapia milimetryczne zmiany",
       approach:
-        "InSAR cyklu życia łączy bazowe linie projektowe, monitoring budowy i nadzór operacyjny w jeden ciągły zapis.",
+        "Analiza InSAR cyklu życia infrastruktury łączy bazowe linie projektowe, monitoring budowy i nadzór operacyjny w jeden ciągły zapis.",
       outcome:
-        "Właściciele i operatorzy zmniejszają ryzyko capex i wydłużają życie obiektów przez planowanie utrzymania oparte na dowodach.",
+        "Właściciele i operatorzy zmniejszają ryzyko capex i wydłużają życie obiektów przez planowanie utrzymania oparte na twardych dowodach.",
       features: [
         {
           title: "Bazowa linia przedbudowlana",

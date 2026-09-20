@@ -15,6 +15,7 @@ import { Route as SolutionsRouteImport } from './routes/solutions'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as ResourcesRouteImport } from './routes/resources'
+import { Route as LlmsDottxtRouteImport } from './routes/llms[.]txt'
 import { Route as InsarSolutionsRouteImport } from './routes/insar-solutions'
 import { Route as InsarAnalyticsRouteImport } from './routes/insar-analytics'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -56,6 +57,11 @@ const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
 const ResourcesRoute = ResourcesRouteImport.update({
   id: '/resources',
   path: '/resources',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LlmsDottxtRoute = LlmsDottxtRouteImport.update({
+  id: '/llms.txt',
+  path: '/llms.txt',
   getParentRoute: () => rootRouteImport,
 } as any)
 const InsarSolutionsRoute = InsarSolutionsRouteImport.update({
@@ -125,6 +131,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/insar-analytics': typeof InsarAnalyticsRoute
   '/insar-solutions': typeof InsarSolutionsRoute
+  '/llms.txt': typeof LlmsDottxtRoute
   '/resources': typeof ResourcesRouteWithChildren
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -145,6 +152,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/insar-analytics': typeof InsarAnalyticsRoute
   '/insar-solutions': typeof InsarSolutionsRoute
+  '/llms.txt': typeof LlmsDottxtRoute
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/space-monitoring': typeof SpaceMonitoringRoute
@@ -163,6 +171,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/insar-analytics': typeof InsarAnalyticsRoute
   '/insar-solutions': typeof InsarSolutionsRoute
+  '/llms.txt': typeof LlmsDottxtRoute
   '/resources': typeof ResourcesRouteWithChildren
   '/robots.txt': typeof RobotsDottxtRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -185,6 +194,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/insar-analytics'
     | '/insar-solutions'
+    | '/llms.txt'
     | '/resources'
     | '/robots.txt'
     | '/sitemap.xml'
@@ -205,6 +215,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/insar-analytics'
     | '/insar-solutions'
+    | '/llms.txt'
     | '/robots.txt'
     | '/sitemap.xml'
     | '/space-monitoring'
@@ -222,6 +233,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/insar-analytics'
     | '/insar-solutions'
+    | '/llms.txt'
     | '/resources'
     | '/robots.txt'
     | '/sitemap.xml'
@@ -243,6 +255,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   InsarAnalyticsRoute: typeof InsarAnalyticsRoute
   InsarSolutionsRoute: typeof InsarSolutionsRoute
+  LlmsDottxtRoute: typeof LlmsDottxtRoute
   ResourcesRoute: typeof ResourcesRouteWithChildren
   RobotsDottxtRoute: typeof RobotsDottxtRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -293,6 +306,13 @@ declare module '@tanstack/react-router' {
       path: '/resources'
       fullPath: '/resources'
       preLoaderRoute: typeof ResourcesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/llms.txt': {
+      id: '/llms.txt'
+      path: '/llms.txt'
+      fullPath: '/llms.txt'
+      preLoaderRoute: typeof LlmsDottxtRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/insar-solutions': {
@@ -431,6 +451,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   InsarAnalyticsRoute: InsarAnalyticsRoute,
   InsarSolutionsRoute: InsarSolutionsRoute,
+  LlmsDottxtRoute: LlmsDottxtRoute,
   ResourcesRoute: ResourcesRouteWithChildren,
   RobotsDottxtRoute: RobotsDottxtRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,

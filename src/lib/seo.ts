@@ -178,6 +178,7 @@ export function pageHead({
 export function getSitemapPaths(): { path: string; priority: number; changefreq: string }[] {
   return [
     { path: "/", priority: 1, changefreq: "weekly" },
+    { path: "/llms.txt", priority: 0.5, changefreq: "monthly" },
     { path: "/solutions", priority: 0.9, changefreq: "weekly" },
     { path: "/solutions/infrastructure", priority: 0.8, changefreq: "monthly" },
     { path: "/solutions/mining", priority: 0.8, changefreq: "monthly" },
