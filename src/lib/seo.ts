@@ -1,5 +1,4 @@
 import defaultOgImage from "@/assets/hero-home.jpg";
-import logo from "@/assets/sarmetrics-logo.webp";
 import { glossarySlugs } from "@/content/glossary";
 
 export const SITE_URL = "https://sarmetrics.pl";
@@ -45,7 +44,7 @@ export function organizationJsonLd() {
     "@type": "Organization",
     name: SITE_NAME,
     url: SITE_URL,
-    logo: absoluteUrl(logo),
+    logo: absoluteUrl("/logo-mark.png"),
     email: "kontakt@sarmetrics.pl",
     address: {
       "@type": "PostalAddress",

@@ -10,7 +10,7 @@ export const pl: Messages = {
     about: {
       title: "O nas — SAR Metrics",
       description:
-        "SAR Metrics przekształca dane radarowe z satelitów w milimetryczną inteligencję o ruchach gruntu dla przemysłu, infrastruktury i ochrony cywilnej.",
+        "SAR Metrics przekształca dane radarowe z satelitów w precyzyjne informacje o przemieszczeniach gruntu dla przemysłu, infrastruktury i ochrony cywilnej.",
     },
     contact: {
       title: "Kontakt — SAR Metrics",
@@ -33,7 +33,7 @@ export const pl: Messages = {
         `${tagline}. Analityka InSAR i monitoring satelitarny dla ${title === "Oil & Gas" ? "ropy i gazu" : title === "Infrastructure" ? "infrastruktury" : title === "Mining" ? "górnictwa" : title === "Insurance" ? "ubezpieczeń" : title === "Geohazards" ? "zagrożeń geotechnicznych" : title === "Structural movement" ? "ruchów konstrukcji" : title.toLowerCase()}.`,
     },
     insarAnalytics: {
-      title: "Analityka InSAR — milimetryczna inteligencja o gruncie | SAR Metrics",
+      title: "Analityka InSAR — precyzyjne dane o ruchu gruntu | SAR Metrics",
       description:
         "Analityka InSAR z radaru satelitarnego: mapy przemieszczeń, serie czasowe i alerty dla infrastruktury, górnictwa, energetyki i zagrożeń geotechnicznych.",
     },
@@ -68,7 +68,7 @@ export const pl: Messages = {
     notFound: {
       title: "SAR Metrics — obserwacja Ziemi i analityka InSAR",
       description:
-        "Milimetryczna inteligencja o gruncie z kosmosu. Analityka InSAR dla zagrożeń geotechnicznych, górnictwa, infrastruktury i energetyki.",
+        "Precyzyjne informacje o ruchu gruntu z kosmosu. Analityka InSAR dla zagrożeń geotechnicznych, górnictwa, infrastruktury i energetyki.",
     },
   },
 
@@ -114,11 +114,11 @@ export const pl: Messages = {
       line2: "",
     },
     copyright: "© {year} SAR Metrics. Wszelkie prawa zastrzeżone.",
-    footerTagline: "Milimetryczna inteligencja o gruncie z kosmosu.",
+    footerTagline: "Precyzyjne informacje o ruchu gruntu z kosmosu.",
   },
 
   cta: {
-    defaultTitle: "Gotowy zobaczyć, co się rusza?",
+    defaultTitle: "Chcesz zobaczyć, co się rusza?",
     defaultBody: "Powiedz nam o obiekcie lub regionie, który chcesz monitorować. Pokażemy, co może ujawnić InSAR.",
     defaultLabel: "Porozmawiaj z naszym zespołem",
   },
@@ -128,14 +128,14 @@ export const pl: Messages = {
       eyebrow: "Analityka InSAR",
       title: "Mierzymy ruchy. Zarządzamy ryzykiem.",
       subtitle:
-        "SAR Metrics dostarcza analitykę InSAR i monitoring satelitarny mierzące ruchy gruntu i konstrukcji z dokładnością do milimetra — wszędzie, w dzień i w nocy, w każdych warunkach pogodowych.",
+        "SAR Metrics dostarcza analitykę InSAR i monitoring satelitarny mierzący ruchy gruntu i konstrukcji z dokładnością do milimetra — wszędzie, w dzień i w nocy, w każdych warunkach pogodowych.",
       exploreDemo: "Przeglądaj demo",
       insarSolutions: "Rozwiązania InSAR",
       howInsarWorks: "Jak działa InSAR",
     },
     supportedBy: {
       eyebrow: "Wspierają nas",
-      text: "SAR Metrics jest wspierany przez Europejską Agencję Kosmiczną (ESA BIC Poland).",
+      text: "SAR Metrics działa przy wsparciu Europejskiej Agencji Kosmicznej (ESA BIC Poland).",
     },
     solutions: {
       eyebrow: "Rozwiązania InSAR",
@@ -144,7 +144,7 @@ export const pl: Messages = {
     },
     capabilities: {
       eyebrow: "Możliwości",
-      title: "Zbudowane na skalę, dostrojone dla precyzji.",
+      title: "Zbudowane na skalę, dostosowane do precyzji.",
       items: {
         millimetricPrecision: {
           title: "Precyzja milimetrowa",
@@ -171,7 +171,7 @@ export const pl: Messages = {
       eyebrow: "O nas",
       title: "Mierzymy to, co się rusza, aby inni mogli działać, zanim będzie za późno.",
       subtitle:
-        "Zespół inżynierów radarowych, geospecjalistów i programistów czyniących obserwację Ziemi i analitykę InSAR rozwiązaniem operacyjnym.",
+        "Zespół inżynierów radarowych, geospecjalistów i programistów, którzy przekształcają obserwację Ziemi i analitykę InSAR w rozwiązania operacyjne.",
     },
     valuesEyebrow: "Wartości",
     values: {
@@ -267,7 +267,7 @@ export const pl: Messages = {
       eyebrow: "Technologia",
       title: "Analityka InSAR z radaru satelitarnego.",
       subtitle:
-        "Łańcuch przetwarzania kompresujący petabajty danych SAR w milimetryczne zrozumienie przemieszczeń dla operacyjnego monitoringu satelitarnego.",
+        "Łańcuch przetwarzania, który przekształca petabajty danych SAR w precyzyjne informacje o przemieszczeniach dla operacyjnego monitoringu satelitarnego.",
     },
     howItWorks: {
       eyebrow: "Jak to działa",
@@ -287,7 +287,7 @@ export const pl: Messages = {
         },
         analytics: {
           title: "Analityka i alerty",
-          body: "Serie czasowe są rozkładane na trendy, cykle sezonowe i anomalie, a następnie udostępniane przez dashboardy, API i dostrojone alerty — analityka InSAR, na której operatorzy mogą działać.",
+          body: "Serie czasowe są rozkładane na trendy, cykle sezonowe i anomalie, a następnie udostępniane przez panele, API i dostosowane alerty — analityka InSAR, na której operatorzy mogą działać.",
         },
       },
       footer: "Zagłęb się w nasz {glossary}, poznaj {analytics} lub zobacz branżowe {solutions}.",
@@ -364,13 +364,13 @@ export const pl: Messages = {
       title: "Infrastruktura",
       tagline: "Inteligencja dla bezpieczniejszej infrastruktury — od projektowania po utrzymanie",
       description:
-        "Autostrady, mosty, zapory, koleje i rurociągi monitorowane z precyzją milimetrową przez każdą fazę ich cyklu życia — rozwiązania InSAR dostrojone dla operatorów infrastruktury.",
+        "Autostrady, mosty, zapory, koleje i rurociągi monitorowane z precyzją milimetrową przez każdą fazę ich cyklu życia — rozwiązania InSAR dostosowane do potrzeb operatorów infrastruktury.",
     },
     mining: {
       title: "Górnictwo",
       tagline: "Wczesne ostrzeżenia i mitygacja ryzyka w obiektach górniczych",
       description:
-        "Ciągły monitoring ścian wykopów, zapór odpadów poflotacyjnych, hałd odpadów i osiadania podziemnego — z progami alertów dostrojonymi na obiekt przy użyciu analityki InSAR.",
+        "Ciągły monitoring ścian wykopów, zapór odpadów poflotacyjnych, hałd odpadów i osiadania podziemnego — z progami alertów dostosowanymi do specyfiki obiektu przy użyciu analityki InSAR.",
     },
     insurance: {
       title: "Ubezpieczenia",
@@ -388,7 +388,7 @@ export const pl: Messages = {
       title: "Zagrożenia geotechniczne",
       tagline: "Identyfikacja lokalizacji zagrożonych i monitoring zagrożeń geotechnicznych na dużych obszarach",
       description:
-        "Screening Analiza InSAR na dużych obszarach ujawnia osuwiska, osiadanie i ruchy tektoniczne w całych regionach — na długo przed ich dotarciem do radarów ochrony cywilnej.",
+        "Analiza screeningowa InSAR na dużych obszarach ujawnia osuwiska, osiadanie i ruchy tektoniczne w całych regionach — na długo przed ich dotarciem do radarów ochrony cywilnej.",
     },
     structural: {
       title: "Ruchy konstrukcji",
@@ -405,15 +405,15 @@ export const pl: Messages = {
       challenge:
         "Osuwiska, osiadanie i ruchy tektoniczne zagrażają populacjom i infrastrukturze na rozległych, trudno dostępnych terenach.",
       approach:
-        "Screening InSAR na dużych obszarach w całych regionach identyfikuje aktywne wzorce deformacji, następnie precyzuje punkty gorące akwizycjami wysokiej rozdzielczości.",
+        "Analiza screeningowa InSAR na dużych obszarach w całych regionach identyfikuje aktywne wzorce deformacji, następnie precyzuje obszary ryzyka akwizycjami wysokiej rozdzielczości.",
       outcome:
-        "Władze ochrony cywilnej i ubezpieczyciele otrzymują priorytetowy, ciągle aktualizowany obraz tego, gdzie grunt się rusza — i jak szybko.",
+        "Władze ochrony cywilnej i ubezpieczyciele otrzymują uporządkowany, na bieżąco aktualizowany obraz tego, gdzie grunt się rusza — i jak szybko.",
       features: [
         {
           title: "Screening regionalny",
           body: "Mapy bazowe ruchu gruntu na skalę kraju i zagłębia.",
         },
-        { title: "Precyzja punktów gorących", body: "Skupienie wysokiej rozdzielczości tam, gdzie wykryto ruch." },
+        { title: "Precyzja w obszarach ryzyka", body: "Skupienie wysokiej rozdzielczości tam, gdzie wykryto ruch." },
         { title: "Progi alarmowe", body: "Dostrajalne alarmy prędkości i przyspieszenia na lokalizację." },
       ],
       metrics: [
@@ -423,7 +423,7 @@ export const pl: Messages = {
       ],
       deliverables: [
         "Regionalne mapy prędkości w formatach gotowych do GIS",
-        "Rankingowy wykaz obszarów aktywnej deformacji",
+        "Uporządkowany wykaz obszarów aktywnej deformacji według priorytetów",
         "Serie czasowe na lokalizację i alarmy przyspieszenia",
         "Kwartalne raporty przeglądowe z interpretacją ekspertów",
       ],
@@ -497,9 +497,9 @@ export const pl: Messages = {
       challenge:
         "Zespoły underwritingowe i likwidacji szkód często podejmują decyzje o wysokiej wartości z ograniczonymi, niespójnymi lub opóźnionymi dowodami z miejsca.",
       approach:
-        "Screening InSAR na dużych obszarach identyfikuje punkty gorące ekspozycji w portfelach, następnie analiza punktowa rekonstruuje historię przemieszczeń przed, w czasie i po zdarzeniu.",
+        "Analiza screeningowa InSAR na dużych obszarach identyfikuje obszary ryzyka w portfelach, następnie analiza punktowa rekonstruuje historię przemieszczeń przed, w czasie i po zdarzeniu.",
       outcome:
-        "Zespoły ubezpieczeniowe zyskują obronne dowody ruchu dla underwritingu, zarządzania akumulacją, walidacji roszczeń i raportowania eksperckiego.",
+        "Zespoły ubezpieczeniowe zyskują niezależne dowody ruchu dla underwritingu, zarządzania akumulacją, walidacji roszczeń i raportowania eksperckiego.",
       features: [
         {
           title: "Screening portfelowy",
@@ -520,7 +520,7 @@ export const pl: Messages = {
         { value: "1 mm/rok", label: "Czułość ruchu długoterminowego" },
       ],
       deliverables: [
-        "Mapy ekspozycji portfela z priorytetowymi punktami gorącymi",
+        "Mapy ekspozycji portfela z priorytetowymi obszarami ryzyka",
         "Serie czasowe przemieszczeń na poziomie nieruchomości i korytarza",
         "Rekonstrukcje ruchu przed i po zdarzeniu dla roszczeń",
         "Raporty ekspertów wspierające underwriting i ocenę szkód",
@@ -630,18 +630,18 @@ export const pl: Messages = {
       intro:
         "Każda odbijająca fasada w mieście to potencjalny punkt pomiarowy. SAR Metrics przekształca obszary miejskie w żywe mapy deformacji — budynek po budynku, wstecz do wczesnych lat 90. XX wieku.",
       challenge:
-        "Budynki miejskie osiadają, przechylają się i pękają w odpowiedzi na prace sąsiednie, poziomy wód gruntowych i fundamenty sprzed dekad.",
+        "Budynki miejskie osiadają, przechylają się i pękają przez sąsiednie prace, poziomy wód gruntowych i fundamenty sprzed dekad.",
       approach:
         "InSAR rozpraszaczy trwałych przekształca każdą odbijającą fasadę w punkt pomiarowy, wstecz do wczesnych archiwów SAR.",
       outcome:
-        "Władze miejskie, menedżerowie obiektów i inżynierowie medycyny sądowej otrzymują historie przemieszczeń na poziomie budynków na żądanie.",
+        "Władze miejskie, menedżerowie obiektów i inżynierowie zajmujący się ekspertyzami technicznymi otrzymują historie przemieszczeń na poziomie budynków na żądanie.",
       features: [
         { title: "Budynek po budynku", body: "Przemieszczenie na konstrukcję na poziomie fasady." },
         {
           title: "Rekonstrukcja archiwalna",
           body: "Ruch historyczny od 1992 roku tam, gdzie dane istnieją.",
         },
-        { title: "Dowody medycyny sądowej", body: "Dokumentacja osiadania na poziomie sądowym." },
+        { title: "Dowody eksperckie", body: "Dokumentacja osiadania na poziomie sądowym." },
       ],
       metrics: [
         { value: "1992", label: "Najwcześniejsze obrazowanie archiwalne" },
@@ -664,7 +664,7 @@ export const pl: Messages = {
           body: "Diagnozuj problemy przechyłu i osiadania zanim staną się strukturalne.",
         },
         {
-          title: "Inżynieria medycyny sądowej",
+          title: "Ekspertyzy techniczne",
           body: "Odtwórz historię ruchu budynku wokół zdarzenia szkodowego.",
         },
       ],
@@ -677,7 +677,7 @@ export const pl: Messages = {
         eyebrow: "Analityka InSAR",
         title: "Analityka InSAR przekształcająca radar w decyzje.",
         subtitle:
-          "Milimetryczna inteligencja przemieszczeń z kosmosu — mapy, serie czasowe i alerty dla zespołów zarządzających ryzykiem ruchu.",
+          "Precyzyjne informacje o przemieszczeniach z kosmosu — mapy, serie czasowe i alerty dla zespołów zarządzających ryzykiem ruchu.",
       },
       sections: {
         problem: {
@@ -722,7 +722,7 @@ export const pl: Messages = {
         eyebrow: "Rozwiązania InSAR",
         title: "Rozwiązania InSAR zbudowane pod to, jak branże zarządzają ryzykiem.",
         subtitle:
-          "Jeden fundament radaru satelitarnego. Sześć ofert operacyjnych dostrojonych dla decyzji, które twoje zespoły już podejmują.",
+          "Jeden fundament radaru satelitarnego. Sześć ofert operacyjnych dostosowanych do decyzji, które twoje zespoły już podejmują.",
       },
       whyDedicated: {
         title: "Dlaczego dedykowane rozwiązania InSAR",
@@ -751,7 +751,7 @@ export const pl: Messages = {
         eyebrow: "Monitoring satelitarny",
         title: "Monitoring satelitarny widzący ruchy z orbity.",
         subtitle:
-          "Satelitarny SAR obserwuje obiekty i regiony w dzień i w nocy, przez chmury — następnie analityka InSAR przekształca te akwizycje w operacyjną inteligencję o gruncie.",
+          "Satelitarny SAR obserwuje obiekty i regiony w dzień i w nocy, przez chmury — następnie analityka InSAR przekształca te akwizycje w operacyjne dane o ruchu gruntu.",
       },
       whyFromSpace: {
         title: "Dlaczego monitorować z kosmosu",
@@ -933,9 +933,9 @@ export const pl: Messages = {
       "satellite-radar": {
         term: "Radar satelitarny",
         shortDefinition:
-          "Sensing radarowy z orbity — typowo SAR — używany do obrazowania terenu i mierzenia zmian niezależnie od światła dziennego i pokrywy chmur.",
+          "Obserwacja radarowa z orbity — typowo SAR — używana do obrazowania terenu i mierzenia zmian niezależnie od światła dziennego i pokrywy chmur.",
         body: [
-          "Radar satelitarny odnosi się do systemów obrazowania mikrofalowego lądujących na statkach kosmicznych. Dominującą formą cywilną jest radar z syntetyczną aperturą (SAR).",
+          "Radar satelitarny odnosi się do systemów obrazowania mikrofalowego umieszczonych na pokładach statków kosmicznych. Dominującą formą cywilną jest radar z syntetyczną aperturą (SAR).",
           "Ponieważ czujnik sam oświetla grunt, radar satelitarny wspiera obrazowanie całopogodowe, dzień-noc niezbędne dla operacyjnych programów monitoringu.",
           "SAR Metrics buduje analitykę InSAR na archiwach radaru satelitarnego i zadaniowych akwizycjach komercyjnych.",
         ],
@@ -945,7 +945,7 @@ export const pl: Messages = {
         shortDefinition:
           "Screening dużych regionów — korytarzy, zagłębi, miast — w poszukiwaniu ruchu gruntu ze spójnym pokryciem satelitarnym.",
         body: [
-          "Monitoring regionalny używa spiętrzonych pokryć SAR do produkcji regionalnych map przemieszczeń i punktów gorących bez wcześniejszego indywidualnego sprawdzania każdego obiektu.",
+          "Monitoring regionalny używa spiętrzonych pokryć SAR do produkcji regionalnych map przemieszczeń i obszarów ryzyka bez wcześniejszego indywidualnego sprawdzania każdego obiektu.",
           "Jest zwykłym punktem wejścia dla screeningu zagrożeń geotechnicznych, widoków portfeli ubezpieczeniowych i programów infrastruktury sieciowej.",
           "Gdy lokalizacje ryzyka są zidentyfikowane, monitoring InSAR punktowy może zwiększyć rozdzielczość i powrót nad krytycznymi miejscami.",
         ],

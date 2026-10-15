@@ -95,8 +95,10 @@ export const Route = createRootRouteWithContext<{
       ],
       links: [
         { rel: "stylesheet", href: appCss },
-        { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-        { rel: "apple-touch-icon", href: "/favicon.svg" },
+        { rel: "icon", href: "/favicon.ico", sizes: "48x48" },
+        { rel: "icon", type: "image/png", sizes: "48x48", href: "/favicon-48x48.png" },
+        { rel: "icon", type: "image/png", sizes: "192x192", href: "/favicon-192x192.png" },
+        { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         {
           rel: "preconnect",
