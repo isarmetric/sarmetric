@@ -81,7 +81,7 @@ function HomePage() {
           </p>
           <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4 fade-up">
             <a
-              href="https://demo.sarmetrics.pl/upper_silesia"
+              href="https://open.sarmetrics.pl"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-foreground px-6 py-3 text-sm text-background transition hover:opacity-90"
