@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 interface PageHeroProps {
   eyebrow?: string;
   title: string;
@@ -5,6 +7,7 @@ interface PageHeroProps {
   image: string;
   imageAlt: string;
   height?: "full" | "tall" | "short";
+  children?: ReactNode;
 }
 
 export function PageHero({
@@ -14,6 +17,7 @@ export function PageHero({
   image,
   imageAlt,
   height = "tall",
+  children,
 }: PageHeroProps) {
   const h =
     height === "full"
@@ -42,6 +46,7 @@ export function PageHero({
             {subtitle}
           </p>
         )}
+        {children}
       </div>
     </section>
   );

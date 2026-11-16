@@ -2,52 +2,51 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout } from "@/components/site/Layout";
 import { PageHero } from "@/components/site/PageHero";
+import { pageHead } from "@/lib/seo";
 import hero from "@/assets/hero-contact.jpg";
+import { messagesForLocale } from "@/i18n/fromMatches";
+import { useT } from "@/i18n/context";
 
 export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact — SAR Metrics" },
-      {
-        name: "description",
-        content:
-          "Tell us about the asset or region you need to monitor. We'll show what InSAR can reveal.",
-      },
-      { property: "og:title", content: "Contact — SAR Metrics" },
-      {
-        property: "og:description",
-        content: "Get in touch with the SAR Metrics team.",
-      },
-      { property: "og:url", content: "/contact" },
-    ],
-    links: [{ rel: "canonical", href: "/contact" }],
-  }),
+  loader: ({ context }) => ({ locale: context.locale }),
+  head: ({ loaderData }) => {
+    const t = messagesForLocale(loaderData?.locale);
+    return pageHead({
+      title: t.meta.contact.title,
+      description: t.meta.contact.description,
+      path: "/contact",
+      image: hero,
+      breadcrumbs: [
+        { name: t.common.home, path: "/" },
+        { name: t.nav.contact, path: "/contact" },
+      ],
+    });
+  },
   component: ContactPage,
 });
 
-const offices = [{ city: "Warsaw", line1: "Chmielna II", line2: "00-020 Warsaw, Poland" }];
-
-const industries = [
-  "Infrastructure",
-  "Mining",
-  "Insurance",
-  "Oil & Gas",
-  "Geohazards",
-  "Structural",
-  "Other",
-];
-
 function ContactPage() {
+  const t = useT();
   const [sent, setSent] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  const industries = [
+    t.contact.form.industries.infrastructure,
+    t.contact.form.industries.mining,
+    t.contact.form.industries.insurance,
+    t.contact.form.industries.oilGas,
+    t.contact.form.industries.geohazards,
+    t.contact.form.industries.structural,
+    t.contact.form.industries.other,
+  ];
+
   return (
     <SiteLayout>
       <PageHero
-        eyebrow="Contact"
-        title="Tell us what you need to see."
-        subtitle="A short note is enough — we'll come back with the right people and a plan."
+        eyebrow={t.contact.hero.eyebrow}
+        title={t.contact.hero.title}
+        subtitle={t.contact.hero.subtitle}
         image={hero}
         imageAlt="Earth horizon"
         height="short"
@@ -86,12 +85,12 @@ function ContactPage() {
               }
             }}
           >
-            <Field label="Name" name="name" />
-            <Field label="Work email" name="email" type="email" />
-            <Field label="Company" name="company" />
+            <Field label={t.contact.form.nameLabel} name="name" />
+            <Field label={t.contact.form.emailLabel} name="email" type="email" />
+            <Field label={t.contact.form.companyLabel} name="company" />
             <div>
               <label className="block text-xs uppercase tracking-[0.3em] text-muted-foreground mb-3">
-                Industry
+                {t.contact.form.industryLabel}
               </label>
               <select
                 name="industry"
@@ -100,7 +99,7 @@ function ContactPage() {
                 required
               >
                 <option value="" disabled className="bg-background">
-                  Select
+                  {t.contact.form.industryPlaceholder}
                 </option>
                 {industries.map((i) => (
                   <option key={i} value={i} className="bg-background text-foreground">
@@ -111,7 +110,7 @@ function ContactPage() {
             </div>
             <div>
               <label className="block text-xs uppercase tracking-[0.3em] text-muted-foreground mb-3">
-                What do you need to monitor?
+                {t.contact.form.messageLabel}
               </label>
               <textarea
                 name="message"
@@ -126,29 +125,27 @@ function ContactPage() {
                 className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background text-sm hover:opacity-90 transition disabled:opacity-50"
                 disabled={sent || submitting}
               >
-                {sent ? "Thanks — we'll be in touch." : submitting ? "Sending..." : "Send message"}
+                {sent ? t.contact.form.submitSuccess : submitting ? t.contact.form.submitSending : t.contact.form.submitIdle}
               </button>
-              {error && <p className="mt-2 text-sm text-destructive">{error}</p>}
+              {error && <p className="mt-2 text-sm text-destructive">{t.contact.form.errorMessage}</p>}
             </div>
           </form>
 
           <div className="md:col-span-5 md:pl-10 md:border-l md:border-border">
             <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-8">
-              Office
+              {t.contact.officeEyebrow}
             </div>
             <ul className="space-y-8">
-              {offices.map((o) => (
-                <li key={o.city}>
-                  <div className="text-display text-2xl mb-1">{o.city}</div>
-                  <div className="text-sm text-foreground/70">{o.line1}</div>
-                  <div className="text-sm text-foreground/70">{o.line2}</div>
-                </li>
-              ))}
+              <li>
+                <div className="text-display text-2xl mb-1">{t.footer.office.city}</div>
+                <div className="text-sm text-foreground/70">{t.footer.office.line1}</div>
+                {t.footer.office.line2 && <div className="text-sm text-foreground/70">{t.footer.office.line2}</div>}
+              </li>
             </ul>
             <div className="mt-12 pt-8 border-t border-border text-sm text-foreground/70 space-y-3">
               <div>
-                General enquiries
-                <div className="text-foreground mt-1">kontakt@sarmetrics.pl</div>
+                {t.contact.generalEnquiries}
+                <div className="text-foreground mt-1">{t.contact.email}</div>
               </div>
             </div>
           </div>

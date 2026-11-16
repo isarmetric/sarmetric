@@ -25,7 +25,7 @@ export const offerings: Offering[] = [
     title: "Infrastructure",
     tagline: "Movement intelligence for safer infrastructure - from design to maintenance",
     description:
-      "Highways, bridges, dams, railways and pipelines monitored at millimeter precision through every phase of their lifecycle.",
+      "Highways, bridges, dams, railways and pipelines monitored at millimeter precision through every phase of their lifecycle — InSAR solutions tuned for infrastructure operators.",
     image: infrastructure,
   },
   {
@@ -35,7 +35,7 @@ export const offerings: Offering[] = [
     title: "Mining",
     tagline: "Early warnings and risk mitigation across mine assets",
     description:
-      "Continuous monitoring of pit walls, tailings dams, waste piles and underground subsidence — with alerting thresholds tuned per asset.",
+      "Continuous monitoring of pit walls, tailings dams, waste piles and underground subsidence — with alerting thresholds tuned per asset using InSAR analytics.",
     image: mining,
   },
   {
@@ -55,7 +55,7 @@ export const offerings: Offering[] = [
     title: "Oil & Gas",
     tagline: "Subtle surface displacement for production and reservoir management",
     description:
-      "Track reservoir compaction and uplift, CO₂ storage integrity, and ground response around extraction sites — globally, repeatably.",
+      "Track reservoir compaction and uplift, CO₂ storage integrity, and ground response around extraction sites — globally, repeatably — with InSAR space monitoring.",
     image: oilgas,
   },
   {
