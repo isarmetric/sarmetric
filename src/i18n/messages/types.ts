@@ -73,6 +73,10 @@ export type Messages = {
       title: string;
       description: string;
     };
+    offer: {
+      title: string;
+      description: string;
+    };
     notFound: {
       title: string;
       description: string;
@@ -81,6 +85,7 @@ export type Messages = {
 
   nav: {
     solutions: string;
+    offer: string;
     technology: string;
     resources: string;
     about: string;
@@ -105,6 +110,7 @@ export type Messages = {
       insarSolutions: string;
       spaceMonitoring: string;
       technology: string;
+      offer: string;
     };
     resourcesTitle: string;
     resources: {
@@ -136,6 +142,7 @@ export type Messages = {
       title: string;
       subtitle: string;
       exploreDemo: string;
+      seeOffer: string;
       insarSolutions: string;
       howInsarWorks: string;
     };
@@ -255,6 +262,82 @@ export type Messages = {
       };
     };
     ctaTitle: string;
+    ctaLabel: string;
+  };
+
+  offer: {
+    hero: {
+      eyebrow: string;
+      title: string;
+      subtitle: string;
+      primaryCta: string;
+      secondaryCta: string;
+    };
+    economics: {
+      eyebrow: string;
+      title: string;
+      withoutLabel: string;
+      withoutValue: string;
+      withoutUnit: string;
+      withoutBody: string;
+      withLabel: string;
+      withValue: string;
+      withUnit: string;
+      withBody: string;
+      pointsTitle: string;
+      points: { title: string; body: string }[];
+      note: string;
+    };
+    proof: { value: string; label: string }[];
+    figures: {
+      heroAlt: string;
+      bridgeAlt: string;
+      bridgeCaption: string;
+      usesAlt: string;
+      costCaption: string;
+    };
+    comparison: {
+      areaLabel: string;
+      costLabel: string;
+      ground: string;
+      drones: string;
+      insar: string;
+      groundCost: string;
+      dronesCost: string;
+      insarCost: string;
+    };
+    explain: {
+      eyebrow: string;
+      isTitle: string;
+      isBody: string;
+      forTitle: string;
+      forBody: string;
+    };
+    benefits: {
+      eyebrow: string;
+      title: string;
+      items: { title: string; body: string }[];
+    };
+    platform: {
+      title: string;
+      body: string;
+      link: string;
+    };
+    uses: {
+      eyebrow: string;
+      title: string;
+      items: { title: string; body: string }[];
+    };
+    sectors: {
+      eyebrow: string;
+      title: string;
+      intro: string;
+      items: Record<string, { title: string; body: string }>;
+    };
+    faqEyebrow: string;
+    faqTitle: string;
+    ctaTitle: string;
+    ctaBody: string;
     ctaLabel: string;
   };
 
@@ -415,6 +498,12 @@ export type Messages = {
       footer: string;
       footerLink: string;
     };
+    termPage: {
+      notFound: string;
+      backToGlossary: string;
+      relatedTerms: string;
+      allTerms: string;
+    };
     terms: Record<string, GlossaryTermContent>;
   };
 
@@ -423,6 +512,7 @@ export type Messages = {
     insarAnalytics: FaqEntry[];
     insarSolutions: FaqEntry[];
     spaceMonitoring: FaqEntry[];
+    offer: FaqEntry[];
   };
 
   faqPage: {
@@ -436,6 +526,7 @@ export type Messages = {
     footer: string;
     footerLinks: {
       glossary: string;
+      offer: string;
       insarAnalytics: string;
       insarSolutions: string;
       spaceMonitoring: string;

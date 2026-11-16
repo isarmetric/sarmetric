@@ -119,6 +119,11 @@
   .text-hero {
     font-size: clamp(2.75rem, 7.5vw, 6.5rem);
   }
+  /* Polish headlines carry longer words ("przemieszczenia", "geotechnicznych");
+     a smaller minimum keeps them inside 360–375px screens. */
+  html[lang="pl"] .text-hero {
+    font-size: clamp(2.5rem, 7.5vw, 6.5rem);
+  }
   .text-section {
     font-size: clamp(2rem, 4.5vw, 4rem);
   }

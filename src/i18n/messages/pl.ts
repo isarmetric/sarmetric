@@ -3,103 +3,110 @@ import type { Messages } from "./types";
 export const pl: Messages = {
   meta: {
     home: {
-      title: "Analityka InSAR i monitoring satelitarny — SAR Metrics",
+      title: "Monitoring InSAR terenu i infrastruktury | SAR Metrics",
       description:
-        "Analityka InSAR dla zagrożeń geotechnicznych, górnictwa, infrastruktury i energetyki. Monitoring gruntu z kosmosu z precyzją milimetrową i zasięgiem regionalnym.",
+        "Monitoring InSAR dla budownictwa, kolei, infrastruktury, górnictwa oraz ropy i gazu. Wykrywamy milimetrowe przemieszczenia terenu, zanim zamienią się w szkody.",
     },
     about: {
-      title: "O nas — SAR Metrics",
+      title: "O nas – satelitarny monitoring InSAR | SAR Metrics",
       description:
-        "SAR Metrics przekształca dane radarowe z satelitów w precyzyjne informacje o przemieszczeniach gruntu dla przemysłu, infrastruktury i ochrony cywilnej.",
+        "SAR Metrics zamienia dane z satelitów radarowych w pomiary przemieszczeń terenu i obiektów. Poznaj zespół wspierany przez ESA BIC Poland i nasze podejście.",
     },
     contact: {
-      title: "Kontakt — SAR Metrics",
+      title: "Kontakt | SAR Metrics",
       description:
-        "Powiedz nam, jaki obiekt lub region potrzebujesz monitorować. Pokażemy, co może ujawnić analityka InSAR i monitoring satelitarny.",
+        "Wskaż obiekt lub obszar do monitorowania. Sprawdzimy dostępne dane satelitarne i pokażemy, jakie przemieszczenia da się tam zmierzyć metodą InSAR.",
     },
     technology: {
-      title: "Technologia analityki InSAR — SAR Metrics",
+      title: "Jak działa InSAR – pomiar przemieszczeń z orbity | SAR Metrics",
       description:
-        "Jak działa analityka InSAR: rozpraszacze trwałe, archiwa satelitarne SAR i milimetryczne pomiary przemieszczeń w monitoringu satelitarnym.",
+        "Jak działa InSAR: zobrazowania radarowe SAR, interferometria, stabilne rozpraszacze (PS-InSAR) i szeregi czasowe przemieszczeń z dokładnością do milimetrów.",
     },
     solutions: {
-      title: "Rozwiązania InSAR — SAR Metrics",
+      title: "Rozwiązania InSAR dla branż | SAR Metrics",
       description:
-        "Rozwiązania InSAR dla zagrożeń geotechnicznych, górnictwa, infrastruktury, ubezpieczeń, ropy i gazu oraz ruchów konstrukcji — monitoring milimetrowy z kosmosu.",
+        "Monitoring InSAR dla infrastruktury i kolei, górnictwa, budownictwa, ropy i gazu, ubezpieczeń oraz geozagrożeń – pomiary przemieszczeń z dokładnością do milimetrów.",
     },
     solutionTemplate: {
-      titleSuffix: "Monitoring InSAR — SAR Metrics",
+      titleSuffix: "– monitoring InSAR | SAR Metrics",
       descriptionTemplate: (title: string, tagline: string) =>
-        `${tagline}. Analityka InSAR i monitoring satelitarny dla ${title === "Oil & Gas" ? "ropy i gazu" : title === "Infrastructure" ? "infrastruktury" : title === "Mining" ? "górnictwa" : title === "Insurance" ? "ubezpieczeń" : title === "Geohazards" ? "zagrożeń geotechnicznych" : title === "Structural movement" ? "ruchów konstrukcji" : title.toLowerCase()}.`,
+        `${tagline}. ${title} – satelitarny monitoring InSAR od SAR Metrics.`,
     },
     insarAnalytics: {
-      title: "Analityka InSAR — precyzyjne dane o ruchu gruntu | SAR Metrics",
+      title: "Analityka InSAR – mapy przemieszczeń i alerty | SAR Metrics",
       description:
-        "Analityka InSAR z radaru satelitarnego: mapy przemieszczeń, serie czasowe i alerty dla infrastruktury, górnictwa, energetyki i zagrożeń geotechnicznych.",
+        "Analityka InSAR: mapy przemieszczeń, szeregi czasowe, trendy i alerty dla infrastruktury, kolei, budownictwa, górnictwa i energetyki. Wyniki online i przez API.",
     },
     insarSolutions: {
       title: "Rozwiązania InSAR dla przemysłu i infrastruktury | SAR Metrics",
       description:
-        "Rozwiązania InSAR dla infrastruktury, górnictwa, ubezpieczeń, ropy i gazu, zagrożeń geotechnicznych oraz ruchów konstrukcji — monitoring operacyjny z radaru satelitarnego.",
+        "Monitoring InSAR dla branż: infrastruktura i kolej, górnictwo, budownictwo, ropa i gaz, ubezpieczenia, geozagrożenia. Wczesne ostrzeganie o przemieszczeniach.",
     },
     spaceMonitoring: {
-      title: "Monitoring satelitarny z SAR i InSAR | SAR Metrics",
+      title: "Monitoring satelitarny SAR i InSAR | SAR Metrics",
       description:
-        "Monitoring satelitarny z radaru: programy InSAR o zasięgu regionalnym i punktowym mierzące ruchy gruntu i konstrukcji przez chmury i w ciemnościach.",
+        "Monitoring satelitarny z użyciem radaru SAR: regionalne i punktowe pomiary przemieszczeń terenu i obiektów – w dzień i w nocy, niezależnie od zachmurzenia.",
     },
     resources: {
-      title: "Zasoby — słownik InSAR, FAQ i poradniki | SAR Metrics",
+      title: "Baza wiedzy InSAR – słownik i FAQ | SAR Metrics",
       description:
-        "Poznaj analitykę InSAR, monitoring satelitarny i radar satelitarny: słownik, FAQ i poradniki SAR Metrics.",
+        "Słownik pojęć i odpowiedzi na najczęstsze pytania o InSAR, radar satelitarny SAR i monitoring przemieszczeń terenu.",
     },
     glossary: {
       title: "Słownik InSAR i monitoringu satelitarnego | SAR Metrics",
       description:
-        "Słownik terminów: InSAR, PS-InSAR, SAR, interferometria, deformacja gruntu, monitoring satelitarny i terminy obserwacji Ziemi.",
+        "Słownik pojęć: InSAR, PS-InSAR, SAR, interferometria, deformacje terenu, stabilne rozpraszacze i monitoring satelitarny – wyjaśnione prostym językiem.",
     },
     glossaryTerm: {
-      titleTemplate: (term: string) => `${term} — Słownik | SAR Metrics`,
+      titleTemplate: (term: string) => `${term} – słownik InSAR | SAR Metrics`,
     },
     faq: {
-      title: "FAQ InSAR i monitoring satelitarny | SAR Metrics",
+      title: "InSAR – najczęstsze pytania (FAQ) | SAR Metrics",
       description:
-        "Najczęściej zadawane pytania o analitykę InSAR, precyzję milimetrową, niezależność od pogody, branże, dostawę danych i jak zacząć z SAR Metrics.",
+        "Odpowiedzi na pytania o monitoring InSAR: dokładność, niezależność od pogody, koszty, zastosowania w branżach, forma wyników i początek współpracy.",
+    },
+    offer: {
+      title: "Oferta monitoringu InSAR – koszt, korzyści i oszczędności | SAR Metrics",
+      description:
+        "Monitoring infrastruktury z orbity, co do milimetra, z historią od lat 90. Cena zależy od terenu, częstotliwości i dokładności. W najniższym wariancie schodzi do około 100 zł za km² — mniej na kilometr kwadratowy niż aparatura naziemna i drony.",
     },
     notFound: {
-      title: "SAR Metrics — obserwacja Ziemi i analityka InSAR",
+      title: "SAR Metrics – satelitarny monitoring InSAR",
       description:
-        "Precyzyjne informacje o ruchu gruntu z kosmosu. Analityka InSAR dla zagrożeń geotechnicznych, górnictwa, infrastruktury i energetyki.",
+        "Satelitarne pomiary przemieszczeń terenu i infrastruktury z dokładnością do milimetrów. Monitoring InSAR dla budownictwa, kolei, górnictwa i energetyki.",
     },
   },
 
   nav: {
     solutions: "Rozwiązania",
+    offer: "Oferta",
     technology: "Technologia",
-    resources: "Zasoby",
+    resources: "Baza wiedzy",
     about: "O nas",
     contact: "Kontakt",
   },
 
   footer: {
-    tagline: "Mierzymy ruchy. Zarządzamy ryzykiem.",
-    supportedBy: "Wspierają nas",
+    tagline: "Mierzymy przemieszczenia. Ograniczamy ryzyko.",
+    supportedBy: "Przy wsparciu",
     solutionsTitle: "Rozwiązania",
     solutions: {
       infrastructure: "Infrastruktura",
       mining: "Górnictwo",
       insurance: "Ubezpieczenia",
       oilGas: "Ropa i gaz",
-      geohazards: "Zagrożenia geotechniczne",
-      structural: "Ruchy konstrukcji",
+      geohazards: "Geozagrożenia",
+      structural: "Budownictwo i budynki",
     },
-    capabilitiesTitle: "Możliwości",
+    capabilitiesTitle: "Oferta",
     capabilities: {
       insarAnalytics: "Analityka InSAR",
       insarSolutions: "Rozwiązania InSAR",
       spaceMonitoring: "Monitoring satelitarny",
       technology: "Technologia",
+      offer: "Oferta",
     },
-    resourcesTitle: "Zasoby",
+    resourcesTitle: "Baza wiedzy",
     resources: {
       overview: "Przegląd",
       glossary: "Słownik",
@@ -114,55 +121,56 @@ export const pl: Messages = {
       line2: "",
     },
     copyright: "© {year} SAR Metrics. Wszelkie prawa zastrzeżone.",
-    footerTagline: "Precyzyjne informacje o ruchu gruntu z kosmosu.",
+    footerTagline: "Satelitarne pomiary przemieszczeń z dokładnością do milimetrów.",
   },
 
   cta: {
-    defaultTitle: "Chcesz zobaczyć, co się rusza?",
+    defaultTitle: "Pokażemy, co InSAR ujawni na Państwa terenie.",
     defaultBody:
-      "Napisz, jaki obiekt lub obszar chcesz monitorować. Pokażemy, co da się wykryć dzięki InSAR.",
-    defaultLabel: "Porozmawiaj z naszym zespołem",
+      "Wskaż obiekt lub obszar – wspólnie ocenimy, jakie przemieszczenia da się tam zmierzyć.",
+    defaultLabel: "Skontaktuj się z nami",
   },
 
   home: {
     hero: {
-      eyebrow: "Analityka InSAR",
-      title: "Mierzymy ruchy. Zarządzamy ryzykiem.",
+      eyebrow: "Satelitarny monitoring InSAR",
+      title: "Mierzymy przemieszczenia. Ograniczamy ryzyko.",
       subtitle:
-        "SAR Metrics dostarcza analitykę InSAR i monitoring satelitarny, które mierzą ruchy gruntu i konstrukcji z dokładnością rzędu milimetrów — wszędzie, 24/7, niezależnie od pogody.",
-      exploreDemo: "Przeglądaj demo",
+        "SAR Metrics mierzy z orbity przemieszczenia terenu, budowli i infrastruktury – z dokładnością do milimetrów, w dzień i w nocy, niezależnie od pogody. Nasze algorytmy wychwytują najmniejsze zmiany, zanim zamienią się w kosztowne szkody.",
+      exploreDemo: "Zobacz demo",
+      seeOffer: "Zobacz ofertę",
       insarSolutions: "Rozwiązania InSAR",
       howInsarWorks: "Jak działa InSAR",
     },
     supportedBy: {
-      eyebrow: "Wspierają nas",
-      text: "SAR Metrics działa przy wsparciu Europejskiej Agencji Kosmicznej (ESA BIC Poland).",
+      eyebrow: "Przy wsparciu",
+      text: "SAR Metrics rozwija się przy wsparciu inkubatora Europejskiej Agencji Kosmicznej – ESA BIC Poland.",
     },
     solutions: {
       eyebrow: "Rozwiązania InSAR",
       title:
-        "Od pojedynczych obiektów po całe regiony — wykrywaj ruchy, zanim staną się problemem.",
-      readMore: "Czytaj więcej",
+        "Od pojedynczych obiektów po całe regiony – wykrywaj przemieszczenia gruntu i infrastruktury na wczesnym etapie i zapobiegaj szkodom.",
+      readMore: "Zobacz rozwiązanie",
     },
     capabilities: {
       eyebrow: "Możliwości",
-      title: "Skalowalne rozwiązania, milimetrowa precyzja.",
+      title: "Dokładność metod naziemnych. Zasięg, którego one nie dają.",
       items: {
         millimetricPrecision: {
-          title: "Precyzja milimetrowa",
-          body: "Mierzymy przemieszczenia gruntu i konstrukcji wzdłuż linii widzenia satelity z dokładnością rzędu milimetrów.",
+          title: "Dokładność do milimetrów",
+          body: "Mierzymy przemieszczenia terenu i obiektów w kierunku linii widzenia satelity (LOS) z dokładnością porównywalną z metodami naziemnymi.",
         },
         wideAreaCoverage: {
           title: "Zasięg regionalny",
-          body: "Monitoruj całe zagłębia, korytarze transportowe i miasta w jednym cyklu przetwarzania.",
+          body: "Jedna analiza obejmuje całe miasto, zagłębie górnicze albo setki kilometrów dróg i linii kolejowych – bez rozstawiania sprzętu w terenie.",
         },
         allWeatherSar: {
-          title: "SAR 24/7",
-          body: "Radar „widzi” przez chmury i dym oraz działa w nocy — niezależnie od pogody.",
+          title: "Pomiary 24/7",
+          body: "Radar działa w dzień i w nocy, przez chmury i dym. Dane napływają niezależnie od pogody i pory roku.",
         },
         historicalArchive: {
-          title: "Archiwum historyczne",
-          body: "Odtwórz historię przemieszczeń nawet od początku lat 90. dzięki archiwalnym danym SAR.",
+          title: "Historia od lat 90.",
+          body: "Archiwa satelitarne pozwalają odtworzyć przebieg przemieszczeń nawet od początku lat 90. – także tam, gdzie nigdy nie prowadzono pomiarów.",
         },
       },
     },
@@ -171,23 +179,23 @@ export const pl: Messages = {
   about: {
     hero: {
       eyebrow: "O nas",
-      title: "Mierzymy to, co się porusza — żeby można było zareagować, zanim będzie za późno.",
+      title: "Mierzymy to, co się przemieszcza – żeby można było zareagować na czas.",
       subtitle:
-        "Jesteśmy zespołem inżynierów radarowych, specjalistów od geodanych i programistów. Zamieniamy obserwację Ziemi oraz InSAR w narzędzia gotowe do codziennego użycia.",
+        "Jesteśmy zespołem inżynierów radarowych, specjalistów od danych przestrzennych i programistów. Zamieniamy satelitarne dane radarowe w narzędzie codziennej pracy dla osób odpowiedzialnych za bezpieczeństwo obiektów i terenu.",
     },
     valuesEyebrow: "Wartości",
     values: {
       measurementFirst: {
-        title: "Pomiar przede wszystkim",
-        body: "Ufamy danym, nie opowieściom. Każde stwierdzenie opieramy na sygnale, który sami przetworzyliśmy i sprawdziliśmy.",
+        title: "Najpierw pomiar",
+        body: "Opieramy się na danych, nie na przypuszczeniach. Za każdym wnioskiem stoi sygnał, który sami przetworzyliśmy i zweryfikowaliśmy.",
       },
       operatorGrade: {
-        title: "Klasa operacyjna",
-        body: "Projektujemy tak, żeby mogli na tym polegać inżynierowie geotechniczni, służby ochrony cywilnej i operatorzy obiektów.",
+        title: "Jakość dla praktyków",
+        body: "Tworzymy narzędzia dla geotechników, służb zarządzania kryzysowego i zarządców obiektów – ludzi, którzy na podstawie naszych danych podejmują decyzje.",
       },
       openByDefault: {
-        title: "Otwarci domyślnie",
-        body: "Standardowe formaty, udokumentowane API, powtarzalne przetwarzanie. Żadnych czarnych skrzynek.",
+        title: "Otwartość",
+        body: "Standardowe formaty danych, udokumentowane API, powtarzalne przetwarzanie. Żadnych czarnych skrzynek.",
       },
     },
     timelineEyebrow: "Oś czasu",
@@ -195,497 +203,697 @@ export const pl: Messages = {
       seasat: {
         year: "1978",
         title: "Seasat",
-        body: "NASA wypuszcza pierwszy cywilny satelitę SAR, dowodząc skuteczności obrazowania radarowego Ziemi z orbity.",
+        body: "NASA wynosi na orbitę pierwszego cywilnego satelitę z radarem SAR i dowodzi, że Ziemię można obrazować radarowo z kosmosu.",
       },
       ers: {
         year: "1992",
         title: "Początek archiwum ERS-1",
-        body: "Misje ERS ESA rozpoczynają ciągłe archiwum SAR, które nadal stanowi fundament historycznej analityki InSAR.",
+        body: "Misje ERS Europejskiej Agencji Kosmicznej zapoczątkowują ciągłe archiwum danych SAR – do dziś podstawę analiz historycznych InSAR.",
       },
       psinsar: {
         year: "2002",
         title: "PS-InSAR",
-        body: "Techniki PS-InSAR umożliwiają budowę milimetrowo dokładnych serii czasowych na stabilnych reflektorach.",
+        body: "Metoda stabilnych rozpraszaczy pozwala budować szeregi czasowe przemieszczeń o milimetrowej dokładności.",
       },
       sentinel: {
         year: "2014",
         title: "Sentinel-1",
-        body: "Darmowy, otwarty, globalny SAR co 6–12 dni zmienia InSAR z narzędzia badawczego w usługę operacyjną.",
+        body: "Bezpłatne, otwarte dane SAR z całego świata co 6–12 dni sprawiają, że InSAR z narzędzia badawczego staje się usługą operacyjną.",
       },
       commercial: {
-        year: "lata 2020.",
-        title: "Komercyjne konstelacje małych satelitów SAR",
-        body: "Częste, wysokorozdzielcze zobrazowania SAR od operatorów komercyjnych umożliwiają nawet codzienny monitoring wybranych obiektów.",
+        year: "po 2020",
+        title: "Komercyjne konstelacje SAR",
+        body: "Małe satelity komercyjne dostarczają zobrazowań o wysokiej rozdzielczości na tyle często, że możliwy staje się nawet codzienny monitoring wybranych obiektów.",
       },
       founded: {
         year: "2026",
-        title: "Założenie SAR Metrics",
-        body: "Zamieniamy cztery dekady rozwoju SAR w operacyjny system monitoringu dla przemysłu i infrastruktury.",
+        title: "Powstaje SAR Metrics",
+        body: "Przekładamy cztery dekady rozwoju techniki SAR na system monitoringu dla przemysłu i infrastruktury.",
       },
       esaBic: {
         year: "2026",
         title: "Grant ESA BIC Poland",
-        body: "SAR Metrics otrzymał grant ESA BIC Poland wspierający rozwój i komercjalizację technologii.",
+        body: "SAR Metrics otrzymuje grant ESA BIC Poland na rozwój i komercjalizację technologii.",
       },
     },
-    ctaTitle: "Współpracuj z nami.",
-    ctaLabel: "Skontaktuj się",
+    ctaTitle: "Porozmawiajmy o współpracy.",
+    ctaLabel: "Skontaktuj się z nami",
   },
 
   contact: {
     hero: {
       eyebrow: "Kontakt",
-      title: "Powiedz nam, co chcesz zobaczyć.",
-      subtitle: "Wystarczy krótka wiadomość — wrócimy z odpowiednimi osobami i planem.",
+      title: "Powiedz nam, co chcesz monitorować.",
+      subtitle: "Wystarczy krótka wiadomość. Odezwiemy się z propozycją kolejnych kroków.",
     },
     form: {
       nameLabel: "Imię i nazwisko",
-      emailLabel: "Email służbowy",
+      emailLabel: "E-mail służbowy",
       companyLabel: "Firma",
       industryLabel: "Branża",
-      industryPlaceholder: "Wybierz",
+      industryPlaceholder: "Wybierz branżę",
       industries: {
-        infrastructure: "Infrastruktura",
+        infrastructure: "Infrastruktura i kolej",
         mining: "Górnictwo",
         insurance: "Ubezpieczenia",
         oilGas: "Ropa i gaz",
-        geohazards: "Zagrożenia geotechniczne",
-        structural: "Konstrukcje",
-        other: "Inne",
+        geohazards: "Geozagrożenia",
+        structural: "Budownictwo",
+        other: "Inna",
       },
       messageLabel: "Co chcesz monitorować?",
       submitIdle: "Wyślij wiadomość",
-      submitSending: "Wysyłanie...",
-      submitSuccess: "Dziękujemy — wkrótce się skontaktujemy.",
-      errorMessage: "Błąd sieci. Spróbuj ponownie.",
+      submitSending: "Wysyłanie…",
+      submitSuccess: "Dziękujemy – wkrótce się odezwiemy.",
+      errorMessage: "Nie udało się wysłać wiadomości. Spróbuj ponownie.",
     },
     officeEyebrow: "Biuro",
-    generalEnquiries: "Zapytania ogólne",
+    generalEnquiries: "Kontakt ogólny",
     email: "kontakt@sarmetrics.pl",
   },
 
   technology: {
     hero: {
       eyebrow: "Technologia",
-      title: "Analityka InSAR z radaru satelitarnego.",
+      title: "Od obrazu radarowego do milimetrowego pomiaru.",
       subtitle:
-        "Proces przetwarzania, który zamienia petabajty danych SAR w precyzyjne informacje o przemieszczeniach — gotowe do wykorzystania w monitoringu operacyjnym.",
+        "Nasz łańcuch przetwarzania zamienia ogromne zbiory danych SAR w wiarygodne informacje o przemieszczeniach terenu i obiektów – gotowe do wykorzystania w bieżącym monitoringu.",
     },
     howItWorks: {
       eyebrow: "Jak to działa",
-      title: "Cztery etapy — od surowego radaru do sygnału gotowego do decyzji.",
+      title:
+        "Cztery etapy: od surowych danych radarowych do informacji, na której można oprzeć decyzję.",
       steps: {
         acquisition: {
           title: "Pozyskanie danych",
-          body: "Satelity SAR rejestrują obraz radarowy powierzchni Ziemi w dzień i w nocy, także przez chmury i dym — to fundament monitoringu satelitarnego.",
+          body: "Satelity z radarem SAR obrazują powierzchnię Ziemi w dzień i w nocy, także przez chmury i dym. Regularne przeloty nad tym samym obszarem tworzą materiał do pomiarów.",
         },
         interferometry: {
           title: "Interferometria",
-          body: "Zestawiamy pary zobrazowań SAR z tego samego obszaru i wyznaczamy zmianę fazy sygnału, która jest bezpośrednio związana z przemieszczeniem.",
+          body: "Porównujemy zobrazowania tego samego obszaru wykonane w różnym czasie. Różnica fazy sygnału radarowego odpowiada zmianie odległości między satelitą a terenem, czyli przemieszczeniu.",
         },
         persistentScatterers: {
-          title: "Rozpraszacze trwałe",
-          body: "Stabilne reflektory — dachy, infrastruktura, odsłonięte skały — są identyfikowane w długich seriach czasowych i śledzone indywidualnie z precyzją milimetrową.",
+          title: "Stabilne rozpraszacze",
+          body: "W długich seriach zobrazowań wyszukujemy punkty stabilnie odbijające sygnał – dachy, konstrukcje, elementy infrastruktury, odsłonięte skały – i dla każdego z nich wyznaczamy historię przemieszczeń z milimetrową dokładnością.",
         },
         analytics: {
           title: "Analityka i alerty",
-          body: "Analizujemy serie czasowe (trendy, sezonowość i anomalie), a wyniki udostępniamy w panelach, przez API i w postaci alertów — tak, żeby można było od razu reagować.",
+          body: "W szeregach czasowych rozdzielamy trend, wahania sezonowe i anomalie. Wyniki trafiają na platformę internetową, do API i do alertów, dzięki czemu od razu wiadomo, gdzie potrzebna jest reakcja.",
         },
       },
-      footer: "Zagłęb się w nasz {glossary}, poznaj {analytics} lub zobacz branżowe {solutions}.",
+      footer: "Więcej wyjaśnień zawiera {glossary}. Zobacz też {analytics} i {solutions}.",
       footerLinks: {
         glossary: "słownik InSAR",
         analytics: "analitykę InSAR",
-        solutions: "rozwiązania InSAR",
+        solutions: "rozwiązania dla branż",
       },
     },
     dataProducts: {
-      eyebrow: "Produkty danych",
+      eyebrow: "Co dostarczamy",
       items: {
         wideArea: {
-          title: "Bazowa mapa regionalna",
-          body: "Regionalne mapy przemieszczeń aktualizowane z częstotliwością dobraną do twoich potrzeb.",
+          title: "Mapa regionalna",
+          body: "Mapy przemieszczeń dla całych regionów, aktualizowane z uzgodnioną częstotliwością.",
         },
         focused: {
           title: "Monitoring punktowy",
-          body: "Zobrazowania o wysokiej rozdzielczości nad krytycznymi obiektami, z gęstym próbkowaniem w czasie.",
+          body: "Zobrazowania o wysokiej rozdzielczości i częste pomiary nad obiektami o krytycznym znaczeniu.",
         },
         historical: {
-          title: "Rekonstrukcja historyczna",
-          body: "Rekonstrukcja wyłącznie z archiwów — z historią przemieszczeń sięgającą nawet początku lat 90. XX wieku.",
+          title: "Analiza historyczna",
+          body: "Odtworzenie przemieszczeń z danych archiwalnych – nawet od początku lat 90.",
         },
         api: {
-          title: "API i dostawa danych",
-          body: "Dane wyjściowe GeoJSON, rastrowe i tabelaryczne oraz API alertów w czasie rzeczywistym.",
+          title: "API i eksport danych",
+          body: "Dane w formatach GeoJSON, rastrowych i tabelarycznych oraz API alertów działające w czasie rzeczywistym.",
         },
       },
       footer:
-        "Porównaj podejścia regionalne i punktowe na naszej stronie {spaceMonitoring} lub przeglądaj {solutions}.",
+        "Podejście regionalne i punktowe porównujemy na stronie o {spaceMonitoring}. Zobacz też {solutions}.",
       footerLinks: {
-        spaceMonitoring: "monitoringu satelitarnego",
-        solutions: "rozwiązania branżowe",
+        spaceMonitoring: "monitoringu satelitarnym",
+        solutions: "rozwiązania dla branż",
       },
     },
-    ctaTitle: "Chcesz zobaczyć dane na swoim obiekcie?",
-    ctaLabel: "Poproś o próbkę",
+    ctaTitle: "Chcesz zobaczyć dane dla swojego obiektu?",
+    ctaLabel: "Poproś o przykładową analizę",
+  },
+
+  offer: {
+    hero: {
+      eyebrow: "Monitoring infrastruktury",
+      title: "Wydawaj tylko za obszar, który faktycznie monitorujesz",
+      subtitle:
+        "Z orbity widać, o ile ruszył się teren i konstrukcja — co do milimetra, w dzień i w nocy, także przez chmury. Reagujecie tam, gdzie coś się naprawdę dzieje, zanim drobny ruch urośnie do szkody.",
+      primaryCta: "Sprawdź swój obiekt",
+      secondaryCta: "Zobacz demo",
+    },
+    economics: {
+      eyebrow: "Po co to się opłaca",
+      title: "Jedna awaria kosztuje więcej niż lata pomiarów.",
+      withoutLabel: "Bez monitoringu. Jedno zdarzenie.",
+      withoutValue: "Miliony",
+      withoutUnit: "złotych strat",
+      withoutBody:
+        "Wykolejenie przez zły stan toru albo przestój w kopalni odkrywkowej to miliony: postoje, naprawy, odszkodowania, utracone kontrakty.",
+      withLabel: "Monitoring SAR Metrics",
+      withValue: "od 100 zł",
+      withUnit: "za km² w najniższym wariancie",
+      withBody:
+        "Cena nie jest jedna. Zależy od terenu, od tego, jak często mierzymy, i od dokładności, jakiej potrzebujecie. W najniższym wariancie schodzi do około 100 zł za kilometr kwadratowy. Na kilometrze kwadratowym wychodzi mniej niż przy aparaturze naziemnej i dronach.",
+      pointsTitle: "Na czym polega oszczędność",
+      points: [
+        {
+          title: "Awarie, których nie ma",
+          body: "Widać, że rusza się tor, skarpa albo nasyp, zanim coś pęknie. Abonament płacicie za to, żeby zobaczyć to na czas.",
+        },
+        {
+          title: "Kontrole tylko tam, gdzie trzeba",
+          body: "Ludzie i pieniądze idą na odcinki, które się ruszają. Nie trzeba obchodzić całej sieci według sztywnego grafiku.",
+        },
+        {
+          title: "Bez aparatury w terenie",
+          body: "Na pojedynczym punkcie pomiar z ziemi bywa równie dokładny. InSAR obejmuje cały korytarz z orbity i nie trzeba niczego rozstawiać.",
+        },
+      ],
+      note: "100 zł za km² to dolna granica, nie cennik. Wycena rusza się razem z terenem, częstotliwością pomiarów i wymaganą dokładnością.",
+    },
+    proof: [
+      { value: "mm", label: "Dokładność jak przy pomiarze z ziemi" },
+      { value: "24/7", label: "Działa przez chmury, dym i w nocy" },
+      { value: "od lat 90.", label: "Z archiwów da się odtworzyć historię ruchu" },
+      { value: "od 100 zł", label: "Za km² w najniższym wariancie. Dalej zależy od terenu, częstotliwości i dokładności." },
+    ],
+    figures: {
+      heroAlt: "Satelita nad Ziemią, monitoring infrastruktury",
+      bridgeAlt: "Most w nocy, z punktami pokazującymi, gdzie rusza się pomost",
+      bridgeCaption: "Tak może wyglądać most: punkty pokazują, gdzie rusza się pomost.",
+      usesAlt: "Wiadukt z drogą i koleją w nocy",
+      costCaption:
+        "Aparatura i drony są policzone za kilometr infrastruktury. InSAR pokazujemy od 100 zł za km², czyli od najniższego wariantu. Na kilometrze kwadratowym wychodzi to mniej niż tamte metody. Właściwa cena i tak zależy od terenu, częstotliwości i dokładności.",
+    },
+    comparison: {
+      areaLabel: "Jaki obszar obejmuje",
+      costLabel: "Koszt pomiaru",
+      ground: "Aparatura naziemna",
+      drones: "Drony",
+      insar: "InSAR (satelity)",
+      groundCost: "20 000 zł / km",
+      dronesCost: "82 500 zł / km",
+      insarCost: "od 100 zł / km²",
+    },
+    explain: {
+      eyebrow: "Na czym to polega",
+      isTitle: "Co mierzymy",
+      isBody:
+        "InSAR mierzy ruch z orbity. Satelita wraca nad ten sam teren, a porównanie kolejnych obrazów pokazuje, o ile przesunął się grunt albo obiekt — co do milimetra. Radar działa w dzień i w nocy, przez chmury i dym. Z archiwów da się odtworzyć historię nawet od początku lat 90.",
+      forTitle: "Do czego to wykorzystacie",
+      forBody:
+        "Widać, gdzie rusza się teren i infrastruktura, na dużym obszarze i bez wyjazdu w teren. Wskazujemy odcinki i obiekty, które wymagają reakcji, więc kontrola i budżet idą tam, gdzie są potrzebne.",
+    },
+    benefits: {
+      eyebrow: "Co dostajecie",
+      title: "Alarm, kolejność działań i zapis pomiaru.",
+      items: [
+        {
+          title: "Wczesny alarm",
+          body: "Nietypowy ruch widać, kiedy jeszcze da się zareagować.",
+        },
+        {
+          title: "Szkoda, zanim powstanie",
+          body: "Reagujecie, zanim pęknięcie, osiadanie albo osuwisko zamieni się w naprawę.",
+        },
+        {
+          title: "Co będzie dalej",
+          body: "Z historii widać, czy ruch jest stały, zwalnia, czy przyspiesza.",
+        },
+        {
+          title: "Gdzie już jest problem",
+          body: "Widać, które obiekty i odcinki zachowują się inaczej niż reszta.",
+        },
+        {
+          title: "Od czego zacząć kontrolę",
+          body: "Podpowiadamy, co sprawdzić najpierw.",
+        },
+        {
+          title: "Zapis, który da się pokazać",
+          body: "Niezależny pomiar do roszczeń, sporów i rozmów o gwarancji.",
+        },
+      ],
+    },
+    platform: {
+      title: "Wszystko w jednej aplikacji.",
+      body: "Obszar, który monitorujecie, widać online. Pomiarów bywa kilka w miesiącu. Mapy, wykresy w czasie i alerty są w jednym miejscu.",
+      link: "Jak przetwarzamy dane",
+    },
+    uses: {
+      eyebrow: "Infrastruktura",
+      title: "Sieć pod okiem, zanim coś się zepsuje.",
+      items: [
+        {
+          title: "Uszkodzenie widać wcześnie",
+          body: "Dla właściciela, dewelopera albo wykonawcy, który odpowiada za drogę, kolej, most czy inny obiekt. Widać, gdzie problem się zaczyna i od kiedy.",
+        },
+        {
+          title: "Zapory, skarpy, nasypy",
+          body: "Ruch, który skończyłby się awarią, widać jeszcze wtedy, kiedy da się zareagować.",
+        },
+        {
+          title: "Cały korytarz, nie jeden punkt",
+          body: "Śledzimy zmiany wzdłuż dróg, kolei i innej infrastruktury liniowej, a także na dużych obiektach.",
+        },
+        {
+          title: "Obiekt zostaje czynny",
+          body: "Chodzi o ruch terenu i konstrukcji, przez który trzeba by zamknąć linię, most albo plac.",
+        },
+      ],
+    },
+    sectors: {
+      eyebrow: "Dla kogo",
+      title: "Ten sam pomiar. Inny raport — pod waszą decyzję.",
+      intro:
+        "Sam pomiar jest zawsze tak samo rzetelny. Inaczej układamy monitoring, zakres wyników i język raportu.",
+      items: {
+        critical: {
+          title: "Infrastruktura krytyczna",
+          body: "Wiecie, co kontrolować najpierw. Przestojów jest mniej.",
+        },
+        energy: {
+          title: "Sieci energetyczne",
+          body: "Osiadanie przy stacjach, słupach i fundamentach.",
+        },
+        roads: {
+          title: "Drogi, autostrady, mosty",
+          body: "Odcinki, które ruszają się nietypowo. Utrzymanie idzie tam, gdzie ma sens.",
+        },
+        rail: {
+          title: "Kolej",
+          body: "Tor, nasyp i skarpa. Mniej opóźnień.",
+        },
+        construction: {
+          title: "Budowy i inwestycje",
+          body: "Przed budową, w trakcie i po oddaniu.",
+        },
+        generation: {
+          title: "Elektrownie i farmy",
+          body: "Elektrownie, fotowoltaika i wiatr.",
+        },
+        fuels: {
+          title: "Paliwa i rurociągi",
+          body: "Zbiorniki, rurociągi, terminale, bazy.",
+        },
+        mining: {
+          title: "Górnictwo",
+          body: "Deformacje terenu, zwałowiska i skarpy, także przy rekultywacji.",
+        },
+        insurance: {
+          title: "Ubezpieczenia",
+          body: "Ryzyko szkody w portfelu widać wcześniej.",
+        },
+      },
+    },
+    faqEyebrow: "Pytania",
+    faqTitle: "Zanim podpiszecie umowę",
+    ctaTitle: "Pokażemy, co InSAR pokaże na waszym terenie.",
+    ctaBody: "Wskażcie obiekt albo region. Sprawdzimy, jaki ruch da się tam zmierzyć.",
+    ctaLabel: "Zacznijcie od swojego obiektu",
   },
 
   solutions: {
     hero: {
       eyebrow: "Rozwiązania InSAR",
-      title: "Rozwiązania InSAR dla każdego krytycznego obiektu.",
+      title: "Monitoring InSAR dopasowany do branży.",
       subtitle:
-        "Programy monitoringu dopasowane do potrzeb branż, oparte na radarze satelitarnym — od pojedynczych obiektów po całe regiony.",
+        "Od pojedynczego obiektu po całą sieć lub region – usługi monitoringu oparte na radarze satelitarnym, zaprojektowane z myślą o konkretnych ryzykach.",
     },
     intro:
-      "Każda z branż poniżej ma rozwiązanie InSAR zaprojektowane pod to, jak w praktyce zarządza się ryzykiem. Szerszy przegląd znajdziesz w {insarSolutions} i {insarAnalytics}.",
+      "Każde z poniższych rozwiązań uwzględnia to, jak dana branża w praktyce zarządza ryzykiem. Szersze omówienie znajduje się na stronach {insarSolutions} i {insarAnalytics}.",
     introLinks: {
-      insarSolutions: "rozwiązania InSAR",
-      insarAnalytics: "analitykę InSAR",
+      insarSolutions: "Rozwiązania InSAR",
+      insarAnalytics: "Analityka InSAR",
     },
-    open: "Otwórz",
+    open: "Zobacz",
   },
 
   solutionDetail: {
     eyebrow: "Rozwiązanie",
     challenge: "Wyzwanie",
-    approach: "Podejście",
-    outcome: "Rezultat",
-    includes: "Co obejmuje usługa.",
-    deliverablesEyebrow: "Dostarczane produkty",
+    approach: "Nasze podejście",
+    outcome: "Efekt",
+    includes: "Zakres usługi.",
+    deliverablesEyebrow: "Wyniki",
     deliverables: "Co otrzymujesz.",
-    useCasesEyebrow: "Przypadki użycia",
-    useCases: "Kto tego używa i dlaczego.",
-    otherSolutionsEyebrow: "Inne rozwiązania",
-    open: "Otwórz",
+    useCasesEyebrow: "Zastosowania",
+    useCases: "Kto z tego korzysta i po co.",
+    otherSolutionsEyebrow: "Pozostałe rozwiązania",
+    open: "Zobacz",
     notFound: "Nie znaleziono rozwiązania",
-    backToSolutions: "Powrót do rozwiązań",
+    backToSolutions: "Wróć do rozwiązań",
   },
 
   offerings: {
     infrastructure: {
       title: "Infrastruktura",
-      tagline: "Inteligencja dla bezpieczniejszej infrastruktury — od projektowania po utrzymanie",
+      tagline: "Monitoring dróg, mostów, linii kolejowych i zapór – od projektu po utrzymanie",
       description:
-        "Autostrady, mosty, zapory, koleje i rurociągi monitorowane z precyzją milimetrową przez każdą fazę ich cyklu życia — rozwiązania InSAR dostosowane do potrzeb operatorów infrastruktury.",
+        "Milimetrowe pomiary przemieszczeń autostrad, mostów, torowisk, nasypów, zapór i rurociągów na każdym etapie życia obiektu. Wskazujemy odcinki, które wymagają reakcji, zanim dojdzie do awarii.",
     },
     mining: {
       title: "Górnictwo",
-      tagline: "Wczesne ostrzeganie i ograniczanie ryzyka w obiektach górniczych",
+      tagline: "Wczesne ostrzeganie o deformacjach terenu, zboczy i składowisk",
       description:
-        "Ciągły monitoring ścian wykopów, zapór odpadów poflotacyjnych, hałd odpadów i osiadania podziemnego — z progami alertów dostosowanymi do specyfiki obiektu przy użyciu analityki InSAR.",
+        "Stały monitoring zboczy wyrobisk, zwałowisk, obwałowań składowisk odpadów poflotacyjnych i osiadań nad eksploatacją podziemną – z progami alarmowymi ustalanymi osobno dla każdego obiektu.",
     },
     insurance: {
       title: "Ubezpieczenia",
-      tagline:
-        "Niezależne dowody ruchu gruntu dla oceny ryzyka, likwidacji szkód i zarządzania portfelem",
+      tagline: "Niezależne dane o ruchach terenu do oceny ryzyka i likwidacji szkód",
       description:
-        "Analiza InSAR dla całych portfeli i pojedynczych lokalizacji: osiadanie, osuwiska i ruchy konstrukcji. Pomaga w ocenie ryzyka, przeglądzie ekspozycji i weryfikacji roszczeń.",
+        "Analizy InSAR dla całych portfeli i pojedynczych lokalizacji: osiadanie terenu, osuwiska, przemieszczenia budynków. Wsparcie oceny ryzyka, przeglądu ekspozycji i weryfikacji roszczeń.",
     },
     "oil-gas": {
       title: "Ropa i gaz",
-      tagline: "Subtelne przemieszczenia powierzchni dla produkcji i zarządzania złożem",
+      tagline: "Monitoring przemieszczeń powierzchni terenu nad złożami ropy i gazu",
       description:
-        "Śledź kompakcję i uniesienie złoża, integralność składowania CO₂ i reakcję gruntu wokół miejsc wydobycia — globalnie, powtarzalnie — z monitoringiem satelitarnym InSAR.",
+        "Kompakcja i wypiętrzanie nad złożem, szczelność składowisk CO₂, reakcja terenu wokół odwiertów i instalacji – mierzone regularnie i w ten sam sposób w dowolnym miejscu na świecie.",
     },
     geohazards: {
-      title: "Zagrożenia geotechniczne",
-      tagline:
-        "Identyfikacja lokalizacji zagrożonych i monitoring zagrożeń geotechnicznych na dużych obszarach",
+      title: "Geozagrożenia",
+      tagline: "Wykrywanie osuwisk i osiadania terenu na dużych obszarach",
       description:
-        "Analiza przesiewowa InSAR na dużych obszarach ujawnia osuwiska, osiadanie i ruchy tektoniczne w całych regionach — na długo zanim staną się widoczne w terenie.",
+        "Przesiewowa analiza InSAR pokazuje aktywne osuwiska, osiadanie i ruchy tektoniczne w skali całych regionów – na długo, zanim zmiany staną się widoczne w terenie.",
     },
     structural: {
-      title: "Ruchy konstrukcji",
-      tagline: "Pomiar ruchów gruntu i konstrukcji z kosmosu",
+      title: "Budownictwo i budynki",
+      tagline: "Monitoring budynków i otoczenia inwestycji – przed budową, w trakcie i po niej",
       description:
-        "Historia przemieszczeń budynek po budynku w obszarach miejskich — od pojedynczych fasad po całe dzielnice — na podstawie danych archiwalnych i bieżących SAR.",
+        "Historia przemieszczeń budynek po budynku – od pojedynczej elewacji po całą dzielnicę – z danych archiwalnych i bieżących. Dla inwestorów, wykonawców i zarządców nieruchomości.",
     },
   },
 
   solutionPages: {
     geohazards: {
       intro:
-        "Od terenów górskich po równiny przybrzeżne — zagrożenia geotechniczne rzadko dają wyraźne sygnały ostrzegawcze. SAR Metrics zamienia dekady danych SAR w na bieżąco aktualizowany obraz tego, gdzie grunt pracuje, żeby można było działać, zanim dojdzie do awarii.",
+        "Od terenów górskich po wybrzeże – osuwiska i osiadanie terenu rzadko dają wyraźne sygnały ostrzegawcze. SAR Metrics zamienia wieloletnie archiwa danych radarowych w stale aktualizowany obraz tego, gdzie teren się przemieszcza, tak aby można było zareagować przed katastrofą.",
       challenge:
-        "Osuwiska, osiadanie i ruchy tektoniczne zagrażają populacjom i infrastrukturze na rozległych, trudno dostępnych terenach.",
+        "Osuwiska, osiadanie terenu i ruchy tektoniczne zagrażają ludziom i infrastrukturze na rozległych obszarach, które trudno objąć pomiarami naziemnymi.",
       approach:
-        "Analiza przesiewowa InSAR na dużych obszarach identyfikuje aktywne wzorce deformacji, a następnie zawęża obszary ryzyka dzięki zobrazowaniom o wyższej rozdzielczości.",
+        "Analiza przesiewowa InSAR wskazuje w skali regionu obszary aktywnych deformacji. Tam, gdzie wykryjemy ruch, zagęszczamy pomiary zobrazowaniami o wyższej rozdzielczości.",
       outcome:
-        "Służby ochrony cywilnej i ubezpieczyciele dostają uporządkowany, aktualizowany obraz tego, gdzie grunt się porusza — i jak szybko.",
+        "Służby zarządzania kryzysowego i ubezpieczyciele otrzymują aktualny, uporządkowany według priorytetów obraz tego, gdzie teren się przemieszcza i jak szybko.",
       features: [
         {
           title: "Przegląd regionalny",
-          body: "Bazowe mapy ruchu gruntu w skali regionu lub kraju.",
+          body: "Wyjściowe mapy przemieszczeń terenu w skali regionu lub kraju.",
         },
         {
-          title: "Precyzja w obszarach ryzyka",
-          body: "Skupienie wysokiej rozdzielczości tam, gdzie wykryto ruch.",
+          title: "Analiza szczegółowa",
+          body: "Pomiary o wysokiej rozdzielczości tam, gdzie wykryto ruch.",
         },
         {
           title: "Progi alarmowe",
-          body: "Konfigurowalne alerty prędkości i przyspieszenia dla każdej lokalizacji.",
+          body: "Alerty prędkości i przyspieszenia przemieszczeń ustawiane osobno dla każdej lokalizacji.",
         },
       ],
       metrics: [
-        { value: "1 mm/rok", label: "Czułość prędkości" },
-        { value: "100 000 km²", label: "Typowy zasięg przeglądu" },
-        { value: "1992→", label: "Głębokość archiwum historycznego" },
+        { value: "1 mm/rok", label: "Czułość pomiaru prędkości" },
+        { value: "100 000 km²", label: "Typowy zasięg analizy przesiewowej" },
+        { value: "od 1992", label: "Dostępne dane archiwalne" },
       ],
       deliverables: [
-        "Regionalne mapy prędkości w formatach gotowych do GIS",
-        "Uporządkowany wykaz obszarów aktywnej deformacji według priorytetów",
-        "Serie czasowe na lokalizację i alarmy przyspieszenia",
-        "Kwartalne raporty przeglądowe z interpretacją ekspertów",
+        "Regionalne mapy prędkości przemieszczeń w formatach GIS",
+        "Wykaz obszarów aktywnych deformacji uszeregowany według priorytetu",
+        "Szeregi czasowe dla poszczególnych lokalizacji i alerty o przyspieszeniu ruchu",
+        "Kwartalne raporty z interpretacją ekspercką",
       ],
       useCases: [
         {
-          title: "Ochrona cywilna",
-          body: "Priorytetyzuj inspekcję gruntu i planowanie ewakuacji w regionie.",
+          title: "Zarządzanie kryzysowe",
+          body: "Ustalanie kolejności kontroli terenowych i planowanie ewakuacji w skali regionu.",
         },
         {
-          title: "Władze transportowe",
-          body: "Przeskanuj korytarze drogowe i kolejowe w poszukiwaniu niestabilności zboczy zanim zakłócą usługi.",
+          title: "Zarządcy dróg i kolei",
+          body: "Przegląd korytarzy drogowych i kolejowych pod kątem niestabilnych zboczy, zanim dojdzie do przerwy w ruchu.",
         },
         {
           title: "Ubezpieczyciele i reasekuratorzy",
-          body: "Skwantyfikuj ekspozycję na ryzyko osiadania i osuwisk w portfelach.",
+          body: "Ocena ekspozycji portfela na ryzyko osiadania terenu i osuwisk.",
         },
       ],
     },
     mining: {
       intro:
-        "Odkrywki, obiekty składowania odpadów poflotacyjnych i operacje podziemne — wszystko się rusza. Pytanie brzmi: jak szybko i co to oznacza. SAR Metrics integruje satelitarny, naziemny radar i dane in-situ w jeden obraz geotechniczny.",
+        "W kopalni wszystko się przemieszcza: zbocza wyrobisk, zwałowiska, składowiska odpadów, teren nad eksploatacją podziemną. Pytanie brzmi: jak szybko i co z tego wynika. SAR Metrics łączy dane satelitarne, pomiary radarem naziemnym i dane z czujników w jeden obraz geotechniczny.",
       challenge:
-        "Ściany wykopów, zapory odpadów poflotacyjnych i hałdy odpadów zawodzą bez ostrzeżenia, ze katastrofalnymi kosztami środowiskowymi i ludzkimi.",
+        "Zbocza wyrobisk, obwałowania składowisk odpadów poflotacyjnych i zwałowiska potrafią utracić stateczność bez wyraźnego ostrzeżenia – z katastrofalnymi skutkami dla ludzi i środowiska.",
       approach:
-        "Ciągły monitoring SAR połączony z fuzją radaru naziemnego dostarcza serie przemieszczeń na poziom ławy i komórki niemal w czasie rzeczywistym.",
+        "Ciągły monitoring satelitarny SAR, uzupełniony danymi z radarów naziemnych, dostarcza szeregów czasowych przemieszczeń dla poszczególnych pięter wyrobiska i kwater składowiska – niemal w czasie rzeczywistym.",
       outcome:
-        "Zespoły geotechniczne kopalni otrzymują wskaźniki wczesnego ostrzegania, codziennie, względem progów stabilności specyficznych dla obiektu.",
+        "Służby geotechniczne kopalni codziennie otrzymują wskaźniki wczesnego ostrzegania odniesione do progów stateczności ustalonych dla danego obiektu.",
       features: [
         {
-          title: "Stabilność wykopu i ścian",
-          body: "Serie przemieszczeń na poziomie ławy dla aktywnych i nieużywanych wykopów.",
+          title: "Stateczność zboczy wyrobisk",
+          body: "Szeregi czasowe przemieszczeń dla poszczególnych pięter – w wyrobiskach czynnych i wyłączonych z eksploatacji.",
         },
         {
-          title: "Integralność zapory odpadów poflotacyjnych",
-          body: "Śledzenie ruchu komórka po komórce z progami alarmowymi.",
+          title: "Składowiska odpadów poflotacyjnych",
+          body: "Śledzenie przemieszczeń obwałowań kwatera po kwaterze, z progami alarmowymi.",
         },
         {
-          title: "Monitoring zamknięcia",
-          body: "Długoterminowe śledzenie osiadania i odbicia po zamknięciu.",
+          title: "Monitoring po zakończeniu eksploatacji",
+          body: "Wieloletnia obserwacja osiadania i wypiętrzania terenu po likwidacji zakładu.",
         },
       ],
       metrics: [
-        { value: "Co tydzień", label: "Częstotliwość aktualizacji krytycznych obiektów" },
-        { value: "1 mm", label: "Precyzja na punkt po spiętrzeniu" },
-        { value: "GISTM", label: "Zgodność ze standardami odpadów poflotacyjnych" },
+        { value: "Co tydzień", label: "Aktualizacja danych dla obiektów krytycznych" },
+        { value: "1 mm", label: "Precyzja w punkcie po uśrednieniu serii" },
+        { value: "GISTM", label: "Dostosowanie do standardu dla odpadów poflotacyjnych" },
       ],
       deliverables: [
-        "Mapy deformacji na poziomie ławy i komórki",
-        "Alarmy prędkości i przyspieszenia do paneli operacyjnych",
-        "Niezależne raporty stron trzecich dla regulatorów i zarządów",
-        "Bazowe linie trendu długoterminowego zamknięcia i po zamknięciu",
+        "Mapy deformacji dla pięter wyrobisk i kwater składowisk",
+        "Alerty prędkości i przyspieszenia przemieszczeń w panelach operacyjnych",
+        "Niezależne raporty dla organów nadzoru i zarządu",
+        "Wieloletnie trendy odniesienia na etapie likwidacji zakładu i po niej",
       ],
       useCases: [
         {
-          title: "Inżynieria geotechniczna",
-          body: "Waliduj modele stabilności zboczy ciągłą, obiektową prawdą terenową.",
+          title: "Geotechnika",
+          body: "Weryfikacja modeli stateczności zboczy ciągłymi pomiarami obejmującymi cały zakład.",
         },
         {
-          title: "Zarządzanie odpadami poflotacyjnymi",
-          body: "Demonstruj integralność zapory regulatorom i społecznościom zgodnie z GISTM.",
+          title: "Gospodarka odpadami poflotacyjnymi",
+          body: "Wykazywanie bezpieczeństwa obwałowań przed organami nadzoru i lokalną społecznością, zgodnie z GISTM.",
         },
         {
-          title: "Zamknięcie i obiekty nieużywane",
-          body: "Śledź rezydualne osiadanie dekady po zaprzestaniu operacji.",
+          title: "Tereny pogórnicze",
+          body: "Pomiar osiadań resztkowych wiele lat po zakończeniu eksploatacji.",
         },
       ],
     },
     insurance: {
       intro:
-        "Ubezpieczyciele potrzebują niezależnych dowodów, które działają zarówno dla pojedynczego roszczenia, jak i dla całego portfela. SAR Metrics wykorzystuje radar satelitarny do ilościowego opisu ruchu gruntu i konstrukcji w portfelach, strefach katastrof i spornych lokalizacjach.",
+        "Ubezpieczyciel potrzebuje niezależnych danych, które sprawdzą się zarówno przy pojedynczej szkodzie, jak i przy analizie całego portfela. SAR Metrics mierzy za pomocą radaru satelitarnego przemieszczenia terenu i budynków – w portfelach, na obszarach dotkniętych katastrofami i w lokalizacjach spornych.",
       challenge:
-        "Zespoły oceny ryzyka i likwidacji szkód często podejmują decyzje o dużej wartości na podstawie ograniczonych, niespójnych albo spóźnionych danych z terenu.",
+        "Underwriterzy i likwidatorzy szkód często podejmują decyzje o dużej wartości na podstawie niepełnych, niespójnych lub spóźnionych informacji z terenu.",
       approach:
-        "Analiza przesiewowa InSAR na dużych obszarach wskazuje obszary ryzyka w portfelu, a następnie monitoring punktowy odtwarza historię przemieszczeń przed, w trakcie i po zdarzeniu.",
+        "Analiza przesiewowa InSAR wskazuje w portfelu miejsca o podwyższonej ekspozycji. Następnie analiza punktowa odtwarza historię przemieszczeń przed zdarzeniem, w jego trakcie i po nim.",
       outcome:
-        "Zespoły ubezpieczeniowe zyskują niezależne dowody ruchu do oceny ryzyka, zarządzania akumulacją, weryfikacji roszczeń i raportów eksperckich.",
+        "Zespoły ubezpieczeniowe zyskują wiarygodne dane o przemieszczeniach na potrzeby oceny ryzyka, kontroli kumulacji, weryfikacji roszczeń i opinii eksperckich.",
       features: [
         {
           title: "Przegląd portfela",
-          body: "Porządkuj obiekty i regiony według obserwowanej aktywności osiadania, osuwisk i deformacji.",
+          body: "Ranking ubezpieczonych obiektów i regionów według zaobserwowanego osiadania terenu, aktywności osuwisk i osiadania budynków.",
         },
         {
-          title: "Rekonstrukcja roszczeń",
-          body: "Odbuduj historię przemieszczeń wokół zgłoszonego zdarzenia szkodowego używając archiwów SAR.",
+          title: "Rekonstrukcja zdarzenia",
+          body: "Odtworzenie historii przemieszczeń wokół zgłoszonej szkody na podstawie archiwów SAR.",
         },
         {
-          title: "Niezależne raportowanie",
-          body: "Dostarcz pakiety dowodowe gotowe dla ekspertów do likwidatorów, brokerów i zespołów prawnych.",
+          title: "Niezależne raporty",
+          body: "Materiał dowodowy przygotowany dla likwidatorów, brokerów i działów prawnych.",
         },
       ],
       metrics: [
-        { value: "1992→", label: "Głębokość archiwum do rekonstrukcji zdarzeń" },
-        { value: "Skala portfela", label: "Pokrycie w księgach biznesowych" },
-        { value: "1 mm/rok", label: "Czułość ruchu długoterminowego" },
+        { value: "od 1992", label: "Dane archiwalne do rekonstrukcji zdarzeń" },
+        { value: "Cały portfel", label: "Analiza w skali portfela ubezpieczeń" },
+        { value: "1 mm/rok", label: "Czułość na powolne przemieszczenia" },
       ],
       deliverables: [
-        "Mapy ekspozycji portfela z priorytetowymi obszarami ryzyka",
-        "Serie czasowe przemieszczeń na poziomie nieruchomości i korytarza",
-        "Rekonstrukcje ruchu przed i po zdarzeniu dla roszczeń",
-        "Raporty ekspertów wspierające ocenę ryzyka i ocenę szkód",
+        "Mapy ekspozycji portfela ze wskazaniem obszarów priorytetowych",
+        "Szeregi czasowe przemieszczeń dla nieruchomości i korytarzy infrastruktury",
+        "Rekonstrukcje przemieszczeń sprzed zdarzenia i po nim – na potrzeby likwidacji szkód",
+        "Opinie eksperckie wspierające ocenę ryzyka i wycenę szkód",
       ],
       useCases: [
         {
           title: "Ocena ryzyka",
-          body: "Sprawdź nowe ryzyka pod kątem sygnałów osiadania, niestabilności zboczy i długoterminowych deformacji.",
+          body: "Sprawdzanie nowych ryzyk pod kątem osiadania terenu, niestabilności zboczy i długotrwałych deformacji.",
         },
         {
-          title: "Roszczenia i likwidacja szkód",
-          body: "Testuj, czy obserwowany ruch zgadza się z czasem i naturą zgłoszonej szkody.",
+          title: "Likwidacja szkód",
+          body: "Weryfikacja, czy zmierzone przemieszczenia odpowiadają dacie i charakterowi zgłoszonej szkody.",
         },
         {
           title: "Zarządzanie portfelem",
-          body: "Identyfikuj koncentracje ekspozycji związanej z ruchem w regionach, sektorach i klasach obiektów.",
+          body: "Wykrywanie kumulacji ekspozycji na ruchy terenu w regionach, sektorach i klasach obiektów.",
         },
       ],
     },
     infrastructure: {
       intro:
-        "Infrastruktura krytyczna zmienia się przez cały cykl życia — osiada pod obciążeniem, reaguje na prace w otoczeniu i po prostu się starzeje. SAR Metrics dostarcza ciągły zapis, który łączy założenia projektowe z rzeczywistym zachowaniem obiektu.",
+        "Infrastruktura pracuje przez cały okres użytkowania: osiada pod obciążeniem, reaguje na roboty prowadzone w sąsiedztwie, starzeje się. SAR Metrics dostarcza ciągły zapis przemieszczeń, który pozwala porównać założenia projektowe z rzeczywistym zachowaniem obiektu.",
       challenge:
-        "Zapory, mosty, tunele i sieci kolejowe degradują się po cichu. Inspekcja „gołym okiem” łatwo przegapia milimetrowe zmiany.",
+        "Zapory, mosty, tunele, nasypy i torowiska degradują się niepostrzeżenie. Sam przegląd wizualny nie wychwyci milimetrowych zmian, które zapowiadają poważne uszkodzenia.",
       approach:
-        "Analiza InSAR cyklu życia infrastruktury łączy bazowe linie projektowe, monitoring budowy i nadzór operacyjny w jeden ciągły zapis.",
+        "Monitoring InSAR obejmuje cały cykl życia obiektu: stan odniesienia przed budową, kontrolę w trakcie robót i nadzór w okresie eksploatacji – w jednym ciągłym zapisie.",
       outcome:
-        "Właściciele i operatorzy zmniejszają ryzyko inwestycyjne i wydłużają życie obiektów dzięki planowaniu utrzymania opartemu na twardych danych.",
+        "Właściciele i zarządcy ograniczają ryzyko inwestycyjne i wydłużają okres użytkowania obiektów, bo planują utrzymanie na podstawie pomiarów. Kontrole i budżet trafiają tam, gdzie są naprawdę potrzebne.",
       features: [
         {
-          title: "Bazowa linia przedbudowlana",
-          body: "Lata historycznego ruchu zanim grunt zostanie naruszony.",
+          title: "Stan odniesienia przed budową",
+          body: "Wieloletnia historia przemieszczeń terenu, zanim rozpoczną się roboty.",
         },
         {
-          title: "Nadzór budowlany",
-          body: "Śledzi przemieszczenia wywołane pracami w czasie rzeczywistym.",
+          title: "Nadzór w trakcie budowy",
+          body: "Śledzenie w czasie rzeczywistym przemieszczeń wywołanych robotami.",
         },
         {
-          title: "Monitoring operacyjny",
-          body: "Stały nadzór przez cykl życia obiektu.",
+          title: "Monitoring w eksploatacji",
+          body: "Stały nadzór przez cały okres użytkowania obiektu.",
         },
       ],
       metrics: [
-        { value: "30+ lat", label: "Dostępna historyczna linia odniesienia" },
-        { value: "Co tydzień", label: "Częstotliwość aktualizacji na aktywnych obiektach" },
-        { value: "BIM/GIS", label: "Natywna integracja z systemami obiektowymi" },
+        { value: "30+ lat", label: "Historia dostępna jako stan odniesienia" },
+        { value: "Co tydzień", label: "Częstotliwość pomiarów na czynnych obiektach" },
+        { value: "BIM/GIS", label: "Integracja z systemami zarządzania obiektami" },
       ],
       deliverables: [
-        "Panele przemieszczeń na poziomie obiektu",
-        "Raporty osadzania wywołanego w fazie budowy",
-        "Przegląd całych korytarzy dla sieci kolejowych i drogowych",
-        "Niezależne dowody dla zezwoleń, audytów i sporów sądowych",
+        "Panele przemieszczeń dla poszczególnych obiektów",
+        "Raporty osiadań wywołanych robotami budowlanymi",
+        "Przegląd całych korytarzy drogowych i linii kolejowych",
+        "Niezależny materiał dowodowy na potrzeby pozwoleń, audytów i sporów",
       ],
       useCases: [
         {
-          title: "Zapory i zbiorniki",
-          body: "Wykrywaj ruch korony i oporów w całej konstrukcji.",
+          title: "Linie kolejowe",
+          body: "Stabilność torowisk, nasypów i skarp na całej długości linii – mniej ograniczeń prędkości i opóźnień.",
+        },
+        {
+          title: "Drogi i autostrady",
+          body: "Wskazanie odcinków z nietypowymi trendami przemieszczeń i racjonalne planowanie utrzymania.",
         },
         {
           title: "Mosty i wiadukty",
-          body: "Zapisy ruchu na filar skorelowane z ruchem i sezonami.",
+          body: "Zapis przemieszczeń każdej podpory, zestawiony z natężeniem ruchu i porą roku.",
         },
-        { title: "Tunele i metro", body: "Reakcja powierzchni na prace podziemne i postęp TBM." },
+        {
+          title: "Zapory i zbiorniki",
+          body: "Wykrywanie przemieszczeń korony i przyczółków na całej długości obiektu.",
+        },
+        {
+          title: "Tunele i metro",
+          body: "Reakcja powierzchni terenu na roboty podziemne i postęp tarczy TBM.",
+        },
+        {
+          title: "Sieci energetyczne",
+          body: "Osiadanie terenu wokół stacji, słupów i fundamentów.",
+        },
       ],
     },
     "oil-gas": {
       intro:
-        "Wydajność złoża, integralność odwiertów i bezpieczeństwo składowania — wszystko zostawia ślad na powierzchni. SAR Metrics dekoduje ten sygnał w produkcyjnych polach, opuszczonych odwiertach i miejscach składowania CO₂ na całym świecie.",
+        "Eksploatacja złoża, stan odwiertów i szczelność magazynów zostawiają ślad na powierzchni terenu. SAR Metrics odczytuje ten sygnał nad eksploatowanymi złożami, zlikwidowanymi odwiertami i składowiskami CO₂ na całym świecie.",
       challenge:
-        "Ekstrakcja ze złoża i iniekcja indukują przemieszczenie powierzchni sygnalizujące integralność odwiertu, kompakcję i wydajność składowania.",
+        "Wydobycie i zatłaczanie płynów wywołują przemieszczenia powierzchni, które niosą informację o kompakcji złoża, stanie odwiertów i zachowaniu składowiska.",
       approach:
-        "InSAR z powtarzalnymi przelotami nad polami i miejscami składowania dostarcza mapy uniesienia i osiadania związane z cyklami produkcyjnymi.",
+        "Regularne pomiary InSAR nad złożami i składowiskami dają mapy osiadania i wypiętrzania terenu powiązane z cyklami produkcyjnymi.",
       outcome:
-        "Zespoły obiektowe korelują ruch z danymi z głębinowych, aby optymalizować produkcję i demonstrować integralność składowania CO₂.",
+        "Zespoły złożowe zestawiają przemieszczenia powierzchni z danymi otworowymi, aby optymalizować wydobycie i wykazywać szczelność składowisk CO₂.",
       features: [
         {
           title: "Nadzór nad złożem",
-          body: "Śledź kompakcję i odbicie nad produkcyjnymi polami.",
+          body: "Śledzenie kompakcji i odprężenia nad eksploatowanymi złożami.",
         },
         {
-          title: "Integralność składowania CO₂",
-          body: "Reakcja powierzchni na iniekcję w miejscach składowania.",
+          title: "Szczelność składowisk CO₂",
+          body: "Reakcja powierzchni terenu na zatłaczanie w miejscach składowania.",
         },
         {
-          title: "Zgodność z zezwoleniami",
-          body: "Niezależne dowody dla regulatorów i interesariuszy.",
+          title: "Wymogi koncesyjne",
+          body: "Niezależne dane dla organów nadzoru i interesariuszy.",
         },
       ],
       metrics: [
-        { value: "1 mm", label: "Wykrywanie uniesienia na miejscach składowania" },
-        { value: "Miesięcznie", label: "Standardowa częstotliwość cyklu produkcyjnego" },
-        { value: "Globalne", label: "Pokrycie z jednej platformy" },
+        { value: "1 mm", label: "Wykrywalne wypiętrzenie nad składowiskiem" },
+        { value: "Co miesiąc", label: "Standardowa częstotliwość pomiarów" },
+        { value: "Cały świat", label: "Zasięg jednej platformy" },
       ],
       deliverables: [
-        "Mapy osiadania i uniesienia całego pola",
-        "Serie czasowe na głowicach, podkładach i punktach iniekcji",
-        "Dane wejściowe dopasowania historycznego dla modeli złóż",
-        "Pakiety monitoringu, raportowania i weryfikacji CCS gotowe dla regulatora",
+        "Mapy osiadania i wypiętrzania dla całego złoża",
+        "Szeregi czasowe dla głowic odwiertów, placów wiertniczych i punktów zatłaczania",
+        "Dane wejściowe do kalibracji modeli złożowych (history matching)",
+        "Pakiety monitoringu, raportowania i weryfikacji (MRV) dla projektów CCS, gotowe do przekazania organom nadzoru",
       ],
       useCases: [
         {
-          title: "Pola produkcyjne",
-          body: "Połącz kompakcję powierzchni ze stawkami produkcji i ciśnieniem złoża.",
+          title: "Złoża w eksploatacji",
+          body: "Powiązanie kompakcji z tempem wydobycia i ciśnieniem złożowym.",
         },
         {
-          title: "CCS i składowanie",
-          body: "Niezależnie zweryfikuj zatrzymanie wstrzykniętego CO₂ w miejscach składowania.",
+          title: "CCS i magazynowanie",
+          body: "Niezależna weryfikacja, że zatłoczony CO₂ pozostaje w składowisku.",
         },
         {
-          title: "Opuszczone odwierty",
-          body: "Przeskanuj populacje nieużywanych odwiertów w poszukiwaniu anomalii powierzchniowych.",
+          title: "Zlikwidowane odwierty",
+          body: "Przegląd dużych grup nieczynnych odwiertów pod kątem anomalii na powierzchni.",
         },
       ],
     },
     structural: {
       intro:
-        "Każda odbijająca fasada w mieście to potencjalny punkt pomiarowy. SAR Metrics przekształca obszary miejskie w żywe mapy deformacji — budynek po budynku, wstecz do wczesnych lat 90. XX wieku.",
+        "Każda elewacja odbijająca sygnał radarowy to potencjalny punkt pomiarowy. SAR Metrics tworzy z zabudowy miejskiej mapę deformacji – budynek po budynku, z historią sięgającą początku lat 90. Dzięki temu wiadomo, jak teren i sąsiednie obiekty zachowywały się przed inwestycją i jak reagują na budowę.",
       challenge:
-        "Budynki miejskie osiadają, przechylają się i pękają przez sąsiednie prace, poziomy wód gruntowych i fundamenty sprzed dekad.",
+        "Budynki osiadają, wychylają się i pękają – pod wpływem głębokich wykopów w sąsiedztwie, zmian poziomu wód gruntowych i starych fundamentów. Bez danych sprzed budowy trudno ustalić przyczynę i odpowiedzialność.",
       approach:
-        "InSAR rozpraszaczy trwałych przekształca każdą odbijającą fasadę w punkt pomiarowy, wstecz do wczesnych archiwów SAR.",
+        "Metoda stabilnych rozpraszaczy (PS-InSAR) zamienia elewacje i dachy w punkty pomiarowe. Archiwa SAR dają stan odniesienia sprzed inwestycji, a bieżące zobrazowania – kontrolę w trakcie robót i po ich zakończeniu.",
       outcome:
-        "Władze miejskie, menedżerowie obiektów i inżynierowie zajmujący się ekspertyzami technicznymi otrzymują historie przemieszczeń na poziomie budynków na żądanie.",
+        "Inwestorzy, wykonawcy, zarządcy nieruchomości, urzędy miast i rzeczoznawcy otrzymują na żądanie historię przemieszczeń każdego budynku.",
       features: [
-        { title: "Budynek po budynku", body: "Przemieszczenie na konstrukcję na poziomie fasady." },
         {
-          title: "Rekonstrukcja archiwalna",
-          body: "Ruch historyczny od 1992 roku tam, gdzie dane istnieją.",
+          title: "Budynek po budynku",
+          body: "Przemieszczenia poszczególnych obiektów mierzone na poziomie elewacji.",
         },
-        { title: "Dowody eksperckie", body: "Dokumentacja osiadania na poziomie sądowym." },
+        {
+          title: "Analiza archiwalna",
+          body: "Historia przemieszczeń od 1992 roku – wszędzie tam, gdzie istnieją dane.",
+        },
+        {
+          title: "Materiał dowodowy",
+          body: "Dokumentacja osiadań przygotowana na potrzeby postępowań sądowych.",
+        },
       ],
       metrics: [
-        { value: "1992", label: "Najwcześniejsze obrazowanie archiwalne" },
-        { value: ">10 tys.", label: "Punktów pomiarowych na km² w gęstych obszarach" },
-        { value: "0,1 mm/rok", label: "Precyzja prędkości długoterminowej" },
+        { value: "1992", label: "Najstarsze zobrazowania w archiwum" },
+        { value: ">10 tys.", label: "Punktów pomiarowych na km² w gęstej zabudowie" },
+        { value: "0,1 mm/rok", label: "Precyzja wyznaczenia prędkości długookresowej" },
       ],
       deliverables: [
-        "Serie czasowe przemieszczeń na budynek",
-        "Chmury punktów na poziomie fasady i dachu z prędkością",
-        "Rekonstrukcje historyczne dla śledztw przed zdarzeniem",
-        "Raporty ekspertów dla sporów sądowych, ubezpieczeniowych i obiektowych",
+        "Szeregi czasowe przemieszczeń dla każdego budynku",
+        "Chmury punktów pomiarowych na elewacjach i dachach wraz z prędkością przemieszczeń",
+        "Rekonstrukcje historyczne do analiz stanu sprzed zdarzenia",
+        "Opinie eksperckie na potrzeby sporów sądowych, ubezpieczeniowych i majątkowych",
       ],
       useCases: [
         {
-          title: "Władze miejskie",
-          body: "Monitoruj dzielnice dziedzictwa i wysoko-ryzykowne sąsiedztwa ciągle.",
+          title: "Deweloperzy i wykonawcy",
+          body: "Dokumentowanie stanu terenu i sąsiedniej zabudowy przed budową, w jej trakcie i w okresie gwarancji.",
         },
         {
-          title: "Właściciele nieruchomości",
-          body: "Diagnozuj problemy przechyłu i osiadania zanim staną się strukturalne.",
+          title: "Właściciele i zarządcy nieruchomości",
+          body: "Wczesne rozpoznanie wychyleń i osiadań, zanim zagrożą konstrukcji.",
         },
         {
           title: "Ekspertyzy techniczne",
-          body: "Odtwórz historię ruchu budynku wokół zdarzenia szkodowego.",
+          body: "Odtworzenie historii przemieszczeń budynku wokół zdarzenia, które spowodowało szkodę.",
         },
       ],
     },
@@ -695,92 +903,93 @@ export const pl: Messages = {
     insarAnalytics: {
       hero: {
         eyebrow: "Analityka InSAR",
-        title: "Analityka InSAR — od radaru do decyzji.",
+        title: "Analityka InSAR: od pomiaru do decyzji.",
         subtitle:
-          "Precyzyjne informacje o przemieszczeniach z kosmosu: mapy, serie czasowe i alerty dla zespołów, które zarządzają ryzykiem.",
+          "Mapy przemieszczeń, szeregi czasowe i alerty dla zespołów, które odpowiadają za bezpieczeństwo obiektów i terenu.",
       },
       sections: {
         problem: {
-          title: "Problem, który rozwiązuje analityka InSAR",
+          title: "Jaki problem rozwiązuje analityka InSAR",
           paragraphs: [
-            "Krytyczne obiekty ruszają się powoli, aż nagle nie. Osiadanie, pełzanie zboczy i osadzanie konstrukcji często pozostają niewidoczne aż do okien inspekcyjnych lub zdarzeń awaryjnych.",
-            "Analityka InSAR daje operatorom ciągłą warstwę pomiarową: gdzie grunt i konstrukcje się ruszają, jak szybko i czy wzorzec przyspiesza — bez oczekiwania na instrumentację każdego kilometra.",
+            "Analityka InSAR to przetwarzanie satelitarnych pomiarów radarowych w mapy przemieszczeń, trendy i alerty. Pokazuje, gdzie teren i obiekty się przemieszczają, jak szybko i czy ruch przyspiesza.",
+            "Obiekty krytyczne przez długi czas przemieszczają się powoli – aż do awarii. Osiadanie terenu, pełzanie zboczy czy osiadanie konstrukcji zwykle pozostają niezauważone do kolejnego przeglądu albo do chwili, gdy pojawią się uszkodzenia.",
+            "Analityka InSAR daje ciągłą warstwę pomiarową na rozległych obszarach, bez instalowania czujników na każdym kilometrze. Kontrole i budżet można skierować tam, gdzie są naprawdę potrzebne.",
           ],
         },
         howWeDeliver: {
-          title: "Jak SAR Metrics produkuje sygnał",
+          title: "Jak powstają wyniki",
           paragraphs: [
-            "Łączymy kolejne zobrazowania SAR, tworzymy interferogramy, wybieramy rozpraszacze trwałe i przeliczamy zmianę fazy na milimetrowe przemieszczenia wzdłuż linii widzenia satelity.",
-            "Potem wyodrębniamy trendy, sezonowość i anomalie, a wyniki dostarczamy w postaci map, historii punktów i alertów — w panelach i przez API. Pełny łańcuch opisujemy na stronie technologii.",
+            "Zestawiamy serie zobrazowań SAR, tworzymy interferogramy, wybieramy stabilne rozpraszacze i przeliczamy zmianę fazy sygnału na przemieszczenia w kierunku linii widzenia satelity – z dokładnością do milimetrów.",
+            "Następnie nasze algorytmy rozdzielają trend, sezonowość i anomalie. Wyniki – mapy, historie punktów i alerty – są dostępne na platformie internetowej i przez API. Cały proces opisujemy na stronie Technologia.",
           ],
         },
         whatYouReceive: {
           title: "Co otrzymujesz",
           paragraphs: [
-            "Regionalne linie odniesienia do analizy przesiewowej, monitoring punktowy dla obiektów priorytetowych, rekonstrukcję historyczną z archiwów oraz formaty danych, z których twoi inżynierowie już korzystają.",
-            "Wyniki są zaprojektowane dla przepływów pracy geotechnicznych, obiektowych i ryzyka — nie dla notebooków badawczych.",
+            "Regionalny stan odniesienia do analiz przesiewowych, monitoring punktowy obiektów priorytetowych, analizę historyczną z archiwów oraz dane w formatach, z których Państwa inżynierowie korzystają na co dzień.",
+            "Wyniki przygotowujemy z myślą o pracy geotechników, zarządców obiektów i zespołów ds. ryzyka: wczesne ostrzeżenia o nietypowych przemieszczeniach, trendy wskazujące, czego się spodziewać, oraz rekomendacje, co i gdzie sprawdzić w pierwszej kolejności.",
           ],
         },
       },
       industries: {
-        eyebrow: "Branże polegające na analityce",
-        title: "Branże polegające na analityce",
+        eyebrow: "Branże, które korzystają z analityki InSAR",
+        title: "Branże, które korzystają z analityki InSAR",
       },
-      footer: "Poznaj pakietowe {insarSolutions}, {spaceMonitoring} lub {glossary}.",
+      footer: "Zobacz też: {insarSolutions}, {spaceMonitoring} i {glossary}.",
       footerLinks: {
-        insarSolutions: "rozwiązania InSAR",
+        insarSolutions: "rozwiązania InSAR dla branż",
         spaceMonitoring: "monitoring satelitarny",
-        glossary: "wpis słownikowy InSAR",
+        glossary: "hasło InSAR w słowniku",
       },
-      faqTitle: "Pytania o analitykę InSAR",
-      ctaTitle: "Zobacz analitykę InSAR na swoim obszarze (AOI).",
-      ctaLabel: "Porozmawiaj z naszym zespołem",
+      faqTitle: "Analityka InSAR – pytania i odpowiedzi",
+      ctaTitle: "Zobacz analitykę InSAR dla swojego obszaru.",
+      ctaLabel: "Skontaktuj się z nami",
     },
     insarSolutions: {
       hero: {
         eyebrow: "Rozwiązania InSAR",
         title: "Rozwiązania InSAR dopasowane do tego, jak branże zarządzają ryzykiem.",
         subtitle:
-          "Jeden fundament radaru satelitarnego. Sześć ofert operacyjnych dostosowanych do decyzji, które twoje zespoły już podejmują.",
+          "Jedna technologia radarowa, sześć usług zaprojektowanych z myślą o decyzjach, które Państwa zespoły podejmują na co dzień.",
       },
       whyDedicated: {
-        title: "Dlaczego dedykowane rozwiązania InSAR",
+        title: "Dlaczego rozwiązania branżowe",
         paragraphs: [
-          "Ogólne mapy przemieszczeń rzadko pasują do realnych procesów po stronie operatorów. Właściciele infrastruktury potrzebują kontekstu cyklu życia; kopalnie — progów alarmowych; ubezpieczyciele — niezależnych dowodów; energetyka — trendów w skali złoża.",
-          "SAR Metrics przekłada analitykę InSAR na rozwiązania branżowe: to samo rygorystyczne przetwarzanie, ale inny projekt monitoringu, produkty i język. Fundament techniczny znajdziesz w {insarAnalytics} i {technology}.",
+          "Uniwersalna mapa przemieszczeń rzadko odpowiada na pytania konkretnej branży. Zarządca infrastruktury chce widzieć obiekt w całym cyklu życia, kopalnia potrzebuje progów alarmowych, wykonawca – stanu odniesienia sprzed budowy, ubezpieczyciel – niezależnego materiału dowodowego, a operator złoża – trendów w skali całego pola.",
+          "Dlatego SAR Metrics oferuje analitykę InSAR w postaci rozwiązań branżowych: przetwarzanie jest zawsze równie rygorystyczne, zmienia się projekt monitoringu, zakres wyników i język raportów. Podstawy techniczne opisujemy na stronach {insarAnalytics} i {technology}.",
         ],
         links: {
-          insarAnalytics: "analityce InSAR",
-          technology: "technologii",
+          insarAnalytics: "Analityka InSAR",
+          technology: "Technologia",
         },
       },
       footer:
-        "Wolisz widok skupiony na możliwościach? Zobacz {allSolutions} lub poznaj, jak {spaceMonitoring} skaluje się od zagłębi po budynki.",
+        "Wolisz zacząć od możliwości technologii? Zobacz {allSolutions} albo sprawdź, jak {spaceMonitoring} obejmuje zarówno całe regiony, jak i pojedyncze budynki.",
       footerLinks: {
         allSolutions: "wszystkie rozwiązania",
         spaceMonitoring: "monitoring satelitarny",
       },
-      faqTitle: "FAQ rozwiązań InSAR",
-      ctaTitle: "Zaprojektuj rozwiązanie InSAR dla swojego portfela.",
+      faqTitle: "Rozwiązania InSAR – pytania i odpowiedzi",
+      ctaTitle: "Zaprojektujmy monitoring InSAR dla Państwa obiektów.",
       ctaLabel: "Skontaktuj się z nami",
-      open: "Otwórz",
+      open: "Zobacz",
     },
     spaceMonitoring: {
       hero: {
         eyebrow: "Monitoring satelitarny",
-        title: "Monitoring satelitarny widzący ruchy z orbity.",
+        title: "Monitoring satelitarny: przemieszczenia widoczne z orbity.",
         subtitle:
-          "Satelitarny SAR obserwuje obiekty i regiony w dzień i w nocy, także przez chmury — a analityka InSAR zamienia te zobrazowania w operacyjne dane o ruchu gruntu.",
+          "Satelity radarowe SAR obserwują obiekty i całe regiony w dzień i w nocy, także przez chmury. Analityka InSAR zamienia te zobrazowania w dane o przemieszczeniach terenu, gotowe do wykorzystania w codziennej pracy.",
       },
       whyFromSpace: {
-        title: "Dlaczego monitorować z kosmosu",
+        title: "Dlaczego warto monitorować z orbity",
         paragraphs: [
-          "Sieci naziemne są precyzyjne, ale rzadkie. Satelity optyczne dają kontekst, ale zawodzą przy chmurach i w nocy. Monitoring satelitarny z SAR wypełnia lukę: stała częstotliwość przelotów, niezależność od pogody i pokrycie od pojedynczych fasad po całe regiony.",
-          "SAR Metrics zapewnia całość jako usługę — plan pozyskania danych, przetwarzanie InSAR, analitykę i dostawę — dzięki czemu zespoły inżynieryjne i ryzyka dostają sygnały, na których można działać. Czytaj więcej o {insarAnalytics} i {insarSolutions}.",
+          "Sieci pomiarów naziemnych są dokładne, ale punktowe i kosztowne w utrzymaniu. Satelity optyczne pokazują kontekst, lecz zawodzą przy zachmurzeniu i w nocy. Monitoring radarowy SAR wypełnia tę lukę: regularne przeloty, niezależność od pogody i zasięg od pojedynczej elewacji po cały region.",
+          "SAR Metrics prowadzi cały proces jako usługę – od planu pozyskania zobrazowań, przez przetwarzanie InSAR i analitykę, po dostarczenie wyników. Zespoły inżynierskie i zespoły ds. ryzyka otrzymują informacje, na podstawie których mogą działać. Więcej na stronach {insarAnalytics} i {insarSolutions}.",
         ],
         links: {
-          insarAnalytics: "analityce InSAR",
-          insarSolutions: "rozwiązaniach InSAR",
+          insarAnalytics: "Analityka InSAR",
+          insarSolutions: "Rozwiązania InSAR",
         },
       },
       modes: {
@@ -788,72 +997,71 @@ export const pl: Messages = {
         items: {
           wideArea: {
             title: "Przegląd regionalny",
-            body: "Mapuj przemieszczenia w korytarzach, zagłębiach i miastach, żeby znaleźć „gorące punkty”, zanim zainstalujesz czujniki w terenie. Idealne dla zagrożeń geotechnicznych, właścicieli sieci i oceny ryzyka portfelowego.",
+            body: "Mapy przemieszczeń dla korytarzy transportowych, zagłębi i miast pozwalają znaleźć miejsca wymagające uwagi, zanim trzeba będzie instalować czujniki. To dobry punkt wyjścia dla zarządców sieci, programów ochrony przed geozagrożeniami i oceny ryzyka w portfelu.",
           },
           focused: {
             title: "Monitoring punktowy obiektów",
-            body: "Zwiększ częstotliwość przelotów i szczegółowość nad wykopami, zaporami, zakładami, mostami i dzielnicami, gdy priorytetowe lokalizacje są znane — z progami dopasowanymi do każdego obiektu.",
+            body: "Gdy priorytetowe lokalizacje są już znane, zwiększamy częstotliwość i szczegółowość pomiarów nad wyrobiskami, zaporami, zakładami, mostami i dzielnicami miast – z progami alarmowymi ustalonymi osobno dla każdego obiektu.",
           },
           historical: {
-            title: "Rekonstrukcja historyczna",
-            body: "Odtwórz lata zmian z archiwów SAR, żeby ustalić linie odniesienia, wesprzeć roszczenia i zrozumieć, jak obszar zachowywał się zanim pojawiły się czujniki w terenie.",
+            title: "Analiza historyczna",
+            body: "Z archiwów SAR odtwarzamy wieloletnią historię przemieszczeń: aby ustalić stan odniesienia, udokumentować roszczenia i zrozumieć, jak obszar zachowywał się, zanim pojawiły się na nim czujniki.",
           },
         },
       },
       fromOrbitToAction: {
-        title: "Z orbity do działania",
+        title: "Z orbity do decyzji",
         paragraphs: [
-          "Monitoring satelitarny ma sens tylko wtedy, gdy trafia do osób podejmujących decyzje. Dostarczamy GeoJSON, rastry, tabele, panele oraz API alertów — i dobieramy obszar obserwacji (AOI) do tego, jak prowadzisz inspekcje i zarządzasz eskalacją ryzyka.",
-          "Zacznij od pilotażowego obszaru (AOI), sprawdź historię z archiwów, a potem przejdź na tryb operacyjny. Poznaj {technology}, zajrzyj do {glossary} albo {contact}.",
+          "Monitoring satelitarny ma wartość dopiero wtedy, gdy wyniki docierają do osób podejmujących decyzje. Dlatego dostarczamy je jako pliki GeoJSON, rastry i tabele, na platformie internetowej i przez API alertów, a obszar zainteresowania (AOI) wyznaczamy zgodnie z tym, jak Państwa organizacja prowadzi przeglądy i zgłasza zagrożenia.",
+          "Najprościej zacząć od obszaru pilotażowego: sprawdzić historię z archiwów, a potem przejść na regularny monitoring. Poznaj {technology}, przeczytaj {glossary} albo {contact}.",
         ],
         links: {
-          technology: "łańcuch przetwarzania",
-          glossary: "wpis słownikowy monitoringu satelitarnego",
-          contact: "skontaktuj się z zespołem",
+          technology: "nasz łańcuch przetwarzania",
+          glossary: "hasło w słowniku",
+          contact: "skontaktuj się z nami",
         },
       },
-      faqTitle: "FAQ monitoringu satelitarnego",
-      ctaTitle: "Umieść monitoring satelitarny na swoich obiektach.",
-      ctaBody:
-        "Powiedz nam region lub obiekt. Pokażemy, co satelitarny SAR i InSAR mogą już ujawnić.",
-      ctaLabel: "Poproś o briefing",
+      faqTitle: "Monitoring satelitarny – pytania i odpowiedzi",
+      ctaTitle: "Obejmij swoje obiekty monitoringiem satelitarnym.",
+      ctaBody: "Wskaż region lub obiekt. Pokażemy, co już dziś widać w danych SAR i InSAR.",
+      ctaLabel: "Umów prezentację",
     },
   },
 
   resources: {
     hero: {
-      eyebrow: "Zasoby",
-      title: "Zrozum InSAR, zanim podejmiesz decyzję.",
+      eyebrow: "Baza wiedzy",
+      title: "Poznaj InSAR, zanim podejmiesz decyzję.",
       subtitle:
-        "Referencje w prostym języku dla analityki InSAR, monitoringu satelitarnego i terminów, których twoi inżynierowie już używają.",
+        "Przystępne wyjaśnienia dotyczące analityki InSAR, monitoringu satelitarnego i pojęć, których używają inżynierowie.",
     },
     hubs: {
       glossary: {
         title: "Słownik",
-        body: "Definicje dla InSAR, PS-InSAR, SAR, interferometrii, monitoringu satelitarnego i terminów pokrewnych.",
+        body: "Definicje pojęć: InSAR, PS-InSAR, SAR, interferometria, monitoring satelitarny i pokrewne.",
       },
       faq: {
         title: "FAQ",
-        body: "Praktyczne odpowiedzi o dokładności, niezależności od pogody, branżach, dostawie i jak zacząć.",
+        body: "Konkretne odpowiedzi: dokładność, niezależność od pogody, koszty, branże, forma wyników i początek współpracy.",
       },
       insarAnalytics: {
         title: "Analityka InSAR",
-        body: "Jak inteligencja przemieszczeń jest produkowana i używana w krytycznych obiektach.",
+        body: "Jak powstają dane o przemieszczeniach i jak wykorzystuje się je przy obiektach o krytycznym znaczeniu.",
       },
       insarSolutions: {
         title: "Rozwiązania InSAR",
-        body: "Programy monitoringu dopasowane do potrzeb branż, oparte na radarze satelitarnym.",
+        body: "Usługi monitoringu oparte na radarze satelitarnym, dopasowane do potrzeb branż.",
       },
       spaceMonitoring: {
         title: "Monitoring satelitarny",
-        body: "Monitoring regionalny i punktowy z orbity dla ryzyka ruchu.",
+        body: "Monitoring regionalny i punktowy z orbity – tam, gdzie ryzykiem są przemieszczenia.",
       },
       technology: {
         title: "Technologia",
-        body: "Czteroetapowy łańcuch: od pozyskania danych SAR po analitykę i alerty.",
+        body: "Cztery etapy: od pozyskania danych SAR po analitykę i alerty.",
       },
     },
-    ctaTitle: "Nadal masz pytania?",
+    ctaTitle: "Masz jeszcze pytania?",
     ctaLabel: "Skontaktuj się z nami",
   },
 
@@ -861,112 +1069,118 @@ export const pl: Messages = {
     index: {
       hero: {
         eyebrow: "Słownik",
-        title: "Terminy InSAR i monitoringu satelitarnego.",
+        title: "Pojęcia z zakresu InSAR i monitoringu satelitarnego.",
         subtitle:
-          "Krótkie definicje, którymi możesz się podzielić z interesariuszami — każdy termin rozwija się w pełne wyjaśnienie.",
+          "Krótkie definicje, które można przekazać współpracownikom i decydentom. Każde hasło prowadzi do pełnego wyjaśnienia.",
       },
-      footer: "Szukasz odpowiedzi zamiast definicji? Zobacz {faq}.",
+      footer: "Szukasz odpowiedzi, a nie definicji? Zajrzyj do {faq}.",
       footerLink: "FAQ",
+    },
+    termPage: {
+      notFound: "Nie znaleziono hasła",
+      backToGlossary: "Wróć do słownika",
+      relatedTerms: "Powiązane hasła",
+      allTerms: "Wszystkie hasła słownika",
     },
     terms: {
       insar: {
         term: "InSAR",
         shortDefinition:
-          "Interferometryczny radar z syntetyczną aperturą — technika satelitarna mierząca ruchy gruntu i konstrukcji z precyzją milimetrową.",
+          "Satelitarna interferometria radarowa – technika pomiaru przemieszczeń terenu i obiektów z dokładnością do milimetrów.",
         body: [
-          "InSAR (Interferometric Synthetic Aperture Radar) porównuje pary obrazów radarowych pozyskanych nad tym samym miejscem w różnych czasach. Drobne zmiany fazy sygnału radarowego przekładają się na przemieszczenie powierzchni wzdłuż linii widzenia satelity.",
-          "W przeciwieństwie do obrazowania optycznego, InSAR działa przez chmury, dym i ciemność, ponieważ SAR jest aktywnym czujnikiem mikrofalowym. To czyni go fundamentem operacyjnego monitoringu satelitarnego infrastruktury, kopalń, złóż i zagrożeń geotechnicznych.",
-          "SAR Metrics przekształca pomiary InSAR w analitykę gotową do decyzji — serie czasowe, mapy, alerty i API — aby operatorzy mogli działać zanim ruch stanie się szkodą.",
+          "InSAR (ang. Interferometric Synthetic Aperture Radar) polega na porównywaniu obrazów radarowych tego samego miejsca wykonanych w różnym czasie. Niewielkie zmiany fazy sygnału radarowego odpowiadają przemieszczeniu powierzchni w kierunku linii widzenia satelity.",
+          "W odróżnieniu od zobrazowań optycznych InSAR działa przez chmury i dym oraz w nocy, ponieważ SAR jest aktywnym sensorem mikrofalowym. Dlatego stanowi podstawę stałego monitoringu satelitarnego infrastruktury, kopalń, złóż i geozagrożeń.",
+          "SAR Metrics przetwarza pomiary InSAR w szeregi czasowe, mapy i alerty dostępne na platformie internetowej i przez API – tak, aby można było zareagować, zanim przemieszczenia spowodują szkody.",
         ],
       },
       "ps-insar": {
         term: "PS-InSAR",
         shortDefinition:
-          "InSAR rozpraszaczy trwałych — metoda śledząca stabilne reflektory radarowe w długich seriach czasowych dla przemieszczeń na poziomie milimetra.",
+          "Metoda stabilnych rozpraszaczy – śledzi punkty trwale odbijające sygnał radarowy w długich seriach zobrazowań i wyznacza ich przemieszczenia z dokładnością do milimetrów.",
         body: [
-          "PS-InSAR (Persistent Scatterer InSAR) skupia się na punktach, które pozostają koherentne w wielu przelotach satelity: dachach, mostach, torach, odsłonięciach skał i innych reflektorach inżynierskich lub naturalnych.",
-          "Budując długie serie czasowe na tych punktach, PS-InSAR odzyskuje powolne trendy deformacji, cykle sezonowe i anomalie, które zginęłyby w zaszumionych średnich regionalnych.",
-          "SAR Metrics używa przetwarzania typu PS-InSAR tam, gdzie obiekty potrzebują gęstych, milimetrycznych historii — następnie nakłada analitykę i alerty dla operatorów.",
+          "PS-InSAR (ang. Persistent Scatterer InSAR) wykorzystuje punkty, które zachowują koherencję w wielu kolejnych przelotach satelity: dachy, mosty, tory, odsłonięcia skalne oraz inne obiekty naturalne i inżynierskie.",
+          "Długie szeregi czasowe dla takich punktów pozwalają wyznaczyć powolne trendy deformacji, cykle sezonowe i anomalie, które zniknęłyby w uśrednionych wynikach regionalnych.",
+          "SAR Metrics stosuje przetwarzanie PS-InSAR tam, gdzie obiekt wymaga gęstej sieci punktów i milimetrowej historii przemieszczeń, a następnie uzupełnia wyniki o analitykę i alerty.",
         ],
       },
       sar: {
         term: "SAR",
         shortDefinition:
-          "Radar z syntetyczną aperturą — aktywny czujnik satelitarny obrazujący powierzchnię Ziemi w dzień i w nocy, w każdej pogodzie.",
+          "Radar z syntetyczną aperturą – aktywny sensor satelitarny, który obrazuje powierzchnię Ziemi w dzień i w nocy, niezależnie od pogody.",
         body: [
-          "Radar z syntetyczną aperturą (SAR) transmituje impulsy mikrofalowe i rejestruje echa. Poprzez syntezowanie długiej anteny z ruchu satelity, produkuje obrazy radarowe wysokiej rozdzielczości niezależnie od światła słonecznego.",
-          "Nowoczesne konstelacje (w tym Sentinel-1 i komercyjne małe satelity) powracają do tych samych torów gruntowych regularnie, tworząc archiwa, na których opiera się analityka InSAR.",
-          "SAR Metrics przetwarza serie danych SAR w produkty przemieszczeń dla przemysłu i ochrony cywilnej.",
+          "Radar z syntetyczną aperturą (SAR, ang. Synthetic Aperture Radar) wysyła impulsy mikrofalowe i rejestruje ich echo. Ruch satelity pozwala „zsyntetyzować” bardzo długą antenę i uzyskać obrazy o wysokiej rozdzielczości bez udziału światła słonecznego.",
+          "Współczesne konstelacje – m.in. Sentinel-1 i komercyjne małe satelity – regularnie wracają nad te same obszary. Powstają w ten sposób archiwa, na których opiera się analityka InSAR.",
+          "SAR Metrics przetwarza serie zobrazowań SAR w dane o przemieszczeniach dla przemysłu, infrastruktury i ochrony ludności.",
         ],
       },
       interferometry: {
         term: "Interferometria",
         shortDefinition:
-          "Porównanie dwóch obrazów SAR w celu wydobycia różnic fazy odpowiadających przemieszczeniu powierzchni.",
+          "Porównanie dwóch obrazów SAR w celu wyznaczenia różnicy fazy, która odpowiada przemieszczeniu powierzchni.",
         body: [
-          "Interferometria radarowa tworzy interferogram poprzez połączenie dwóch zespolonych obrazów SAR tego samego obszaru. Różnica fazy koduje zmiany odległości między satelitą a gruntem.",
-          "Po skorygowaniu geometrii orbity, topografii i efektów atmosferycznych, pozostała zmiana fazy jest interpretowana jako ruch gruntu lub konstrukcji.",
-          "Interferometria jest kluczowym krokiem między surowymi danymi SAR a analityką InSAR wykorzystywaną w monitoringu.",
+          "Interferometria radarowa polega na utworzeniu interferogramu z dwóch zespolonych obrazów SAR tego samego obszaru. Różnica fazy niesie informację o zmianie odległości między satelitą a powierzchnią terenu.",
+          "Po uwzględnieniu geometrii orbit, rzeźby terenu i wpływu atmosfery pozostałą zmianę fazy interpretuje się jako przemieszczenie terenu lub obiektu.",
+          "Interferometria jest kluczowym etapem między surowymi danymi SAR a analityką InSAR wykorzystywaną w monitoringu.",
         ],
       },
       "ground-deformation": {
-        term: "Deformacja gruntu",
+        term: "Deformacje terenu",
         shortDefinition:
-          "Zmiana pozycji powierzchni Ziemi w czasie — w tym osiadanie, uniesienie, osuwiska i ruchy tektoniczne.",
+          "Zmiany położenia powierzchni Ziemi w czasie: osiadanie, wypiętrzanie, osuwiska i ruchy tektoniczne.",
         body: [
-          "Deformacja gruntu obejmuje każdy mierzalny ruch powierzchni lądu: powolne osiadanie pod miastami, ruch ściany wykopu w kopalniach, pełzanie osuwisk lub kompakcję złoża nad polami ropy i gazu.",
-          "Satelitarny InSAR może mapować deformację na dużych obszarach i rekonstruować lata historii z archiwów SAR — często zanim instrumenty naziemne zostaną zainstalowane.",
-          "Zrozumienie wzorców deformacji pomaga operatorom priorytetyzować inspekcję, wzmacniać obiekty i zmniejszać ryzyko.",
+          "Deformacje terenu to wszelkie mierzalne przemieszczenia powierzchni: powolne osiadanie pod miastami, ruch zboczy wyrobisk w kopalniach, pełzanie osuwisk czy kompakcja nad złożami ropy i gazu.",
+          "Satelitarny InSAR pozwala mapować deformacje na dużych obszarach i odtwarzać ich wieloletnią historię z archiwów SAR – często z okresu, zanim zainstalowano jakiekolwiek przyrządy naziemne.",
+          "Znajomość przebiegu deformacji pomaga ustalić kolejność kontroli, zaplanować wzmocnienie obiektów i ograniczyć ryzyko.",
         ],
       },
       "persistent-scatterer": {
-        term: "Rozpraszacz trwały",
+        term: "Stabilny rozpraszacz (PS)",
         shortDefinition:
-          "Stabilny reflektor radarowy pozostający koherentny w wielu zobrazowaniach SAR i możliwy do śledzenia w czasie.",
+          "Punkt, który stabilnie odbija sygnał radarowy, zachowuje koherencję w wielu zobrazowaniach SAR i dzięki temu może być śledzony w czasie.",
         body: [
-          "Rozpraszacz trwały to punkt na gruncie zwracający silne, stabilne echo radarowe z przelotu na przelot — typowo konstrukcje metalowe, narożniki budynków, mosty lub odsłonięte skały.",
-          "Te punkty kotwiczą serie czasowe PS-InSAR i pozwalają mierzyć milimetryczne przemieszczenia nawet w złożonych scenach miejskich lub przemysłowych.",
-          "Gęste sieci rozpraszaczy trwałych przekształcają miasta i korytarze w ciągłe siatki monitoringowe.",
+          "Stabilny rozpraszacz (ang. persistent scatterer) to punkt na powierzchni terenu, który przy każdym przelocie satelity daje silne, powtarzalne echo radarowe. Zwykle są to konstrukcje metalowe, naroża budynków, mosty lub odsłonięte skały.",
+          "Na takich punktach opierają się szeregi czasowe PS-InSAR. Pozwalają one mierzyć milimetrowe przemieszczenia nawet w złożonym otoczeniu miejskim lub przemysłowym.",
+          "Gęsta sieć stabilnych rozpraszaczy zamienia miasta i korytarze infrastruktury w naturalne sieci pomiarowe.",
         ],
       },
       "space-monitoring": {
         term: "Monitoring satelitarny",
         shortDefinition:
-          "Obserwowanie obiektów i regionów z orbity — używając czujników satelitarnych takich jak SAR dla ciągłej, regionalnej świadomości sytuacyjnej.",
+          "Obserwacja obiektów i regionów z orbity za pomocą sensorów satelitarnych, takich jak SAR – ciągła i obejmująca duże obszary.",
         body: [
-          "Monitoring satelitarny używa satelitów obserwacji Ziemi do obserwowania krytycznych obiektów i regionów bez instalowania gęstych sieci naziemnych wszędzie.",
-          "Monitoring satelitarny oparty na SAR jest szczególnie potężny dla ruchu: mierzy przemieszczenie przez pogodę i ciemność, na skalach od pojedynczych konstrukcji po całe zagłębia.",
-          "SAR Metrics dostarcza monitoring satelitarny jako operacyjną analitykę InSAR — bazowe linie, kampanie punktowe, rekonstrukcję historyczną i alerty.",
+          "Monitoring satelitarny wykorzystuje satelity obserwacji Ziemi do nadzoru nad obiektami i regionami o krytycznym znaczeniu, bez budowania wszędzie gęstych sieci naziemnych.",
+          "Monitoring oparty na radarze SAR szczególnie dobrze sprawdza się w pomiarach przemieszczeń: działa niezależnie od pogody i pory dnia, w skali od pojedynczego obiektu po całe zagłębie.",
+          "SAR Metrics prowadzi monitoring satelitarny w formie analityki InSAR: stan odniesienia, monitoring punktowy, analizy historyczne i alerty.",
         ],
       },
       "millimetric-displacement": {
-        term: "Przemieszczenie milimetrowe",
+        term: "Przemieszczenia milimetrowe",
         shortDefinition:
-          "Ruch gruntu lub konstrukcji mierzony na skalę milimetra używając satelitarnej interferometrii radarowej.",
+          "Przemieszczenia terenu lub obiektów rzędu milimetrów, mierzone metodą satelitarnej interferometrii radarowej.",
         body: [
-          "Przemieszczenie milimetrowe oznacza wykrywanie i śledzenie ruchu rzędu milimetrów na rok lub na pojedynczy przelot — znacznie poniżej tego, co inspekcja wzrokowa może wiarygodnie wychwycić wcześnie.",
-          "InSAR osiąga to mierząc zmianę fazy radarowej wzdłuż linii widzenia satelity, następnie konwertując ją w serie czasowe przemieszczeń dla punktów i obszarów zainteresowania.",
-          "Wczesne sygnały milimetrowe często poprzedzają widoczne pęknięcia, przechyły lub awarie — dając operatorom czas na interwencję.",
+          "O przemieszczeniach milimetrowych mówimy, gdy wykrywany i śledzony ruch ma wielkość rzędu milimetrów na rok lub między kolejnymi przelotami satelity – znacznie poniżej progu, przy którym zmiany można wcześnie zauważyć gołym okiem.",
+          "InSAR mierzy zmianę fazy sygnału radarowego w kierunku linii widzenia satelity i przelicza ją na szeregi czasowe przemieszczeń dla wybranych punktów i obszarów.",
+          "Milimetrowe sygnały często wyprzedzają widoczne pęknięcia, wychylenia i awarie. Dają czas na reakcję.",
         ],
       },
       "satellite-radar": {
         term: "Radar satelitarny",
         shortDefinition:
-          "Obserwacja radarowa z orbity — typowo SAR — używana do obrazowania terenu i mierzenia zmian niezależnie od światła dziennego i pokrywy chmur.",
+          "Obserwacja radarowa z orbity, najczęściej za pomocą SAR – służy do obrazowania terenu i pomiaru zmian niezależnie od światła dziennego i zachmurzenia.",
         body: [
-          "Radar satelitarny odnosi się do systemów obrazowania mikrofalowego umieszczonych na pokładach statków kosmicznych. Dominującą formą cywilną jest radar z syntetyczną aperturą (SAR).",
-          "Ponieważ czujnik sam oświetla grunt, radar satelitarny wspiera obrazowanie całopogodowe, dzień-noc niezbędne dla operacyjnych programów monitoringu.",
-          "SAR Metrics buduje analitykę InSAR na archiwach radaru satelitarnego oraz komercyjnych zobrazowaniach zamawianych na potrzeby monitoringu.",
+          "Radar satelitarny to mikrofalowy system obrazujący umieszczony na pokładzie satelity. W zastosowaniach cywilnych dominuje radar z syntetyczną aperturą (SAR).",
+          "Sensor sam oświetla powierzchnię terenu, dlatego obrazuje ją w dzień i w nocy, przy każdej pogodzie. To warunek stałego, regularnego monitoringu.",
+          "SAR Metrics opiera analitykę InSAR na archiwach danych radarowych i na zobrazowaniach komercyjnych zamawianych nad wskazane obszary.",
         ],
       },
       "wide-area-monitoring": {
         term: "Monitoring regionalny",
         shortDefinition:
-          "Szeroki przegląd dużych obszarów — korytarzy, zagłębi, miast — w poszukiwaniu sygnałów ruchu gruntu, ze spójnym pokryciem satelitarnym.",
+          "Przegląd dużych obszarów – korytarzy transportowych, zagłębi, miast – pod kątem przemieszczeń terenu, przy jednolitym pokryciu danymi satelitarnymi.",
         body: [
-          "Monitoring regionalny wykorzystuje wiele przelotów SAR do tworzenia map przemieszczeń i obszarów ryzyka — bez konieczności wcześniejszego, ręcznego sprawdzania każdego obiektu.",
-          "To częsty punkt startu dla przeglądu zagrożeń geotechnicznych, analizy portfeli ubezpieczeniowych i programów infrastruktury sieciowej.",
-          "Gdy wskażemy miejsca podwyższonego ryzyka, monitoring punktowy może zwiększyć rozdzielczość i częstotliwość aktualizacji nad krytycznymi lokalizacjami.",
+          "Monitoring regionalny (wielkoobszarowy) wykorzystuje serie zobrazowań SAR do tworzenia map przemieszczeń i wskazywania miejsc wymagających uwagi – bez wcześniejszych pomiarów każdego obiektu z osobna.",
+          "To zwykle pierwszy krok w rozpoznaniu geozagrożeń, w analizie portfeli ubezpieczeniowych i w programach monitoringu sieci infrastruktury.",
+          "Po wskazaniu miejsc podwyższonego ryzyka monitoring punktowy zwiększa rozdzielczość i częstotliwość pomiarów nad lokalizacjami krytycznymi.",
         ],
       },
     },
@@ -975,95 +1189,127 @@ export const pl: Messages = {
   faqs: {
     site: [
       {
-        question: "Co to jest analityka InSAR?",
+        question: "Czym jest analityka InSAR?",
         answer:
-          "Analityka InSAR zamienia satelitarną interferometrię radarową w użyteczne informacje: mapy przemieszczeń, serie czasowe, trendy i alerty. SAR Metrics przetwarza serie danych SAR i dostarcza wyniki w panelach, plikach oraz przez API, aby zespoły mogły zarządzać ryzykiem gruntu i konstrukcji.",
+          "Analityka InSAR zamienia satelitarne pomiary interferometryczne w praktyczne informacje: mapy przemieszczeń, szeregi czasowe, trendy i alerty. SAR Metrics przetwarza serie zobrazowań SAR i udostępnia wyniki na platformie internetowej, w plikach i przez API, aby zespoły mogły zarządzać ryzykiem związanym z ruchami terenu i obiektów.",
       },
       {
-        question: "Jak dokładny jest milimetrowy monitoring gruntu z kosmosu?",
+        question: "Jak dokładny jest satelitarny pomiar przemieszczeń?",
         answer:
-          "Przy odpowiedniej geometrii i koherencji, InSAR może rozwiązać milimetrowe przemieszczenie linii widzenia na rozpraszaczach trwałych. Dokładność zależy od geometrii satelity, atmosfery, pokrywy terenu i metody przetwarzania — dlatego dostrajamy produkty na obiekt i region.",
+          "Przy odpowiedniej geometrii obserwacji i koherencji sygnału technika InSAR mierzy przemieszczenia stabilnych rozpraszaczy w kierunku linii widzenia satelity z dokładnością rzędu milimetrów – porównywalną z metodami naziemnymi. Dokładność zależy od geometrii obserwacji, stanu atmosfery, pokrycia terenu i metody przetwarzania, dlatego zakres analizy dobieramy do obiektu i regionu.",
       },
       {
-        question: "Czy monitoring satelitarny działa przez chmury i w nocy?",
+        question: "Czy monitoring satelitarny działa przy zachmurzeniu i w nocy?",
         answer:
-          "Tak. Radar z syntetyczną aperturą jest aktywnym czujnikiem mikrofalowym, więc działa przez chmury i dym oraz w nocy. Ta niezawodność jest jednym z kluczowych powodów, dla których operatorzy wybierają monitoring satelitarny oparty na SAR zamiast rozwiązań wyłącznie optycznych.",
+          "Tak. Radar z syntetyczną aperturą (SAR) jest aktywnym sensorem mikrofalowym, więc obrazuje teren przez chmury i dym, także w nocy. Ta niezawodność to jeden z głównych powodów, dla których do stałego monitoringu wybiera się radar, a nie same zobrazowania optyczne.",
       },
       {
-        question: "Które branże używają rozwiązań InSAR SAR Metrics?",
+        question: "Dla jakich branż przeznaczone są rozwiązania InSAR SAR Metrics?",
         answer:
-          "Wspieramy właścicieli infrastruktury, operatorów górniczych, ubezpieczycieli, producentów ropy i gazu, zespoły ochrony cywilnej i inżynierów konstrukcji — wszędzie tam, gdzie milimetryczna inteligencja ruchu zmniejsza ryzyko lub wyjaśnia odpowiedzialność.",
+          "Nasze rozwiązania są przeznaczone dla zarządców infrastruktury drogowej i kolejowej, firm budowlanych i deweloperów, kopalń, sektora ropy i gazu, ubezpieczycieli oraz służb zarządzania kryzysowego – wszędzie tam, gdzie wiedza o milimetrowych przemieszczeniach ogranicza ryzyko albo pomaga ustalić odpowiedzialność.",
       },
       {
-        question: "Czy możecie odtworzyć historyczny ruch?",
+        question: "Czy można odtworzyć przemieszczenia z przeszłości?",
         answer:
-          "Tak. Archiwa SAR pozwalają odtworzyć historię przemieszczeń — często nawet od początku lat 90. XX wieku (zależnie od pokrycia). Dane archiwalne pomagają w analizach przyczyn, wyznaczaniu linii odniesienia i ocenie roszczeń.",
+          "Tak. Archiwa SAR pozwalają odtworzyć historię przemieszczeń często nawet od początku lat 90., zależnie od pokrycia danego obszaru. Analizy archiwalne pomagają ustalić przyczyny uszkodzeń, wyznaczyć stan odniesienia i ocenić zasadność roszczeń.",
       },
       {
-        question: "Jak są dostarczane wyniki?",
+        question: "W jakiej formie otrzymuję wyniki?",
         answer:
-          "Produkty obejmują mapy przemieszczeń, serie czasowe punktów, eksporty GeoJSON/raster/tabela, panele oraz API alertów. Dopasowujemy dostawę do tego, jak twoi inżynierowie i zespoły ryzyka już pracują.",
+          "Wyniki obejmują mapy przemieszczeń, szeregi czasowe dla punktów, eksport do formatów GeoJSON, rastrowych i tabelarycznych, platformę internetową oraz API alertów. Formę dopasowujemy do tego, jak pracują Państwa inżynierowie i zespoły ds. ryzyka.",
       },
       {
-        question: "Jaka jest różnica między monitoringiem regionalnym a punktowym?",
+        question: "Czym różni się monitoring regionalny od punktowego?",
         answer:
-          "Monitoring regionalny pozwala szybko sprawdzić regiony i portfele, żeby wskazać miejsca wymagające uwagi. Monitoring punktowy zwiększa szczegółowość przestrzenną i czasową nad krytycznymi obiektami, gdy lokalizacje ryzyka są już znane. Wiele programów łączy oba podejścia.",
+          "Monitoring regionalny to szybki przegląd całych regionów i portfeli, który wskazuje miejsca wymagające uwagi. Monitoring punktowy zwiększa szczegółowość i częstotliwość pomiarów nad obiektami krytycznymi, gdy lokalizacje ryzyka są już znane. Wiele programów łączy oba podejścia.",
       },
       {
-        question: "Jak zacząć?",
+        question: "Ile kosztuje monitoring InSAR?",
         answer:
-          "Powiedz nam obiekt lub region, który chcesz zobaczyć. Przejrzymy dostępne pokrycie SAR, zaproponujemy projekt monitoringu i często możemy pokazać wstępną próbkę z danych archiwalnych zanim zobowiążesz się do programu operacyjnego.",
+          "Cena zależy od terenu, od częstotliwości pomiarów i od dokładności. W najniższym wariancie schodzi do około 100 zł za kilometr kwadratowy. Na kilometrze kwadratowym wychodzi to mniej niż przy aparaturze naziemnej i dronach. Wycenę układamy po tym, jak wskażecie obiekt albo obszar.",
+      },
+      {
+        question: "Jak zacząć współpracę?",
+        answer:
+          "Wystarczy wskazać obiekt lub obszar. Sprawdzimy dostępne dane SAR, zaproponujemy projekt monitoringu i – w wielu przypadkach – pokażemy wstępne wyniki z danych archiwalnych, jeszcze zanim zdecydują się Państwo na stały monitoring.",
       },
     ],
     insarAnalytics: [
       {
-        question: "Jak analityka InSAR różni się od surowych obrazów SAR?",
+        question: "Czym analityka InSAR różni się od surowych obrazów SAR?",
         answer:
-          "Surowe obrazy SAR pokazują rozproszenie radarowe. Analityka InSAR wyznacza przemieszczenia ze zmian fazy w czasie, a potem zamienia je na mapy, trendy i alerty, na których operatorzy mogą działać.",
+          "Surowy obraz SAR pokazuje, jak powierzchnia odbija sygnał radarowy. Analityka InSAR wyznacza przemieszczenia na podstawie zmian fazy w czasie i przedstawia je jako mapy, trendy i alerty, na podstawie których można podejmować decyzje.",
       },
       {
         question: "Jakie decyzje wspiera analityka InSAR?",
         answer:
-          "Typowe decyzje obejmują: gdzie kierować inspekcje, kiedy spowolnić produkcję, czy zbocze przyspiesza, jak obiekt przemieszczał się od czasu budowy oraz jak ocenić ryzyko (np. przy zawieraniu ubezpieczenia).",
+          "Najczęściej: gdzie skierować kontrolę, kiedy ograniczyć eksploatację, czy ruch zbocza przyspiesza, jak obiekt przemieszczał się od zakończenia budowy oraz jak ocenić ryzyko związane z ruchami terenu, na przykład przy zawieraniu ubezpieczenia.",
       },
       {
-        question: "Czy potrzebujecie instrumentów na gruncie?",
+        question: "Czy potrzebne są przyrządy pomiarowe w terenie?",
         answer:
-          "Instrumenty naziemne pozostają wartościowe dla kalibracji i lokalnego potwierdzenia. Analityka InSAR je uzupełnia dostarczając szerokie pokrycie i długie historie tam, gdzie czujniki nigdy nie zostały zainstalowane.",
+          "Nie są konieczne, ale pozostają cenne: służą do kalibracji i lokalnego potwierdzenia wyników. Analityka InSAR uzupełnia je o szeroki zasięg i wieloletnią historię także tam, gdzie nigdy nie zainstalowano czujników.",
       },
     ],
     insarSolutions: [
       {
         question: "Jakie rozwiązania InSAR oferuje SAR Metrics?",
         answer:
-          "Monitoring dopasowany do potrzeb branż: infrastruktury, górnictwa, ubezpieczeń, ropy i gazu, zagrożeń geotechnicznych oraz ruchów konstrukcji — wszystko oparte na tym samym fundamencie radaru satelitarnego.",
+          "Monitoring dopasowany do potrzeb branż: infrastruktury i kolei, górnictwa, budownictwa, ropy i gazu, ubezpieczeń oraz ochrony przed geozagrożeniami. Wszystkie rozwiązania korzystają z tej samej technologii radaru satelitarnego.",
       },
       {
-        question: "Czy jeden program może pokryć wiele typów obiektów?",
+        question: "Czy jeden program może objąć różne typy obiektów?",
         answer:
-          "Tak. Wielu klientów zaczyna od bazowej linii regionalnej, a następnie dodaje monitoring punktowy na obiektach priorytetowych. Wspólne przetwarzanie i dostawa utrzymują programy wieloobjektowe koherentne.",
+          "Tak. Typowy program zaczyna się od regionalnego stanu odniesienia, a potem obejmuje monitoringiem punktowym obiekty priorytetowe. Wspólne przetwarzanie i jedna forma dostarczania wyników zapewniają spójność takiego programu.",
       },
       {
-        question: "Jak szybko można postawić rozwiązanie?",
+        question: "Jak szybko można uruchomić monitoring?",
         answer:
-          "Analiza oparta na archiwach często może ruszyć w ciągu kilku dni do kilku tygodni — zależnie od rozmiaru obszaru (AOI) i wybranego produktu. Tryb operacyjny zależy od dostępności satelity i harmonogramu pozyskania nowych zobrazowań.",
+          "Analizę opartą na danych archiwalnych można zwykle rozpocząć w ciągu kilku dni lub tygodni, zależnie od wielkości obszaru i zakresu wyników. Częstotliwość bieżących pomiarów wynika z dostępności satelitów i harmonogramu zobrazowań.",
       },
     ],
     spaceMonitoring: [
       {
-        question: "Co monitoring satelitarny oznacza dla właścicieli obiektów?",
+        question: "Co monitoring satelitarny daje właścicielom i zarządcom obiektów?",
         answer:
-          "Oznacza obserwowanie ruchu gruntu i konstrukcji z orbity na skalę — bez oczekiwania na instrumentację każdego kilometra korytarza lub każdego obiektu w portfelu.",
+          "Możliwość obserwowania z orbity przemieszczeń terenu i obiektów na dużą skalę – bez instalowania czujników na każdym kilometrze trasy i w każdym obiekcie z portfela.",
       },
       {
-        question: "Czy monitoring satelitarny jest tylko dla dużych regionów?",
+        question: "Czy monitoring satelitarny sprawdza się tylko na dużych obszarach?",
         answer:
-          "Nie. Ta sama technologia SAR może wspierać zarówno przegląd w skali regionu, jak i serie czasowe w skali pojedynczych budynków. Programy zwykle łączą kontekst regionalny z monitoringiem punktowym.",
+          "Nie. Te same dane SAR służą zarówno do przeglądu całych regionów, jak i do wyznaczania szeregów czasowych dla pojedynczych budynków. Programy zwykle łączą kontekst regionalny z monitoringiem wybranych obiektów.",
       },
       {
-        question: "Jak monitoring satelitarny SAR Metrics odnosi się do InSAR?",
+        question: "Jak monitoring satelitarny SAR Metrics wiąże się z InSAR?",
         answer:
-          "Nasza usługa monitoringu satelitarnego opiera się na InSAR: pozyskaniu zobrazowań radarowych, przetwarzaniu interferometrycznym, analityce i alertach przygotowanych do użycia operacyjnego.",
+          "Nasz monitoring satelitarny opiera się na InSAR: obejmuje pozyskanie zobrazowań radarowych, przetwarzanie interferometryczne, analitykę i alerty – w formie gotowej do codziennego użytku.",
+      },
+    ],
+    offer: [
+      {
+        question: "Ile to kosztuje?",
+        answer:
+          "Nie ma jednej stawki. Cena zależy od terenu, częstotliwości pomiarów oraz oczekiwanej dokładności. W najniższym wariancie schodzi do około 100 zł za kilometr kwadratowy. Na kilometrze kwadratowym jest to dużo mniej niż aparatura naziemna albo drony.",
+      },
+      {
+        question: "A ile kosztuje jedna awaria?",
+        answer:
+          "Wykolejenie przez stan toru albo postój kopalni odkrywkowej to miliony: przestój, naprawy, odszkodowania, utracone kontrakty. Monitoring ma pokazać, że rusza się tor, skarpa albo nasyp, zanim do tego dojdzie. Jedna uniknięta awaria pokrywa wiele lat abonamentu.",
+      },
+      {
+        question: "Co jest w abonamencie?",
+        answer:
+          "Mapy przemieszczeń, wykresy w czasie, trendy, alert gdy ruch jest nietypowy, historia z archiwum tam, gdzie satelita już latał, i podpowiedź, co sprawdzić najpierw. Wyniki są w aplikacji. Pomiarów bywa kilka w miesiącu.",
+      },
+      {
+        question: "Czy to naprawdę tak dokładne jak pomiar naziemny?",
+        answer:
+          "Tak, mierzymy przesunięcie wzdłuż linii widzenia satelity co do milimetra — w tej samej klasie co metody naziemne. Różnica jest w zasięgu. Satelita obejmuje korytarz albo cały region, bez rozstawiania sprzętu, w dzień, w nocy i przez chmury.",
+      },
+      {
+        question: "Jak zacząć?",
+        answer:
+          "Wskażcie obiekt albo region. Sprawdzimy, jakie dane satelitarne już są, i pokażemy, co da się zmierzyć. Często zaczyna się od archiwum, a dopiero potem przechodzi na stały monitoring.",
       },
     ],
   },
@@ -1071,31 +1317,32 @@ export const pl: Messages = {
   faqPage: {
     hero: {
       eyebrow: "FAQ",
-      title: "Pytania, które zespoły zadają przed wdrożeniem InSAR.",
+      title: "Pytania, które warto zadać przed wdrożeniem InSAR.",
       subtitle:
-        "Proste odpowiedzi o możliwościach, pokryciu i dostawie — z linkami do głębszych zasobów.",
+        "Konkretne odpowiedzi o możliwościach, zasięgu, kosztach i formie wyników – z odnośnikami do szczegółów.",
     },
     sectionEyebrow: "Odpowiedzi",
     sectionTitle: "Najczęściej zadawane pytania",
     footer:
-      "Wolisz definicje? Przeglądaj {glossary}. Dla stron produktowych zobacz {insarAnalytics}, {insarSolutions} i {spaceMonitoring}.",
+      "Szukasz definicji? Zajrzyj do {glossary}. Ofertę handlową, wraz z orientacyjnymi cenami, opisujemy na stronie {offer}. Usługi są też na stronach {insarAnalytics}, {insarSolutions} i {spaceMonitoring}.",
     footerLinks: {
-      glossary: "słownik",
-      insarAnalytics: "analitykę InSAR",
-      insarSolutions: "rozwiązania InSAR",
-      spaceMonitoring: "monitoring satelitarny",
+      glossary: "słownika",
+      offer: "Oferta",
+      insarAnalytics: "Analityka InSAR",
+      insarSolutions: "Rozwiązania InSAR",
+      spaceMonitoring: "Monitoring satelitarny",
     },
-    ctaTitle: "Nie znalazłeś odpowiedzi?",
-    ctaLabel: "Zapytaj nas bezpośrednio",
+    ctaTitle: "Masz inne pytanie?",
+    ctaLabel: "Napisz do nas",
   },
 
   common: {
     home: "Strona główna",
-    supportedBy: "Wspierają nas",
+    supportedBy: "Przy wsparciu",
     readMore: "Czytaj więcej",
-    open: "Otwórz",
+    open: "Zobacz",
     language: "Język",
-    backToSolutions: "Powrót do rozwiązań",
+    backToSolutions: "Wróć do rozwiązań",
   },
 
   errors: {
@@ -1106,9 +1353,9 @@ export const pl: Messages = {
       homeButton: "Strona główna",
     },
     error: {
-      title: "Ta strona się nie załadowała",
+      title: "Nie udało się wczytać strony",
       description:
-        "Coś poszło nie tak po naszej stronie. Możesz spróbować odświeżyć lub wrócić na stronę główną.",
+        "Coś poszło nie tak po naszej stronie. Odśwież stronę albo wróć na stronę główną.",
       tryAgain: "Spróbuj ponownie",
       goHome: "Strona główna",
     },

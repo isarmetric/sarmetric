@@ -64,7 +64,7 @@ export function websiteJsonLd() {
     name: SITE_NAME,
     url: SITE_URL,
     description:
-      "Millimetric ground intelligence from space. InSAR analytics for geohazards, mining, infrastructure and energy.",
+      "Satellite measurement of ground and infrastructure displacement, accurate to the millimeter. InSAR monitoring for construction, rail, mining and energy.",
     publisher: {
       "@type": "Organization",
       name: SITE_NAME,
@@ -185,6 +185,7 @@ export function getSitemapPaths(): { path: string; priority: number; changefreq:
     { path: "/solutions/oil-gas", priority: 0.8, changefreq: "monthly" },
     { path: "/solutions/geohazards", priority: 0.8, changefreq: "monthly" },
     { path: "/solutions/structural", priority: 0.8, changefreq: "monthly" },
+    { path: "/offer", priority: 0.95, changefreq: "monthly" },
     { path: "/technology", priority: 0.9, changefreq: "monthly" },
     { path: "/insar-analytics", priority: 0.95, changefreq: "monthly" },
     { path: "/insar-solutions", priority: 0.95, changefreq: "monthly" },

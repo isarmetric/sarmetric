@@ -53,6 +53,12 @@ function ResourcesFaqPage() {
                   {t.faqPage.footerLinks.glossary}
                 </Link>
               );
+            } else if (part === 'offer') {
+              acc.push(
+                <Link key={i} to="/offer" className="underline underline-offset-4 hover:text-foreground">
+                  {t.faqPage.footerLinks.offer}
+                </Link>
+              );
             } else if (part === 'insarAnalytics') {
               acc.push(
                 <Link key={i} to="/insar-analytics" className="underline underline-offset-4 hover:text-foreground">

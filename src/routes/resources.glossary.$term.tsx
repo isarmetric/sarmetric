@@ -50,12 +50,12 @@ export const Route = createFileRoute("/resources/glossary/$term")({
     return (
       <SiteLayout>
         <div className="container-x pt-40 pb-32">
-          <h1 className="text-display text-section">Term not found</h1>
+          <h1 className="text-display text-section">{t.glossary.termPage.notFound}</h1>
           <Link
             to="/resources/glossary"
             className="mt-6 inline-block text-foreground/80 hover:text-foreground underline underline-offset-4"
           >
-            {t.common.backToSolutions}
+            {t.glossary.termPage.backToGlossary}
           </Link>
         </div>
       </SiteLayout>
@@ -93,7 +93,7 @@ function GlossaryTermPage() {
         {related.length > 0 && (
           <div className="mt-16 border-t border-border pt-10">
             <div className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-6">
-              Related terms
+              {t.glossary.termPage.relatedTerms}
             </div>
             <ul className="flex flex-wrap gap-x-6 gap-y-3">
               {related.map((term) => (
@@ -113,7 +113,7 @@ function GlossaryTermPage() {
 
         <p className="mt-12 text-foreground/70">
           <Link to="/resources/glossary" className="underline underline-offset-4 hover:text-foreground">
-            All glossary terms
+            {t.glossary.termPage.allTerms}
           </Link>
           {" · "}
           <Link to="/insar-analytics" className="underline underline-offset-4 hover:text-foreground">

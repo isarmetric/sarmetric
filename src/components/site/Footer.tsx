@@ -52,6 +52,7 @@ export function Footer() {
             { to: "/insar-solutions", label: t.footer.capabilities.insarSolutions },
             { to: "/space-monitoring", label: t.footer.capabilities.spaceMonitoring },
             { to: "/technology", label: t.footer.capabilities.technology },
+            { to: "/offer", label: t.footer.capabilities.offer },
           ]}
         />
 

@@ -14,6 +14,7 @@ export function Header() {
 
   const nav = [
     { to: "/solutions", label: t.nav.solutions },
+    { to: "/offer", label: t.nav.offer },
     { to: "/technology", label: t.nav.technology },
     { to: "/resources", label: t.nav.resources },
     { to: "/about", label: t.nav.about },

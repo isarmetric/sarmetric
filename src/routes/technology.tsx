@@ -89,9 +89,7 @@ function TechnologyPage() {
           ))}
         </ol>
         <p className="mt-12 max-w-3xl text-foreground/70">
-          {t.technology.howItWorks.footer.replace('{glossary}', '')
-            .replace('{analytics}', '')
-            .replace('{solutions}', '')
+          {t.technology.howItWorks.footer
             .split(/\{|\}/)
             .reduce<React.ReactNode[]>((acc, part, i) => {
               if (part === 'glossary') {
